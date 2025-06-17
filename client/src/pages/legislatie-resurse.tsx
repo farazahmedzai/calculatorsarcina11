@@ -333,7 +333,7 @@ export default function LegislatieResurse() {
               </Button>
             </Link>
             <Link href="/blog">
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+              <Button variant="outline" className="border-white text-[#7c3bed] hover:bg-white hover:text-primary">
                 Citește Ghidurile Practice
               </Button>
             </Link>

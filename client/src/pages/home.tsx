@@ -96,7 +96,7 @@ export default function Home() {
               </div>
               <div className="flex items-center space-x-3 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full border border-slate-200 shadow-sm">
                 <Award className="w-5 h-5 text-blue-500" />
-                <span className="text-sm font-medium text-slate-700">Legislație 2024</span>
+                <span className="text-sm font-medium text-slate-700">Legislație 2025</span>
               </div>
             </div>
           </div>
@@ -156,7 +156,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-wrap gap-2 pt-2">
                   <Badge variant="secondary" className="text-xs bg-blue-100 text-blue-700 border-0">Toate tipurile</Badge>
-                  <Badge variant="secondary" className="text-xs bg-indigo-100 text-indigo-700 border-0">Legislație 2024</Badge>
+                  <Badge variant="secondary" className="text-xs bg-indigo-100 text-indigo-700 border-0">Legislație 2025</Badge>
                 </div>
               </CardContent>
             </Card>
