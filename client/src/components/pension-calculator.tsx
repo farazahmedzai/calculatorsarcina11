@@ -61,13 +61,13 @@ export function PensionCalculator() {
   };
 
   return (
-    <Card className="w-full mx-auto border border-teal-200 shadow-lg">
-      <CardHeader className="bg-gradient-to-r from-teal-600 to-teal-700 text-white text-center py-6">
+    <Card className="w-full mx-auto border border-purple-200 shadow-xl">
+      <CardHeader className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-center py-6">
         <CardTitle className="text-xl font-semibold flex items-center justify-center gap-2">
           <Calculator className="w-5 h-5" />
           Calculator Pensie
         </CardTitle>
-        <p className="text-teal-100 text-sm">
+        <p className="text-purple-100 text-sm">
           Calculează pensia rapidă și precisă
         </p>
       </CardHeader>
@@ -81,7 +81,7 @@ export function PensionCalculator() {
                 render={({ field }) => (
                   <FormItem className="space-y-2">
                     <FormLabel className="text-sm font-medium text-foreground flex items-center gap-2">
-                      <Users className="w-4 h-4 text-teal-600" />
+                      <Users className="w-4 h-4 text-purple-600" />
                       Vârsta actuală
                     </FormLabel>
                     <FormControl>
@@ -132,7 +132,7 @@ export function PensionCalculator() {
                 render={({ field }) => (
                   <FormItem className="space-y-2">
                     <FormLabel className="text-sm font-medium text-foreground flex items-center gap-2">
-                      <BarChart3 className="w-4 h-4 text-teal-600" />
+                      <BarChart3 className="w-4 h-4 text-indigo-600" />
                       Ani de contribuție
                     </FormLabel>
                     <FormControl>
@@ -197,18 +197,18 @@ export function PensionCalculator() {
         </Form>
 
         {result && (
-          <Alert className="border-teal-200 bg-teal-50 dark:border-teal-800 dark:bg-teal-950">
-            <CheckCircle className="h-4 w-4 text-teal-600" />
+          <Alert className="border-purple-200 bg-purple-50 dark:border-purple-800 dark:bg-purple-950">
+            <CheckCircle className="h-4 w-4 text-purple-600" />
             <AlertDescription>
               <div className="space-y-3">
                 <div className="flex items-center gap-2">
-                  <h4 className="font-semibold text-teal-800 dark:text-teal-200">Rezultatul calculului</h4>
+                  <h4 className="font-semibold text-purple-800 dark:text-purple-200">Rezultatul calculului</h4>
                 </div>
-                <div className="p-3 rounded-md bg-white dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800">
-                  <p className="text-xl font-bold text-teal-800 dark:text-teal-200 mb-1">
+                <div className="p-3 rounded-md bg-white dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800">
+                  <p className="text-xl font-bold text-purple-800 dark:text-purple-200 mb-1">
                     {result.amount.toLocaleString()} RON/lună
                   </p>
-                  <p className="text-sm text-teal-700 dark:text-teal-300">{result.details}</p>
+                  <p className="text-sm text-purple-700 dark:text-purple-300">{result.details}</p>
                 </div>
                 
                 {(result.breakdown.penalties > 0 || result.breakdown.contributionBonus > 0) && (
