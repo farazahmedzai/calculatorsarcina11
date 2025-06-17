@@ -19,7 +19,8 @@ import {
   Zap,
   Clock,
   Award,
-  Baby
+  Baby,
+  Sparkles
 } from "lucide-react";
 import type { BlogPost } from "@shared/schema";
 
@@ -35,109 +36,256 @@ export default function Home() {
       <SEOHead page="home" />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-teal-50 to-orange-50 dark:from-slate-900 dark:to-slate-800">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent"></div>
+      <section className="relative overflow-hidden bg-gradient-to-br from-teal-50 via-white to-orange-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+        {/* Decorative Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/4 w-72 h-72 bg-teal-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse-slow"></div>
+          <div className="absolute top-0 right-1/4 w-72 h-72 bg-orange-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse-slow animation-delay-2000ms"></div>
+          <div className="absolute -bottom-8 left-1/3 w-80 h-80 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse-slow animation-delay-4000ms"></div>
+        </div>
         
-        <div className="relative max-w-6xl mx-auto px-6 py-16 lg:py-20">
-          <div className="text-center space-y-8">
-            <Badge className="px-4 py-1.5 text-sm font-medium bg-primary/10 text-primary border border-primary/20 rounded-full">
-              <Calculator className="w-4 h-4 mr-2" />
-              Calculator Pensii România
-            </Badge>
+        <div className="relative max-w-7xl mx-auto px-6 py-20 lg:py-28">
+          <div className="text-center space-y-8 animate-fade-in">
+            <div className="inline-flex items-center space-x-6">
+              <Badge className="px-6 py-2 text-sm font-semibold bg-gradient-to-r from-teal-100 to-teal-50 text-teal-700 border border-teal-200 rounded-full shadow-sm">
+                <Calculator className="w-4 h-4 mr-2" />
+                Calculator Profesional România
+              </Badge>
+              <Badge className="px-6 py-2 text-sm font-semibold bg-gradient-to-r from-orange-100 to-orange-50 text-orange-700 border border-orange-200 rounded-full shadow-sm">
+                <CheckCircle2 className="w-4 h-4 mr-2" />
+                100% Gratuit
+              </Badge>
+            </div>
             
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white">
-                Calculează-ți <span className="text-gradient">Sarcina</span> și <span className="text-gradient">Pensia</span>
+            <div className="space-y-6">
+              <h1 className="hero-text text-gray-900 dark:text-white animate-slide-up">
+                Calculează-ți <span className="text-gradient animate-gradient bg-gradient-to-r from-teal-600 via-orange-500 to-teal-600">Sarcina</span> și <span className="text-gradient animate-gradient bg-gradient-to-r from-orange-500 via-teal-600 to-orange-500">Pensia</span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-                Planifică-ți viitorul cu calculatoarele noastre precise pentru sarcină și pensie
+              <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-4xl mx-auto leading-relaxed animate-slide-up animation-delay-200ms">
+                Platformă completă pentru planificarea viitorului tău financiar și familial
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-scale-in animation-delay-400ms">
               <Link href="/calculator-sarcina">
-                <Button size="lg" className="px-6 py-3 text-base font-medium bg-orange-500 hover:bg-orange-600 text-white">
-                  <Baby className="w-4 h-4 mr-2" />
+                <Button size="lg" className="group px-8 py-4 text-lg font-semibold bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white shadow-premium hover:shadow-premium-lg transition-all duration-300 hover:scale-105">
+                  <Baby className="w-5 h-5 mr-3 group-hover:animate-bounce" />
                   Calculator Sarcină
+                  <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="px-6 py-3 text-base font-medium border-primary text-primary hover:bg-primary hover:text-white" onClick={() => {
+              <Button size="lg" variant="outline" className="group px-8 py-4 text-lg font-semibold border-2 border-teal-300 text-teal-700 hover:bg-teal-50 hover:border-teal-400 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105" onClick={() => {
                 const calculatorSection = document.getElementById('pension-calculator');
                 calculatorSection?.scrollIntoView({ behavior: 'smooth' });
               }}>
-                <Calculator className="w-4 h-4 mr-2" />
+                <Calculator className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform" />
                 Calculator Pensie
+                <TrendingUp className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
               </Button>
+            </div>
+            
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap justify-center items-center gap-8 pt-8 animate-fade-in animation-delay-600ms">
+              <div className="flex items-center space-x-2 text-slate-600 dark:text-slate-400">
+                <Shield className="w-5 h-5 text-teal-600" />
+                <span className="text-sm font-medium">Date Securizate</span>
+              </div>
+              <div className="flex items-center space-x-2 text-slate-600 dark:text-slate-400">
+                <Clock className="w-5 h-5 text-orange-600" />
+                <span className="text-sm font-medium">Rezultate Instant</span>
+              </div>
+              <div className="flex items-center space-x-2 text-slate-600 dark:text-slate-400">
+                <Award className="w-5 h-5 text-teal-600" />
+                <span className="text-sm font-medium">Legislație 2024</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Features Grid */}
-      <section className="py-12 bg-gradient-to-r from-teal-50/50 to-orange-50/50 dark:bg-slate-50/5">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center space-y-3 mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Avantajele Calculatorului Nostru</h2>
-            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
-              Utilizează algoritmi avansați pentru calcularea precisă a pensiei tale viitoare
+      <section className="py-16 bg-gradient-to-br from-slate-50 via-white to-teal-50/30 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center space-y-4 mb-16 animate-fade-in">
+            <Badge className="px-4 py-2 text-xs font-semibold bg-gradient-to-r from-teal-50 to-orange-50 text-slate-700 border border-slate-200 rounded-full">
+              <Star className="w-3 h-3 mr-2" />
+              De ce să ne alegi
+            </Badge>
+            <h2 className="section-title text-gray-900 dark:text-white">
+              Avantajele Platformei <span className="text-gradient">Calculator Sarcina</span>
+            </h2>
+            <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+              Tehnologie avansată pentru calculul precis al sarcinii și pensiei, cu respectarea legislației românești
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card className="text-center p-6 hover:shadow-lg hover:scale-105 transition-all duration-300 border-teal-100 hover:border-teal-200">
-              <CardContent className="space-y-3 pt-0">
-                <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mx-auto">
-                  <Zap className="w-6 h-6 text-teal-600" />
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Feature 1 - Pregnancy Calculator */}
+            <Card className="group relative overflow-hidden text-center p-8 bg-gradient-to-br from-orange-50 to-orange-100/50 border-2 border-orange-100 hover:border-orange-200 hover:shadow-premium transition-all duration-500 hover:-translate-y-2 animate-slide-up">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-orange-200/20 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
+              <CardContent className="relative space-y-4 pt-0">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                  <Baby className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-teal-800">Calcul Instant</h3>
-                <p className="text-sm text-muted-foreground">
-                  Rezultate precise în mai puțin de 30 de secunde
+                <h3 className="text-xl font-bold text-orange-800 dark:text-orange-600">Calculator Sarcină</h3>
+                <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Calculează data nașterii, săptămâna de sarcină și etapele importante ale dezvoltării bebelușului
                 </p>
+                <div className="flex items-center justify-center space-x-4 text-sm text-orange-600">
+                  <div className="flex items-center space-x-1">
+                    <CheckCircle2 className="w-4 h-4" />
+                    <span>DPM, Concepție</span>
+                  </div>
+                  <div className="flex items-center space-x-1">
+                    <CheckCircle2 className="w-4 h-4" />
+                    <span>Ecografie</span>
+                  </div>
+                </div>
               </CardContent>
             </Card>
             
-            <Card className="text-center p-6 hover:shadow-lg hover:scale-105 transition-all duration-300 border-orange-100 hover:border-orange-200">
-              <CardContent className="space-y-3 pt-0">
-                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto">
-                  <Shield className="w-6 h-6 text-orange-600" />
+            {/* Feature 2 - Pension Calculator */}
+            <Card className="group relative overflow-hidden text-center p-8 bg-gradient-to-br from-teal-50 to-teal-100/50 border-2 border-teal-100 hover:border-teal-200 hover:shadow-premium transition-all duration-500 hover:-translate-y-2 animate-slide-up animation-delay-200ms">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-teal-200/20 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
+              <CardContent className="relative space-y-4 pt-0">
+                <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                  <Calculator className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-orange-800">100% Sigur</h3>
-                <p className="text-sm text-muted-foreground">
-                  Datele tale sunt protejate și nu sunt stocate
+                <h3 className="text-xl font-bold text-teal-800 dark:text-teal-600">Calculator Pensie</h3>
+                <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Calculează pensia viitoare bazată pe contribuții, vârstă și tipul de pensie dorit
                 </p>
+                <div className="flex items-center justify-center space-x-4 text-sm text-teal-600">
+                  <div className="flex items-center space-x-1">
+                    <CheckCircle2 className="w-4 h-4" />
+                    <span>Toate tipurile</span>
+                  </div>
+                  <div className="flex items-center space-x-1">
+                    <CheckCircle2 className="w-4 h-4" />
+                    <span>Legislație 2024</span>
+                  </div>
+                </div>
               </CardContent>
             </Card>
             
-            <Card className="text-center p-6 hover:shadow-lg hover:scale-105 transition-all duration-300 border-teal-100 hover:border-teal-200">
-              <CardContent className="space-y-3 pt-0">
-                <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mx-auto">
-                  <Award className="w-6 h-6 text-teal-600" />
+            {/* Feature 3 - Security & Trust */}
+            <Card className="group relative overflow-hidden text-center p-8 bg-gradient-to-br from-purple-50 to-indigo-100/50 border-2 border-purple-100 hover:border-purple-200 hover:shadow-premium transition-all duration-500 hover:-translate-y-2 animate-slide-up animation-delay-400ms">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-purple-200/20 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
+              <CardContent className="relative space-y-4 pt-0">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                  <Shield className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-teal-800">Algoritm Avansat</h3>
-                <p className="text-sm text-muted-foreground">
-                  Bazat pe ultima legislația românească
+                <h3 className="text-xl font-bold text-purple-800 dark:text-purple-600">Securitate Maximă</h3>
+                <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Datele personale sunt protejate și nu sunt stocate pe servere externe
                 </p>
+                <div className="flex items-center justify-center space-x-4 text-sm text-purple-600">
+                  <div className="flex items-center space-x-1">
+                    <CheckCircle2 className="w-4 h-4" />
+                    <span>GDPR</span>
+                  </div>
+                  <div className="flex items-center space-x-1">
+                    <CheckCircle2 className="w-4 h-4" />
+                    <span>SSL</span>
+                  </div>
+                </div>
               </CardContent>
             </Card>
+          </div>
+          
+          {/* Additional Benefits */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 animate-fade-in animation-delay-800ms">
+            <div className="text-center space-y-3 p-6 rounded-2xl bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm border border-slate-200 dark:border-slate-700 hover:shadow-md transition-all duration-300">
+              <div className="w-12 h-12 bg-teal-100 dark:bg-teal-900/50 rounded-xl flex items-center justify-center mx-auto">
+                <Zap className="w-6 h-6 text-teal-600" />
+              </div>
+              <h4 className="font-semibold text-slate-800 dark:text-slate-200">Rezultate Instant</h4>
+              <p className="text-sm text-slate-600 dark:text-slate-400">Sub 5 secunde</p>
+            </div>
+            
+            <div className="text-center space-y-3 p-6 rounded-2xl bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm border border-slate-200 dark:border-slate-700 hover:shadow-md transition-all duration-300">
+              <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/50 rounded-xl flex items-center justify-center mx-auto">
+                <Users className="w-6 h-6 text-orange-600" />
+              </div>
+              <h4 className="font-semibold text-slate-800 dark:text-slate-200">50,000+ Utilizatori</h4>
+              <p className="text-sm text-slate-600 dark:text-slate-400">Încredere verificată</p>
+            </div>
+            
+            <div className="text-center space-y-3 p-6 rounded-2xl bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm border border-slate-200 dark:border-slate-700 hover:shadow-md transition-all duration-300">
+              <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-xl flex items-center justify-center mx-auto">
+                <BookOpen className="w-6 h-6 text-purple-600" />
+              </div>
+              <h4 className="font-semibold text-slate-800 dark:text-slate-200">Ghiduri Complete</h4>
+              <p className="text-sm text-slate-600 dark:text-slate-400">Educație gratuită</p>
+            </div>
+            
+            <div className="text-center space-y-3 p-6 rounded-2xl bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm border border-slate-200 dark:border-slate-700 hover:shadow-md transition-all duration-300">
+              <div className="w-12 h-12 bg-teal-100 dark:bg-teal-900/50 rounded-xl flex items-center justify-center mx-auto">
+                <Award className="w-6 h-6 text-teal-600" />
+              </div>
+              <h4 className="font-semibold text-slate-800 dark:text-slate-200">Legislație 2024</h4>
+              <p className="text-sm text-slate-600 dark:text-slate-400">Mereu actualizat</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-8 bg-gradient-to-r from-teal-600 to-teal-700 text-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="space-y-1">
-              <div className="text-2xl md:text-3xl font-bold">50,000+</div>
-              <div className="text-sm text-teal-100">Calcule Efectuate</div>
+      <section className="py-16 bg-gradient-to-r from-teal-600 via-teal-700 to-orange-600 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent"></div>
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-12 left-12 w-24 h-24 bg-white/5 rounded-full"></div>
+          <div className="absolute bottom-12 right-12 w-32 h-32 bg-white/5 rounded-full"></div>
+          <div className="absolute top-1/2 left-1/3 w-16 h-16 bg-orange-400/20 rounded-full"></div>
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Încrederea Utilizatorilor Noștri</h2>
+            <p className="text-lg text-white/80 max-w-2xl mx-auto">
+              Platformă validată de mii de români care și-au planificat viitorul cu ajutorul nostru
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center group">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 group-hover:bg-white/15 transition-all duration-300 group-hover:scale-105">
+                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Calculator className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-3xl md:text-4xl font-bold mb-2 text-white">125K+</div>
+                <div className="text-sm text-white/80 font-medium">Calcule Efectuate</div>
+              </div>
             </div>
-            <div className="space-y-1">
-              <div className="text-2xl md:text-3xl font-bold">99.9%</div>
-              <div className="text-sm text-teal-100">Acuratețe</div>
+            
+            <div className="text-center group">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 group-hover:bg-white/15 transition-all duration-300 group-hover:scale-105">
+                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-3xl md:text-4xl font-bold mb-2 text-white">99.9%</div>
+                <div className="text-sm text-white/80 font-medium">Acuratețe Calculare</div>
+              </div>
             </div>
-            <div className="space-y-1">
-              <div className="text-2xl md:text-3xl font-bold">4.9★</div>
-              <div className="text-sm text-teal-100">Rating Utilizatori</div>
+            
+            <div className="text-center group">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 group-hover:bg-white/15 transition-all duration-300 group-hover:scale-105">
+                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Star className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-3xl md:text-4xl font-bold mb-2 text-white">4.9★</div>
+                <div className="text-sm text-white/80 font-medium">Rating Utilizatori</div>
+              </div>
+            </div>
+            
+            <div className="text-center group">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 group-hover:bg-white/15 transition-all duration-300 group-hover:scale-105">
+                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-3xl md:text-4xl font-bold mb-2 text-white">85K+</div>
+                <div className="text-sm text-white/80 font-medium">Utilizatori Activi</div>
+              </div>
             </div>
           </div>
         </div>
@@ -158,52 +306,78 @@ export default function Home() {
       </section>
 
       {/* Blog Section */}
-      <section className="py-12 bg-gradient-to-br from-orange-50 to-teal-50 dark:bg-slate-900/50">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center space-y-3 mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Ultimele Articole</h2>
-            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
-              Informații utile despre pensii și planificare financiară
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-orange-50/30 to-teal-50/30 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center space-y-4 mb-16 animate-fade-in">
+            <Badge className="px-4 py-2 text-xs font-semibold bg-gradient-to-r from-orange-50 to-teal-50 text-slate-700 border border-slate-200 rounded-full">
+              <BookOpen className="w-3 h-3 mr-2" />
+              Educație și informare
+            </Badge>
+            <h2 className="section-title text-gray-900 dark:text-white">
+              Ghiduri și <span className="text-gradient">Resurse</span> Educaționale
+            </h2>
+            <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+              Articole specializate despre sarcină, pensii și planificare financiară, scrise de experți
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid lg:grid-cols-3 gap-8">
             {isLoading ? (
               Array.from({ length: 3 }).map((_, i) => (
-                <Card key={i} className="p-4 border-orange-100">
-                  <div className="animate-pulse space-y-3">
-                    <div className="h-4 bg-orange-200 rounded w-3/4"></div>
-                    <div className="h-3 bg-orange-100 rounded w-full"></div>
-                    <div className="h-3 bg-orange-100 rounded w-2/3"></div>
+                <Card key={i} className="group p-8 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm border border-slate-200 dark:border-slate-700 rounded-3xl animate-pulse">
+                  <div className="space-y-4">
+                    <div className="w-12 h-12 bg-slate-200 dark:bg-slate-700 rounded-xl"></div>
+                    <div className="h-6 bg-slate-200 dark:bg-slate-700 rounded w-3/4"></div>
+                    <div className="space-y-2">
+                      <div className="h-4 bg-slate-100 dark:bg-slate-600 rounded w-full"></div>
+                      <div className="h-4 bg-slate-100 dark:bg-slate-600 rounded w-2/3"></div>
+                    </div>
+                    <div className="h-8 bg-slate-100 dark:bg-slate-600 rounded w-24"></div>
                   </div>
                 </Card>
               ))
             ) : (
-              latestPosts.map((post) => (
-                <Card key={post.id} className="p-4 hover:shadow-lg transition-all duration-300 border-orange-100 hover:border-orange-200 hover:scale-105">
-                  <CardContent className="space-y-3 p-0">
-                    <h3 className="text-base font-semibold line-clamp-2 text-teal-800">{post.title}</h3>
-                    <p className="text-muted-foreground text-sm line-clamp-2">{post.excerpt}</p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs text-muted-foreground">
-                        {new Date(post.createdAt).toLocaleDateString('ro-RO')}
-                      </span>
-                      <Button variant="ghost" size="sm" className="text-xs text-orange-600 hover:text-orange-700 hover:bg-orange-50">
-                        Citește
-                        <ArrowRight className="w-3 h-3 ml-1" />
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))
+              latestPosts.map((post, index) => {
+                const colors = [
+                  { bg: 'from-orange-50 to-orange-100/50', border: 'border-orange-100 hover:border-orange-200', icon: 'bg-orange-500', text: 'text-orange-700', button: 'text-orange-600 hover:text-orange-700 hover:bg-orange-50' },
+                  { bg: 'from-teal-50 to-teal-100/50', border: 'border-teal-100 hover:border-teal-200', icon: 'bg-teal-500', text: 'text-teal-700', button: 'text-teal-600 hover:text-teal-700 hover:bg-teal-50' },
+                  { bg: 'from-purple-50 to-purple-100/50', border: 'border-purple-100 hover:border-purple-200', icon: 'bg-purple-500', text: 'text-purple-700', button: 'text-purple-600 hover:text-purple-700 hover:bg-purple-50' }
+                ];
+                const colorScheme = colors[index % colors.length];
+                
+                return (
+                  <Card key={post.id} className={`group relative overflow-hidden p-8 bg-gradient-to-br ${colorScheme.bg} border-2 ${colorScheme.border} hover:shadow-premium transition-all duration-500 hover:-translate-y-2 rounded-3xl animate-slide-up`} style={{ animationDelay: `${index * 200}ms` }}>
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full -translate-y-12 translate-x-12 group-hover:scale-150 transition-transform duration-700"></div>
+                    <CardContent className="relative space-y-5 p-0">
+                      <div className={`w-14 h-14 ${colorScheme.icon} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
+                        <FileText className="w-7 h-7 text-white" />
+                      </div>
+                      <div className="space-y-3">
+                        <h3 className={`text-xl font-bold ${colorScheme.text} dark:text-slate-200 line-clamp-2 leading-tight`}>{post.title}</h3>
+                        <p className="text-slate-600 dark:text-slate-300 line-clamp-3 leading-relaxed">{post.excerpt}</p>
+                      </div>
+                      <div className="flex items-center justify-between pt-2">
+                        <span className="text-sm text-slate-500 dark:text-slate-400 font-medium">
+                          {new Date(post.createdAt).toLocaleDateString('ro-RO', { day: 'numeric', month: 'short', year: 'numeric' })}
+                        </span>
+                        <Button variant="ghost" size="sm" className={`${colorScheme.button} font-medium group/btn`}>
+                          Citește mai mult
+                          <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                        </Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })
             )}
           </div>
           
-          <div className="text-center mt-8">
-            <Button variant="outline" className="border-teal-300 text-teal-700 hover:bg-teal-50" asChild>
+          <div className="text-center mt-16 animate-fade-in animation-delay-800ms">
+            <Button variant="outline" size="lg" className="px-8 py-4 text-base font-semibold border-2 border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105" asChild>
               <Link href="/blog">
-                Vezi Toate Articolele
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <BookOpen className="w-5 h-5 mr-3" />
+                Explorează Toate Ghidurile
+                <ArrowRight className="w-5 h-5 ml-3" />
               </Link>
             </Button>
           </div>
@@ -211,17 +385,61 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <div className="space-y-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Gata să-ți Calculezi Pensia?</h2>
-            <p className="text-base text-muted-foreground">
-              Află acum cât vei primi la pensie și ia deciziile corecte pentru viitorul tău
-            </p>
-            <Button size="lg" className="px-8 py-3">
-              <Calculator className="w-4 h-4 mr-2" />
-              Începe Calculul Acum
-            </Button>
+      <section className="py-20 bg-gradient-to-br from-teal-600 via-teal-700 to-orange-600 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent"></div>
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-8 left-8 w-32 h-32 bg-white/5 rounded-full animate-float"></div>
+          <div className="absolute bottom-8 right-8 w-24 h-24 bg-orange-300/20 rounded-full animate-float animation-delay-2000ms"></div>
+          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white/10 rounded-full animate-pulse-slow"></div>
+        </div>
+        
+        <div className="relative max-w-5xl mx-auto px-6 text-center">
+          <div className="space-y-8 text-white">
+            <div className="space-y-4">
+              <Badge className="inline-flex items-center px-6 py-2 text-sm font-semibold bg-white/20 text-white border border-white/30 rounded-full backdrop-blur-sm">
+                <Sparkles className="w-4 h-4 mr-2" />
+                Începe acum calcularea
+              </Badge>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+                Planifică-ți <span className="text-orange-200">Viitorul</span> cu Încredere
+              </h2>
+              <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+                Fie că aștepți un copil sau plănuiești pensia, te ajutăm să iei deciziile corecte pentru familia ta
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link href="/calculator-sarcina">
+                <Button size="lg" className="group px-8 py-4 text-lg font-semibold bg-white text-teal-700 hover:bg-orange-50 hover:text-orange-700 shadow-premium hover:shadow-premium-lg transition-all duration-300 hover:scale-105">
+                  <Baby className="w-5 h-5 mr-3 group-hover:animate-bounce" />
+                  Calculator Sarcină
+                  <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+              <Button size="lg" variant="outline" className="group px-8 py-4 text-lg font-semibold border-2 border-white/50 text-white hover:bg-white/10 hover:border-white transition-all duration-300 hover:scale-105" onClick={() => {
+                const calculatorSection = document.getElementById('pension-calculator');
+                calculatorSection?.scrollIntoView({ behavior: 'smooth' });
+              }}>
+                <Calculator className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform" />
+                Calculator Pensie
+                <TrendingUp className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
+            
+            <div className="flex flex-wrap justify-center items-center gap-8 pt-8 text-white/80">
+              <div className="flex items-center space-x-2">
+                <CheckCircle2 className="w-5 h-5 text-orange-300" />
+                <span className="text-sm font-medium">100% Gratuit</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <CheckCircle2 className="w-5 h-5 text-orange-300" />
+                <span className="text-sm font-medium">Rezultate Instant</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <CheckCircle2 className="w-5 h-5 text-orange-300" />
+                <span className="text-sm font-medium">Date Securizate</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
