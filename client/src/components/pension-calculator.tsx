@@ -61,42 +61,27 @@ export function PensionCalculator() {
   };
 
   return (
-    <Card className="w-full mx-auto glass border-0 overflow-hidden">
-      <CardHeader className="gradient-primary text-white text-center py-12 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 animate-gradient"></div>
-        <div className="relative">
-          <CardTitle className="text-3xl font-black flex items-center justify-center gap-4 mb-3">
-            <div className="relative">
-              <div className="absolute inset-0 bg-white/30 rounded-2xl blur-lg"></div>
-              <div className="relative bg-white/20 rounded-2xl p-3 backdrop-blur-xl">
-                <Calculator className="w-8 h-8" />
-              </div>
-            </div>
-            Calculator Pensie Premium
-          </CardTitle>
-          <p className="text-blue-100 mt-3 text-lg font-medium">
-            Calculează pensia <span className="text-yellow-300 font-bold">rapidă și precisă</span>
-          </p>
-          <div className="flex items-center justify-center gap-2 mt-4">
-            <div className="h-1 w-8 bg-white/30 rounded-full"></div>
-            <div className="h-1 w-12 bg-yellow-400 rounded-full"></div>
-            <div className="h-1 w-8 bg-white/30 rounded-full"></div>
-          </div>
-        </div>
+    <Card className="w-full mx-auto border shadow-lg">
+      <CardHeader className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center py-6">
+        <CardTitle className="text-xl font-semibold flex items-center justify-center gap-2">
+          <Calculator className="w-5 h-5" />
+          Calculator Pensie
+        </CardTitle>
+        <p className="text-blue-100 text-sm">
+          Calculează pensia rapidă și precisă
+        </p>
       </CardHeader>
-      <CardContent className="space-y-10 p-10">
+      <CardContent className="space-y-6 p-6">
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-            <div className="grid md:grid-cols-2 gap-8">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+            <div className="grid md:grid-cols-2 gap-4">
               <FormField
                 control={form.control}
                 name="currentAge"
                 render={({ field }) => (
-                  <FormItem className="space-y-3">
-                    <FormLabel className="text-base font-bold text-foreground flex items-center gap-3">
-                      <div className="p-2 rounded-xl bg-gold-500/10 border border-gold-200/50">
-                        <Users className="w-5 h-5 text-gold-600" />
-                      </div>
+                  <FormItem className="space-y-2">
+                    <FormLabel className="text-sm font-medium text-foreground flex items-center gap-2">
+                      <Users className="w-4 h-4 text-primary" />
                       Vârsta actuală
                     </FormLabel>
                     <FormControl>
