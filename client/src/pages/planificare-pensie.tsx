@@ -12,10 +12,10 @@ export default function PlanificareePensie() {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+          <h1 className="text-4xl lg:text-5xl font-bold mb-6 text-white">
             Ghid Complet pentru Planificarea Pensiei în România
           </h1>
-          <p className="text-xl text-purple-100 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Totul ce trebuie să știi pentru a-ți planifica o pensie decentă. Strategii, piloni și greșeli de evitat.
           </p>
         </div>
@@ -237,8 +237,8 @@ export default function PlanificareePensie() {
           <div className="text-center">
             <Card className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-4">Începe Planificarea Acum</h3>
-                <p className="text-purple-100 mb-6">
+                <h3 className="text-2xl font-bold mb-4 text-white">Începe Planificarea Acum</h3>
+                <p className="text-white/90 mb-6">
                   Folosește calculatorul nostru pentru a vedea cum arată pensia ta cu strategiile recomandate.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
