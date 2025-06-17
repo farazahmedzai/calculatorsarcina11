@@ -416,9 +416,27 @@ The pension calculator implements current Romanian pension regulations:
 
 ## Recent Changes - June 17, 2025
 
+### ✓ Teal & Orange Theme Implementation Completed
+
+**Latest Updates (June 17, 2025 - 1:00 PM):**
+- **Complete Color Scheme Overhaul:** Transformed from purple/blue to modern teal and orange theme
+- **CSS Variables:** Updated all primary colors to teal (hsl(173, 58%, 39%)) and orange accents
+- **Home Page:** Gradient backgrounds using teal-50 to orange-50, updated all icons and highlights
+- **Pension Calculator:** Teal header gradient, orange accent colors for form icons and bonuses
+- **Pregnancy Calculator:** Orange primary theme with teal secondary accents throughout
+- **Footer:** Gradient logo background (teal to orange), color-coordinated social links
+- **Feature Cards:** Alternating teal and orange color schemes with hover effects
+- **Typography:** Updated text gradients to use the new teal-to-orange color palette
+
+**Theme Color Specifications:**
+- **Primary (Teal):** hsl(173, 58%, 39%) - used for main UI elements, buttons, borders
+- **Secondary (Orange):** hsl(25, 95%, 53%) - used for accents, highlights, pregnancy features
+- **Backgrounds:** Soft teal-50 and orange-50 gradients for section variety
+- **Dark Mode:** Maintained teal primary with updated dark theme compatibility
+
 ### ✓ UI Optimization and Spacing Improvements Completed
 
-**Latest Updates (June 17, 2025 - 12:48 PM):**
+**Previous Updates (June 17, 2025 - 12:48 PM):**
 - **UI Redesign:** Completely optimized layout with reduced spacing and cleaner design
 - **Home Page:** Reduced excessive padding from py-24 to py-12, improved section spacing
 - **Header:** Streamlined navigation with compact h-16 header height and smaller icons
