@@ -1,11 +1,11 @@
-# API Documentation - Romanian Pension Calculator
+# API Documentation - Calculator Sarcina
 
-This document describes the REST API endpoints available in the Romanian Pension Calculator application.
+This document describes the REST API endpoints available in the Calculator Sarcina application.
 
 ## Base URL
 
 **Development:** `http://localhost:5000/api`
-**Production:** `https://your-domain.com/api`
+**Production:** `https://calculatorsarcina.com/api`
 
 ## Authentication
 

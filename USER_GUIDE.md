@@ -1,14 +1,14 @@
-# User Guide - Romanian Pension Calculator
+# User Guide - Calculator Sarcina
 
-Welcome to the Romanian Pension Calculator! This guide will help you navigate and use all features of the application effectively.
+Welcome to Calculator Sarcina! This guide will help you navigate and use all features of the pregnancy and pension calculator application effectively.
 
 ## Getting Started
 
 ### Accessing the Calculator
 
-1. Open your web browser and navigate to the application
+1. Open your web browser and navigate to https://calculatorsarcina.com
 2. The homepage provides an overview of available features
-3. Click "Calculator de Pensie" to start calculating your pension
+3. Choose between pregnancy calculator or pension calculator based on your needs
 
 ### Navigation Menu
 

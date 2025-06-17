@@ -1,21 +1,22 @@
-# Romanian Pension Calculator
+# Calculator Sarcina
 
-A professional web application for calculating Romanian pension benefits with educational content and SEO optimization.
+A professional Romanian pregnancy calculator and pension calculator web application with educational content and SEO optimization.
 
-![Romanian Pension Calculator](https://img.shields.io/badge/Status-Active-green)
+[Calculator Sarcina](https://img.shields.io/badge/Status-Active-green)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
 ![React](https://img.shields.io/badge/React-18-blue)
 ![Express](https://img.shields.io/badge/Express-4.18-green)
 
 ## Overview
 
-This application helps Romanian citizens calculate their pension benefits based on current Romanian pension laws and regulations. It features a modern, responsive interface with comprehensive educational content about the Romanian pension system.
+Calculator Sarcina helps Romanian citizens with pregnancy calculations and pension benefit calculations based on current Romanian laws and regulations. It features a modern, responsive interface with comprehensive educational content.
 
 ## Features
 
+- **Pregnancy Calculator**: Calculate pregnancy milestones and due dates
 - **Pension Calculator**: Calculate pension benefits based on Romanian regulations
-- **Multiple Pension Types**: Support for standard, early partial, and early complete pensions
-- **Educational Content**: Blog posts and guides about Romanian pension system
+- **Multiple Calculator Types**: Support for various pregnancy and pension calculations
+- **Educational Content**: Blog posts and guides about pregnancy and pension planning
 - **SEO Optimized**: Structured content for better search engine visibility
 - **Responsive Design**: Mobile-first design with accessibility features
 - **Real-time Calculations**: Instant pension calculations with detailed breakdowns
@@ -32,7 +33,7 @@ This application helps Romanian citizens calculate their pension benefits based 
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd romanian-pension-calculator
+cd calculator-sarcina
 ```
 
 2. Install dependencies:
@@ -45,7 +46,7 @@ npm install
 npm run dev
 ```
 
-4. Open your browser and navigate to `http://localhost:5000`
+4. Open your browser and navigate to `http://localhost:5000` or visit https://calculatorsarcina.com
 
 ## Tech Stack
 
