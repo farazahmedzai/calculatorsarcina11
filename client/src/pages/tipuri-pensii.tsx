@@ -193,9 +193,9 @@ export default function TipuriPensii() {
       </section>
 
       {/* Comparison Table */}
-      <section className="py-16">
+      <section className="py-16 bg-white/10 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-neutral-800 mb-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">
             Comparație Rapidă: Tipuri de Pensii
           </h2>
           
@@ -257,20 +257,20 @@ export default function TipuriPensii() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-primary to-secondary text-white">
+      <section className="py-16 bg-gradient-to-r from-green-600/90 to-green-700/90 text-white backdrop-blur-sm">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="text-2xl font-bold mb-4">Calculează-ți Pensia pentru Fiecare Tip</h3>
-          <p className="text-blue-100 mb-6">
+          <p className="text-green-100 mb-6">
             Folosește calculatorul nostru pentru a vedea care tip de pensie se potrivește cel mai bine situației tale.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/">
-              <Button className="bg-accent hover:bg-green-600 text-white">
+              <Button className="bg-white/20 hover:bg-white/30 text-white border border-white/30 hover:border-white/50 transition-all duration-300">
                 Calculează Pensia Acum
               </Button>
             </Link>
             <Link href="/legislatie-resurse">
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-green-600 transition-all duration-300">
                 Citește Legislația
               </Button>
             </Link>
