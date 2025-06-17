@@ -390,14 +390,14 @@ app.use(helmet({
 
 ```bash
 # Check application health
-curl https://your-domain.com/health
+curl https://calculatorsarcina.com/health
 
 # Monitor system resources
 htop
 df -h
 
 # Check application logs
-tail -f /var/log/pension-calculator.log
+tail -f /var/log/calculator-sarcina.log
 
 # Test database connection
 psql $DATABASE_URL -c "SELECT 1;"
@@ -409,7 +409,7 @@ psql $DATABASE_URL -c "SELECT 1;"
 
 ```bash
 # Using PM2
-pm2 stop pension-calculator
+pm2 stop calculator-sarcina
 git checkout previous-stable-tag
 npm install
 npm run build

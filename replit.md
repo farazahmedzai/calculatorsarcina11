@@ -1,13 +1,14 @@
-# Romanian Pension Calculator - Replit Configuration
+# Calculator Sarcina - Replit Configuration
 
 ## Project Overview
 
-This is a comprehensive Romanian pension calculator web application designed to help Romanian citizens calculate their pension benefits based on current Romanian pension laws and regulations. The application combines accurate pension calculations with educational content and SEO optimization for maximum accessibility.
+This is Calculator Sarcina, a comprehensive Romanian pregnancy and pension calculator web application designed to help Romanian citizens with pregnancy calculations and pension benefit calculations based on current Romanian laws and regulations. The application combines accurate calculations with educational content and SEO optimization for maximum accessibility.
 
 ### Key Features
+- Pregnancy calculators for due dates and milestones
 - Accurate pension calculations based on 2024 Romanian regulations
-- Support for multiple pension types (standard, early partial, early complete)
-- Educational content about the Romanian pension system
+- Support for multiple calculator types
+- Educational content about pregnancy and pension planning
 - SEO-optimized pages for better search visibility
 - Responsive design optimized for all devices
 - Accessibility features following WCAG guidelines

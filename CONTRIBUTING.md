@@ -13,7 +13,7 @@ We are committed to providing a welcoming and inspiring community for all. Pleas
 - Node.js 20 or higher
 - Git
 - Basic knowledge of React and TypeScript
-- Understanding of Romanian pension system (helpful but not required)
+- Understanding of Romanian pregnancy and pension systems (helpful but not required)
 
 ### Development Setup
 
@@ -152,10 +152,10 @@ Help improve documentation by:
 
 ## Specific Contribution Areas
 
-### Pension Calculation Logic
+### Calculator Logic
 
-When contributing to pension calculations:
-- Verify accuracy against official Romanian regulations
+When contributing to pregnancy or pension calculations:
+- Verify accuracy against official Romanian regulations and medical guidelines
 - Include source references for calculation methods
 - Test with various scenarios and edge cases
 - Document any assumptions or limitations
@@ -166,12 +166,12 @@ For interface contributions:
 - Maintain consistency with existing design
 - Ensure accessibility compliance
 - Test on mobile devices
-- Consider Romanian language and cultural context
+- Consider Romanian language and cultural context for pregnancy and pension topics
 
 ### Content and Education
 
 When adding educational content:
-- Ensure accuracy of pension information
+- Ensure accuracy of pregnancy and pension information
 - Use clear, accessible language
 - Include sources and references
 - Consider SEO optimization

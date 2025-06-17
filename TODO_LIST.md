@@ -1,6 +1,6 @@
-# TODO List - Romanian Pension Calculator
+# TODO List - Calculator Sarcina
 
-This document tracks pending tasks, improvements, and feature requests for the Romanian Pension Calculator application.
+This document tracks pending tasks, improvements, and feature requests for the Calculator Sarcina application.
 
 ## High Priority Tasks
 
@@ -43,9 +43,9 @@ This document tracks pending tasks, improvements, and feature requests for the R
 ### 📊 Features & Functionality
 
 - [ ] **Advanced Calculator Features**
-  - Add inflation adjustment calculations
+  - Add pregnancy milestone tracking
   - Implement pension projection charts
-  - Support for multiple contribution periods
+  - Support for multiple pregnancy calculators
   - Add comparison tool for different scenarios
 
 - [ ] **Content Management**

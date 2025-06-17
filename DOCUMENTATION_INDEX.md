@@ -1,6 +1,6 @@
-# Documentation Index - Romanian Pension Calculator
+# Documentation Index - Calculator Sarcina
 
-This document provides an overview of all available documentation for the Romanian Pension Calculator project.
+This document provides an overview of all available documentation for the Calculator Sarcina project.
 
 ## Quick Start
 
