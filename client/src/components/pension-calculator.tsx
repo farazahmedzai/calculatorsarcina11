@@ -237,14 +237,14 @@ export function PensionCalculator() {
               <div className="absolute inset-0 bg-gradient-to-br from-gold-50/50 to-forest-50/30 dark:from-gold-900/20 dark:to-forest-900/20 rounded-2xl"></div>
               <div className="relative">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 rounded-xl bg-emerald-500/10 border border-emerald-200/50">
-                    <CheckCircle className="h-6 w-6 text-emerald-600" />
+                  <div className="p-2 rounded-xl bg-forest-500/10 border border-forest-200/50">
+                    <CheckCircle className="h-6 w-6 text-forest-600" />
                   </div>
                   <h4 className="text-xl font-bold text-gradient">Rezultatul calculului</h4>
                 </div>
                 <AlertDescription>
                   <div className="space-y-4">
-                    <div className="p-4 rounded-xl bg-emerald-500/5 border border-emerald-200/30">
+                    <div className="p-4 rounded-xl bg-gold-500/5 border border-gold-200/30">
                       <p className="text-3xl font-black text-gradient-warm mb-2">
                         {result.amount.toLocaleString()} RON/lună
                       </p>
@@ -253,17 +253,17 @@ export function PensionCalculator() {
                     
                     <div className="grid gap-3">
                       {result.breakdown.penalties > 0 && (
-                        <div className="flex items-center justify-between p-3 rounded-xl bg-red-50/50 border border-red-200/30">
-                          <span className="text-sm font-semibold text-red-700">Penalizare</span>
-                          <span className="text-base font-bold text-red-600">
+                        <div className="flex items-center justify-between p-3 rounded-xl bg-crimson-50/50 border border-crimson-200/30">
+                          <span className="text-sm font-semibold text-crimson-700">Penalizare</span>
+                          <span className="text-base font-bold text-crimson-600">
                             -{result.breakdown.penalties.toLocaleString()} RON
                           </span>
                         </div>
                       )}
                       {result.breakdown.contributionBonus > 0 && (
-                        <div className="flex items-center justify-between p-3 rounded-xl bg-emerald-50/50 border border-emerald-200/30">
-                          <span className="text-sm font-semibold text-emerald-700">Bonus vechime</span>
-                          <span className="text-base font-bold text-emerald-600">
+                        <div className="flex items-center justify-between p-3 rounded-xl bg-forest-50/50 border border-forest-200/30">
+                          <span className="text-sm font-semibold text-forest-700">Bonus vechime</span>
+                          <span className="text-base font-bold text-forest-600">
                             +{result.breakdown.contributionBonus.toLocaleString()} RON
                           </span>
                         </div>
