@@ -175,7 +175,7 @@ export function PensionCalculator() {
 
             <Button 
               type="submit" 
-              className="w-full bg-primary hover:bg-secondary text-white py-4 rounded-lg font-semibold text-lg transition-colors"
+              className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white py-6 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02]"
               disabled={calculateMutation.isPending}
             >
               {calculateMutation.isPending ? (

@@ -113,26 +113,31 @@ export default function Home() {
       </section>
 
       {/* Main Content Silos */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-gradient-to-b from-white to-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-neutral-800 mb-4">
-              Planifică-ți Viitorul: Unelte și Resurse Esențiale
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium mb-6">
+              <BookOpen className="w-4 h-4 mr-2" />
+              Resurse Complete
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
+              Planifică-ți Viitorul cu
+              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"> Încredere</span>
             </h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
               Descoperă ghidurile complete și instrumentele de calcul pentru a-ți planifica pensia în mod eficient
             </p>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Silo 1: Planificarea Pensiei */}
-            <Card className="bg-neutral-50 hover:shadow-lg transition-shadow">
+            <Card className="bg-white hover:shadow-2xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-1">
               <CardContent className="p-8">
-                <div className="bg-primary/10 rounded-xl p-4 w-fit mb-6">
-                  <TrendingUp className="w-8 h-8 text-primary" />
+                <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-4 w-fit mb-6 shadow-lg">
+                  <TrendingUp className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-neutral-800 mb-4">Planificarea Pensiei</h3>
-                <p className="text-neutral-600 mb-6">
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">Planificarea Pensiei</h3>
+                <p className="text-slate-600 mb-8 leading-relaxed">
                   Ghid complet pentru planificarea pensiei în România. Strategii de investiții, 
                   diferențe între piloni și greșeli de evitat.
                 </p>
@@ -162,13 +167,13 @@ export default function Home() {
             </Card>
 
             {/* Silo 2: Tipuri de Pensii */}
-            <Card className="bg-neutral-50 hover:shadow-lg transition-shadow">
+            <Card className="bg-white hover:shadow-2xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-1">
               <CardContent className="p-8">
-                <div className="bg-accent/10 rounded-xl p-4 w-fit mb-6">
-                  <Users className="w-8 h-8 text-accent" />
+                <div className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl p-4 w-fit mb-6 shadow-lg">
+                  <Users className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-neutral-800 mb-4">Tipuri de Pensii</h3>
-                <p className="text-neutral-600 mb-6">
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">Tipuri de Pensii</h3>
+                <p className="text-slate-600 mb-8 leading-relaxed">
                   Ghid exhaustiv despre toate tipurile de pensii disponibile în sistemul public din România.
                 </p>
                 <div className="space-y-3 mb-6">
@@ -202,13 +207,13 @@ export default function Home() {
             </Card>
 
             {/* Silo 3: Legislație și Resurse */}
-            <Card className="bg-neutral-50 hover:shadow-lg transition-shadow">
+            <Card className="bg-white hover:shadow-2xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-1">
               <CardContent className="p-8">
-                <div className="bg-orange-500/10 rounded-xl p-4 w-fit mb-6">
-                  <FileText className="w-8 h-8 text-orange-500" />
+                <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl p-4 w-fit mb-6 shadow-lg">
+                  <FileText className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-neutral-800 mb-4">Legislație și Resurse</h3>
-                <p className="text-neutral-600 mb-6">
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">Legislație și Resurse</h3>
+                <p className="text-slate-600 mb-8 leading-relaxed">
                   Legea pensiilor 2024 pe înțelesul tuturor, vârsta de pensionare și procedurile oficiale.
                 </p>
                 <div className="space-y-3 mb-6">
@@ -245,29 +250,35 @@ export default function Home() {
       </section>
 
       {/* Calculator Tools */}
-      <section className="py-20 bg-neutral-50">
+      <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-neutral-800 mb-4">
-              Instrumente de Calcul Specializate
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center px-4 py-2 bg-purple-50 text-purple-700 rounded-full text-sm font-medium mb-6">
+              <Calculator className="w-4 h-4 mr-2" />
+              Instrumente Avansate
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
+              Calculatoare
+              <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"> Specializate</span>
             </h2>
-            <p className="text-xl text-neutral-600">
-              Calculatoare dedicate pentru situații specifice de pensionare
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              Instrumente dedicate pentru situații specifice de pensionare și planificare financiară
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-white shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <div className="bg-primary/10 rounded-lg p-3 w-fit mb-4">
-                  <Calculator className="w-6 h-6 text-primary" />
+            <Card className="bg-white hover:shadow-xl transition-all duration-300 border-0 shadow-md hover:-translate-y-1">
+              <CardContent className="p-8">
+                <div className="bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl p-3 w-fit mb-6 shadow-lg">
+                  <Calculator className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-neutral-800 mb-2">Calculator Sarcina Anticipată</h3>
-                <p className="text-neutral-600 mb-4">
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Calculator Sarcina Anticipată</h3>
+                <p className="text-slate-600 mb-6 leading-relaxed">
                   Calculează penalizarea și valoarea pensiei anticipate parțiale sau complete.
                 </p>
-                <Button variant="link" className="p-0 text-primary hover:text-secondary font-medium">
-                  Utilizează calculatorul →
+                <Button variant="link" className="p-0 text-blue-600 hover:text-blue-700 font-semibold group">
+                  Utilizează calculatorul 
+                  <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
                 </Button>
               </CardContent>
             </Card>
