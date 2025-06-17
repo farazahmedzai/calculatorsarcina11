@@ -17,15 +17,15 @@ export function Footer() {
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center space-x-3">
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-br from-beige-500 to-cream-500 rounded-2xl flex items-center justify-center shadow-lg">
                   <Calculator className="w-6 h-6 text-white" />
                 </div>
-                <div className="absolute -top-1 -right-1 w-5 h-5 bg-orange-400 rounded-full flex items-center justify-center">
+                <div className="absolute -top-1 -right-1 w-5 h-5 bg-cream-400 rounded-full flex items-center justify-center">
                   <Sparkles className="w-2.5 h-2.5 text-white" />
                 </div>
               </div>
               <div>
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-teal-400 to-orange-400 bg-clip-text text-transparent">
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-beige-400 to-cream-400 bg-clip-text text-transparent">
                   Calculator Sarcina
                 </h3>
                 <p className="text-slate-400 text-sm font-medium">Platformă pentru viitorul tău</p>
@@ -40,11 +40,11 @@ export function Footer() {
             {/* Trust Indicators */}
             <div className="flex flex-wrap gap-4 text-sm">
               <div className="flex items-center space-x-2 text-slate-300">
-                <Shield className="w-4 h-4 text-teal-400" />
+                <Shield className="w-4 h-4 text-beige-400" />
                 <span>Date Securizate</span>
               </div>
               <div className="flex items-center space-x-2 text-slate-300">
-                <Star className="w-4 h-4 text-orange-400" />
+                <Star className="w-4 h-4 text-cream-400" />
                 <span>125K+ Utilizatori</span>
               </div>
               <div className="flex items-center space-x-2 text-slate-300">
@@ -55,13 +55,13 @@ export function Footer() {
             
             {/* Social Links */}
             <div className="flex space-x-4">
-              <a href="#" className="group bg-slate-800/50 hover:bg-teal-600 p-3 rounded-xl transition-all duration-300 hover:scale-110 border border-slate-700/50 hover:border-teal-500">
+              <a href="#" className="group bg-slate-800/50 hover:bg-beige-600 p-3 rounded-xl transition-all duration-300 hover:scale-110 border border-slate-700/50 hover:border-beige-500">
                 <Facebook className="w-5 h-5 text-slate-400 group-hover:text-white transition-colors" />
               </a>
-              <a href="#" className="group bg-slate-800/50 hover:bg-orange-600 p-3 rounded-xl transition-all duration-300 hover:scale-110 border border-slate-700/50 hover:border-orange-500">
+              <a href="#" className="group bg-slate-800/50 hover:bg-cream-600 p-3 rounded-xl transition-all duration-300 hover:scale-110 border border-slate-700/50 hover:border-cream-500">
                 <Twitter className="w-5 h-5 text-slate-400 group-hover:text-white transition-colors" />
               </a>
-              <a href="mailto:contact@calculatorsarcina.com" className="group bg-slate-800/50 hover:bg-purple-600 p-3 rounded-xl transition-all duration-300 hover:scale-110 border border-slate-700/50 hover:border-purple-500">
+              <a href="mailto:contact@calculatorsarcina.com" className="group bg-slate-800/50 hover:bg-slate-600 p-3 rounded-xl transition-all duration-300 hover:scale-110 border border-slate-700/50 hover:border-slate-500">
                 <Mail className="w-5 h-5 text-slate-400 group-hover:text-white transition-colors" />
               </a>
             </div>

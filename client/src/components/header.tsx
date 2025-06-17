@@ -45,15 +45,15 @@ export function Header() {
               <Link href="/">
                 <div className="flex items-center space-x-3 cursor-pointer group">
                   <div className="relative">
-                    <div className="w-10 h-10 bg-gradient-to-br from-teal-500 to-orange-500 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                    <div className="w-10 h-10 bg-gradient-to-br from-beige-500 to-cream-500 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
                       <Calculator className="w-5 h-5 text-white" />
                     </div>
-                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-orange-400 rounded-full flex items-center justify-center">
+                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-cream-400 rounded-full flex items-center justify-center">
                       <Sparkles className="w-2 h-2 text-white" />
                     </div>
                   </div>
                   <div className="hidden sm:block">
-                    <h1 className="text-xl font-bold bg-gradient-to-r from-teal-700 to-orange-600 bg-clip-text text-transparent leading-tight">
+                    <h1 className="text-xl font-bold bg-gradient-to-r from-beige-700 to-cream-600 bg-clip-text text-transparent leading-tight">
                       Calculator Sarcina
                     </h1>
                     <p className="text-xs text-slate-500 dark:text-slate-400 leading-tight font-medium">
@@ -73,13 +73,13 @@ export function Header() {
                   <span
                     className={`group relative px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 cursor-pointer ${
                       item.current
-                        ? "bg-gradient-to-r from-teal-500 to-orange-500 text-white shadow-lg"
+                        ? "bg-gradient-to-r from-beige-500 to-cream-500 text-white shadow-lg"
                         : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-slate-800/50"
                     }`}
                   >
                     {item.name}
                     {item.current && (
-                      <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-orange-400 rounded-full"></div>
+                      <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-cream-400 rounded-full"></div>
                     )}
                   </span>
                 </Link>
@@ -126,15 +126,15 @@ export function Header() {
                 <div className="mt-8">
                   <div className="flex items-center space-x-3 mb-8 pb-6 border-b border-slate-200 dark:border-slate-700">
                     <div className="relative">
-                      <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-orange-500 rounded-xl flex items-center justify-center shadow-lg">
+                      <div className="w-12 h-12 bg-gradient-to-br from-beige-500 to-cream-500 rounded-xl flex items-center justify-center shadow-lg">
                         <Calculator className="w-6 h-6 text-white" />
                       </div>
-                      <div className="absolute -top-1 -right-1 w-4 h-4 bg-orange-400 rounded-full flex items-center justify-center">
+                      <div className="absolute -top-1 -right-1 w-4 h-4 bg-cream-400 rounded-full flex items-center justify-center">
                         <Sparkles className="w-2 h-2 text-white" />
                       </div>
                     </div>
                     <div>
-                      <h2 className="text-lg font-bold bg-gradient-to-r from-teal-700 to-orange-600 bg-clip-text text-transparent">Calculator Sarcina</h2>
+                      <h2 className="text-lg font-bold bg-gradient-to-r from-beige-700 to-cream-600 bg-clip-text text-transparent">Calculator Sarcina</h2>
                       <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Platformă pentru viitorul tău</p>
                     </div>
                   </div>
@@ -145,14 +145,14 @@ export function Header() {
                         <span
                           className={`group flex items-center px-4 py-3 rounded-xl text-base font-semibold transition-all duration-300 cursor-pointer ${
                             item.current
-                              ? "bg-gradient-to-r from-teal-500 to-orange-500 text-white shadow-lg"
+                              ? "bg-gradient-to-r from-beige-500 to-cream-500 text-white shadow-lg"
                               : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-slate-800/50"
                           }`}
                           onClick={() => setIsOpen(false)}
                         >
                           <span className="flex-1">{item.name}</span>
                           {item.current ? (
-                            <div className="w-2 h-2 bg-orange-200 rounded-full"></div>
+                            <div className="w-2 h-2 bg-cream-200 rounded-full"></div>
                           ) : (
                             <ArrowRight className="w-4 h-4 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
                           )}
