@@ -8,7 +8,7 @@ import { FileText, Calendar, Scale, TrendingUp, AlertCircle, ExternalLink } from
 export default function LegislatieResurse() {
   const legislativeChanges = [
     {
-      year: "2024",
+      year: "2025",
       title: "Indexarea Pensiilor",
       description: "Mecanismul de indexare a pensiilor cu inflația și creșterea salarială",
       impact: "Creștere medie de 13.8% pentru toate pensiile"
@@ -28,7 +28,7 @@ export default function LegislatieResurse() {
   ];
 
   const retirementAge = [
-    { year: "2024", men: 65, women: 63 },
+    { year: "2025", men: 65, women: 63 },
     { year: "2025", men: 65, women: 63.5 },
     { year: "2026", men: 65, women: 64 },
     { year: "2027", men: 65, women: 64.5 },
@@ -44,7 +44,7 @@ export default function LegislatieResurse() {
       <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-            Legea Pensiilor 2024 pe Înțelesul Tuturor
+            Legea Pensiilor 2025 pe Înțelesul Tuturor
           </h1>
           <p className="text-xl text-purple-100 max-w-2xl mx-auto">
             Ghid complet despre legislația pensiilor din România, modificările recente și procedurile oficiale.
@@ -56,7 +56,7 @@ export default function LegislatieResurse() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
-              Legislația Actuală în 2024
+              Legislația Actuală în 2025
             </h2>
             <p className="text-xl text-slate-600 dark:text-slate-300">
               Principalele prevederi ale Legii nr. 263/2010 privind sistemul unitar de pensii publice
@@ -97,7 +97,7 @@ export default function LegislatieResurse() {
               <CardHeader>
                 <CardTitle className="flex items-center text-[#7c3bed]">
                   <TrendingUp className="w-6 h-6 mr-2" />
-                  Parametri Cheie 2024
+                  Parametri Cheie 2025
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -328,7 +328,7 @@ export default function LegislatieResurse() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/">
-              <Button className="bg-accent hover:bg-green-600 text-white">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white">
                 Calculează Pensia Acum
               </Button>
             </Link>

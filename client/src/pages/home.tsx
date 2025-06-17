@@ -219,7 +219,7 @@ export default function Home() {
                 <Award className="w-7 h-7 text-white" />
               </div>
               <div>
-                <h4 className="font-bold text-slate-800">Legislație 2024</h4>
+                <h4 className="font-bold text-slate-800">Legislație 2025</h4>
                 <p className="text-sm text-slate-600 mt-1">Mereu actualizat</p>
               </div>
             </div>

@@ -67,7 +67,7 @@ export function calculatePension(input: PensionCalculationInput): PensionCalcula
   
   return {
     amount: Math.round(finalAmount),
-    details: `Estimare bazată pe contribuțiile actuale și legislația din 2024`,
+    details: `Estimare bazată pe contribuțiile actuale și legislația din 2025`,
     breakdown: {
       basePension: Math.round(basePension),
       contributionBonus: Math.round(contributionBonus),
