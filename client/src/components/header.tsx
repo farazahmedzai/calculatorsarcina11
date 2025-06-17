@@ -44,18 +44,16 @@ export function Header() {
               <Link href="/">
                 <div className="flex items-center space-x-3 cursor-pointer group">
                   <div className="relative">
-                    <div className="absolute inset-0 gradient-primary rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                    <div className="relative gradient-primary rounded-2xl p-3 group-hover:shadow-glow transition-all duration-300 transform group-hover:scale-105">
-                      <Calculator className="w-7 h-7 text-white" />
+                    <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform">
+                      <Calculator className="w-6 h-6 text-primary-foreground" />
                     </div>
-                    <Sparkles className="absolute -top-1 -right-1 w-4 h-4 text-yellow-400 animate-pulse-slow" />
                   </div>
                   <div className="space-y-1">
-                    <h1 className="text-2xl font-bold text-gradient leading-none">
+                    <h1 className="text-xl font-bold text-foreground leading-none">
                       Calculator Pensii
                     </h1>
                     <p className="text-xs font-medium text-muted-foreground leading-none">
-                      România • Premium
+                      România
                     </p>
                   </div>
                 </div>
