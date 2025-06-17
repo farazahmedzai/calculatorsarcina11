@@ -1,0 +1,167 @@
+Ghidul SEO Suprem: Strategie și Plan de Acțiune Complet pentru calculatorsarcina.com
+
+Obiectiv Principal: Poziționarea calculatorsarcina.com ca autoritatea numărul 1 și resursa de referință în România pentru calculul și planificarea pensiilor, obținând și menținând clasări pe prima pagină pentru " calculator sarcina" și un spectru larg de termeni asociați.
+Partea 1: Arhitectura Site-ului - Fundația Autorității (Structura Silo)
+
+Aceasta este cea mai importantă componentă strategică. O vom implementa fără compromisuri.
+1.1. Harta Vizuală a Structurii Silo
+
+    Homepage (Acasă)
+
+        Silo 1: Planificarea Pensiei
+            PAGINĂ PILON -> Ghid Complet pentru Planificarea Pensiei în România
+                Articol Cluster: Top 5 Greșeli de Evitat în Planificarea Pensiei
+                Articol Cluster: Pilonul II vs. Pilonul III: Ghid de Decizie
+                Articol Cluster: Strategii de Investiții pentru o Pensie Liniștită
+                Calculator (Tool): Calculator Contribuții Pensie Pilon III
+
+        Silo 2: Tipuri de Pensii
+            PAGINĂ PILON -> Ghid Exhaustiv: Tipuri de Pensii din România
+                Articol Cluster: Totul despre Pensia pentru Limită de Vârstă
+                Articol Cluster: Ghid Detaliat: Pensia Anticipată Parțială
+                Articol Cluster: Pensia de Urmaș: Condiții de Acordare și Calcul
+                Articol Cluster: Pensia de Invaliditate: Grade și Condiții
+                Calculator (Tool):  calculator sarcina Anticipată
+
+        Silo 3: Legislație și Resurse
+            PAGINĂ PILON -> Legea Pensiilor [Anul Curent] pe Înțelesul Tuturor
+                Articol Cluster: Vârsta Standard de Pensionare în România: Tabel Complet
+                Articol Cluster: Cum se Calculează Corect Stagiul de Cotizare?
+                Articol Cluster: Indexarea Pensiilor: Mecanism și Impact
+                Articol Cluster: Cum Cumperi Vechime în Muncă: Procedură și Costuri
+
+1.2. Regulile de Aur ale Interconectării (Internal Linking)
+
+    Link în Jos (Pilon -> Cluster): Fiecare Pagină Pilon TREBUIE să conțină link-uri contextuale către TOATE paginile (articole, calculatoare) din silo-ul său.
+    Link în Sus (Cluster -> Pilon): Fiecare pagină din cluster TREBUIE să aibă cel puțin un link contextual care trimite înapoi la Pagina Pilon principală.
+    Link Lateral (Cluster -> Cluster): Se vor adăuga link-uri între paginile din același silo, unde este relevant, pentru a ghida utilizatorul și a distribui autoritatea.
+    Disciplina de Silo: Se va evita crearea de link-uri între silo-uri diferite, cu excepția cazurilor în care relevanța este excepțională și aduce valoare directă utilizatorului.
+
+Partea 2: Blueprint-uri SEO Pagină cu Pagină
+
+Acesta este planul detaliat de optimizare pentru fiecare tip de pagină.
+Blueprint A: Homepage (Acasă)
+
+    Obiectiv: Să capteze utilizatorul, să prezinte instantaneu calculatorul principal și să direcționeze traficul către silo-urile principale.
+    Cuvânt Cheie Principal:  calculator sarcina
+    Cuvinte Cheie Secundare: calcul pensie, simulator pensie online, pensia mea, calculatorsarcina.ro
+    Meta Titlu:  calculator sarcina [Anul Curent] - Calculează Online Pensia Rapid și Corect | calculatorsarcina.ro
+    Meta Descriere: Folosește cel mai precis calculator de pensie online pentru a-ți estima venitul la bătrânețe. Planifică-ți viitorul financiar cu instrumentele și ghidurile noastre complete.
+    Structura Heading-urilor:
+        H1:  calculator sarcina Online: Află Pensia Ta în Câteva Secunde
+        H2: Planifică-ți Viitorul: Unelte și Resurse Esențiale (urmat de link-uri vizuale către calculatoare)
+        H2: Învață Totul Despre Sistemul de Pensii din România (urmat de link-uri către Paginile Pilon)
+        H2: Ultimele Articole de pe Blog (secțiune dinamică)
+    Interconectare:
+        Link-uri proeminente către: Calculatorul Principal, Calculatorul de Pensie Anticipată, și Paginile Pilon ale celor 3 silo-uri.
+    Link-uri Externe (Outbound): Niciunul. Homepage-ul trebuie să păstreze utilizatorul pe site.
+    Schema Markup: Organization, WebSite.
+
+Blueprint B: Pagina Pilon (Exemplu: "Ghid Exhaustiv: Tipuri de Pensii din România")
+
+    Obiectiv: Să fie cea mai cuprinzătoare resursă pe subiectul "tipuri de pensii", să stabilească autoritate și să servească drept hub pentru tot conținutul din silo.
+    Cuvânt Cheie Principal: tipuri de pensii România
+    Cuvinte Cheie Secundare: pensie de stat, pensie anticipată, pensie de urmaș, sistemul de pensii public
+    Meta Titlu: Ghid Complet: Toate Tipurile de Pensii din România | [Anul Curent]
+    Meta Descriere: Descoperă ghidul exhaustiv despre toate tipurile de pensii disponibile în România: pensia pentru limită de vârstă, anticipată, de urmaș, de invaliditate și altele.
+    Structura Heading-urilor:
+        H1: Ghid Exhaustiv: Tipuri de Pensii din Sistemul Public din România
+        H2: 1. Pensia pentru Limită de Vârstă: Baza Sistemului
+            (Paragraf introductiv cu link contextual) Află în detaliu despre **condițiile pensiei pentru limită de vârstă** în articolul nostru dedicat.
+        H2: 2. Pensia Anticipată și Pensia Anticipată Parțială
+            (Paragraf introductiv cu link contextual) Dacă vrei să te retragi mai devreme, consultă ghidul nostru despre **calculul și condițiile pensiei anticipate parțiale**.
+        H2: 3. Pensia de Urmaș: Protecție pentru Familie
+            (Paragraf introductiv cu link contextual) Înțelege cine beneficiază și cum se calculează citind articolul despre **pensia de urmaș**.
+        H2: 4. Pensia de Invaliditate
+            (Paragraf introductiv cu link contextual) Detalii complete despre gradele de invaliditate găsești în ghidul nostru despre **pensia de invaliditate**.
+    Interconectare:
+        Link-uri Către: Fiecare articol și calculator din silo-ul "Tipuri de Pensii".
+    Link-uri Externe (Outbound):
+        Link către site-ul oficial Casa Națională de Pensii Publice (CNPP), direct la secțiunea de legislație. Text ancoră: conform legislației oficiale publicate de CNPP.
+    Schema Markup: Article, FAQPage (adăugați o secțiune de Întrebări Frecvente la final).
+
+Blueprint C: Articol Cluster (Exemplu: "Ghid Detaliat: Pensia Anticipată Parțială")
+
+    Obiectiv: Să răspundă la toate întrebările posibile ale unui utilizator despre pensia anticipată parțială. Să se claseze pentru termeni specifici.
+    Cuvânt Cheie Principal: pensie anticipată parțială
+    Cuvinte Cheie Secundare: condiții pensionare anticipată, calcul penalizare pensie anticipată, cerere pensie anticipată
+    Meta Titlu: Pensia Anticipată Parțială [Anul Curent]: Condiții, Calcul și Penalizări
+    Meta Descriere: Ghid complet despre cum poți obține pensia anticipată parțială. Află condițiile de stagiu, cum se calculează penalizarea și ce acte îți trebuie.
+    Structura Heading-urilor:
+        H1: Ghid Detaliat: Tot ce trebuie să știi despre Pensia Anticipată Parțială
+        H2: Ce este Pensia Anticipată Parțială?
+        H2: Condiții de Acordare în [Anul Curent]
+        H2: Cum se Calculează Penalizarea? (Exemple Concrete)
+        H2: Acte Necesare pentru Dosarul de Pensionare Anticipată
+        H2: Diferența dintre Pensia Anticipată și cea pentru Limită de Vârstă
+    Interconectare:
+        Link în Sus: Pentru o viziune de ansamblu, consultă ghidul nostru despre toate **tipurile de pensii din România**. (Link către Pagina Pilon)
+        Link Lateral: Calculatorul nostru de **pensie anticipată** te poate ajuta să estimezi valoarea finală. (Link către Tool)
+    Link-uri Externe (Outbound):
+        Link către un formular PDF oficial de pe site-ul CNPP (dacă există). Text ancoră: descarcă aici modelul de cerere tip.
+    Schema Markup: Article, HowTo (pentru secțiunea de acte necesare).
+
+Partea 3: Checklist SEO Tehnic Exhaustiv
+
+    ✓ Indexare și Crawlare:
+        Creați și trimiteți sitemap.xml în Google Search Console.
+        Configurați robots.txt pentru a permite accesul la toate resursele importante (CSS, JS) și a bloca zonele de admin.
+        Asigurați-vă că toate paginile importante sunt indexabile și nu au tag-ul noindex.
+    ✓ Viteză și Performanță (Core Web Vitals):
+        Implementați caching la nivel de server (ex: Varnish) și de browser.
+        Minificați fișierele CSS și JavaScript.
+        Optimizați TOATE imaginile (compresie + format modern ca WebP).
+        Folosiți un CDN (Content Delivery Network) pentru a servi resursele rapid la nivel global.
+    ✓ Optimizare pentru Mobil:
+        Design 100% responsiv, testat pe multiple dispozitive.
+        Elementele interactive (butoane, link-uri) trebuie să fie ușor de apăsat.
+        Fonturi lizibile pe ecrane mici.
+    ✓ Securitate și URL-uri:
+        Implementați HTTPS pe tot site-ul.
+        Structură de URL-uri simple, scurte și descriptive (ex: calculatorsarcina.ro/blog/pensie-anticipata-partiala).
+        Folosiți tag-uri canonice pe toate paginile pentru a preveni conținutul duplicat.
+
+Partea 4: Strategie Off-Page - Construirea Autorității Supreme
+
+    1. Guest Posting de Înaltă Calitate:
+        Ținte: Bloguri de finanțe personale (ex: Hotnews, Ziarul Financiar - secțiuni de opinie), site-uri de știri cu secțiuni economice, bloguri de lifestyle pentru segmentul 50+.
+        Ancoră: Se va folosi un mix de ancore de brand (calculatorsarcina.ro), ancore generice (acest ghid despre planificarea pensiei) și, rar, ancore cu potrivire parțială (informații despre calculul pensiei).
+    2. Digital PR - Crearea de Conținut Remarcabil:
+        Idee: Realizați un studiu anual: "Radiografia Viitorului Pensionar din România: Așteptări vs. Realitate".
+        Metodologie: Creați un sondaj online, promovați-l pentru a strânge date.
+        Execuție: Publicați rezultatele într-un raport vizual atractiv (infografice, grafice) și un articol de presă.
+        Promovare: Trimiteți comunicatul de presă către jurnaliști economici și publicații naționale. Rezultatul va fi obținerea de backlink-uri de cea mai înaltă calitate.
+    3. Parteneriate cu Resurse Oficiale:
+        Contactați instituții non-profit sau asociații de pensionari și oferiți-le calculatoarele și ghidurile voastre ca resursă gratuită pentru membrii lor, în schimbul unui link.
+
+Partea 5: Strategia de Conținut și Calendarul de Execuție
+
+    Frecvență: 1 articol de blog (cluster) pe săptămână. 1 pagină pilon sau ghid major pe trimestru.
+    Calendar Editorial (Primul Trimestru):
+        Iulie 2025:
+            Săpt. 1: (Cluster) Vârsta Standard de Pensionare în România: Tabel Complet
+            Săpt. 2: (Cluster) Top 5 Greșeli de Evitat în Planificarea Pensiei
+            Săpt. 3: (Cluster) Pilonul II vs. Pilonul III: Ghid de Decizie
+            Săpt. 4: (Cluster) Cum se Calculează Corect Stagiul de Cotizare?
+        August 2025:
+            ... (se continuă conform planului)
+    Actualizarea Conținutului:
+        Trimestrial: Revizuiți toate paginile pilon și calculatoarele pentru a reflecta orice modificare legislativă. Adăugați un marcaj vizibil: "Actualizat la [Luna Anul]".
+        Anual: Revizuiți toate articolele pentru a verifica acuratețea datelor și a link-urilor.
+
+Partea 6: Măsurare și Raportare - Pilotarea Succesului
+
+    Unelte: Google Analytics 4, Google Search Console, Ahrefs/SEMrush (pentru monitorizare backlink-uri și competiție).
+    Configurare Inițială:
+        În GA4, setați evenimente de conversie pentru:
+            calculator_submission (când un utilizator apasă "Calculează").
+            guide_download (pentru checklist-ul PDF).
+    KPI-uri de Urmărit (Raport Lunar):
+        Trafic Organic Total: Creșterea generală.
+        Clasament Cuvinte Cheie: Poziția pentru  calculator sarcina și top 10 cuvinte cheie secundare.
+        Vizibilitate Organică: Un scor agregat (din Ahrefs/SEMrush).
+        Număr de Backlink-uri Noi și Domenii de Referință: Calitatea și cantitatea link-urilor obținute.
+        Conversii Organice: Numărul de utilizări ale calculatoarelor de către vizitatorii din organic.
+        Top Pagini Organice: Care pagini atrag cel mai mult trafic?
+
+Acest document reprezintă un plan complet și robust. Urmând fiecare pas cu disciplină și atenție la detalii, calculatorsarcina.com nu doar că va atinge prima pagină, ci se va stabili ca o resursă indispensabilă, construind o fundație solidă pentru succes pe termen lung.
