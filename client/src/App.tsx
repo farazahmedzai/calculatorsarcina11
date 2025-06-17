@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import Home from "@/pages/home";
+import CalculatorSarcina from "@/pages/calculator-sarcina";
 import PlanificareePensie from "@/pages/planificare-pensie";
 import TipuriPensii from "@/pages/tipuri-pensii";
 import LegislatieResurse from "@/pages/legislatie-resurse";
@@ -19,6 +20,7 @@ function Router() {
       <main className="flex-1">
         <Switch>
           <Route path="/" component={Home} />
+          <Route path="/calculator-sarcina" component={CalculatorSarcina} />
           <Route path="/planificare-pensie" component={PlanificareePensie} />
           <Route path="/tipuri-pensii" component={TipuriPensii} />
           <Route path="/legislatie-resurse" component={LegislatieResurse} />

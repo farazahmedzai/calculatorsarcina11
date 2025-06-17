@@ -42,9 +42,11 @@ export class MemStorage implements IStorage {
   constructor() {
     this.users = new Map();
     this.pensionCalculations = new Map();
+    this.pregnancyCalculations = new Map();
     this.blogPosts = new Map();
     this.currentUserId = 1;
     this.currentCalculationId = 1;
+    this.currentPregnancyCalculationId = 1;
     this.currentBlogPostId = 1;
     
     // Initialize with sample blog posts
@@ -119,6 +121,27 @@ export class MemStorage implements IStorage {
     return Array.from(this.pensionCalculations.values());
   }
 
+  async createPregnancyCalculation(calculation: InsertPregnancyCalculation): Promise<PregnancyCalculation> {
+    const id = this.currentPregnancyCalculationId++;
+    const pregnancyCalculation: PregnancyCalculation = { 
+      ...calculation, 
+      id,
+      lastMenstrualPeriod: calculation.lastMenstrualPeriod || null,
+      cycleLength: calculation.cycleLength || null,
+      conceptionDate: calculation.conceptionDate || null,
+      ultrasoundDate: calculation.ultrasoundDate || null,
+      ultrasoundWeeks: calculation.ultrasoundWeeks || null,
+      ultrasoundDays: calculation.ultrasoundDays || null,
+      createdAt: new Date()
+    };
+    this.pregnancyCalculations.set(id, pregnancyCalculation);
+    return pregnancyCalculation;
+  }
+
+  async getPregnancyCalculations(): Promise<PregnancyCalculation[]> {
+    return Array.from(this.pregnancyCalculations.values());
+  }
+
   async getBlogPosts(): Promise<BlogPost[]> {
     return Array.from(this.blogPosts.values())
       .filter(post => post.published)
@@ -137,6 +160,8 @@ export class MemStorage implements IStorage {
     const blogPost: BlogPost = { 
       ...insertPost, 
       id,
+      imageUrl: insertPost.imageUrl || null,
+      published: insertPost.published || false,
       createdAt: now,
       updatedAt: now
     };
