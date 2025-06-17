@@ -34,7 +34,6 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead page="home" />
-      
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-white via-slate-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
         {/* Modern Geometric Background */}
@@ -44,7 +43,7 @@ export default function Home() {
           <div className="absolute -bottom-20 left-1/3 w-72 h-72 bg-gradient-to-r from-violet-400 to-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float animation-delay-4000ms"></div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-6 py-24 lg:py-32">
+        <div className="relative max-w-7xl mx-auto px-6 py-24 lg:py-32 bg-[#f9e8f9]">
           <div className="text-center space-y-10">
             <div className="inline-flex items-center justify-center space-x-4">
               <Badge className="px-4 py-2 text-sm font-semibold bg-white/90 backdrop-blur-sm text-slate-700 border border-slate-200 rounded-full shadow-lg">
@@ -102,7 +101,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Features Grid */}
       <section className="py-20 bg-white dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-6">
@@ -226,7 +224,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 via-blue-700 to-gray-600 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent"></div>
@@ -287,7 +284,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Pension Calculator Section */}
       <section id="pension-calculator" className="py-12">
         <div className="max-w-4xl mx-auto px-6">
@@ -301,7 +297,6 @@ export default function Home() {
           <PensionCalculator />
         </div>
       </section>
-
       {/* Blog Section */}
       <section className="py-20 bg-gradient-to-br from-slate-50 via-purple-50/30 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
         <div className="max-w-7xl mx-auto px-6">
@@ -380,7 +375,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-purple-600 via-indigo-600 to-purple-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent"></div>
