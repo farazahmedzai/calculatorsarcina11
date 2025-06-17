@@ -311,7 +311,7 @@ export default function LegislatieResurse() {
                 <p className="text-neutral-600 mb-4">
                   Textul integral al legii sistemului unitar de pensii publice.
                 </p>
-                <Button variant="outline" size="sm" className="text-accent border-accent hover:bg-accent hover:text-white">
+                <Button variant="outline" size="sm" className="text-blue-600 border-blue-600 hover:bg-blue-600 hover:text-white">
                   Citește legea completă
                 </Button>
               </CardContent>
@@ -333,7 +333,7 @@ export default function LegislatieResurse() {
               </Button>
             </Link>
             <Link href="/blog">
-              <Button variant="outline" className="border-white text-[#7c3bed] hover:bg-white hover:text-primary">
+              <Button variant="outline" className="bg-[#ad87f0] border-white text-[#7c3bed] hover:bg-white hover:text-primary">
                 Citește Ghidurile Practice
               </Button>
             </Link>
