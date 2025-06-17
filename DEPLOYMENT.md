@@ -1,6 +1,6 @@
-# Deployment Guide - Romanian Pension Calculator
+# Deployment Guide - Calculator Sarcina
 
-This guide covers deployment options and configuration for the Romanian Pension Calculator application.
+This guide covers deployment options and configuration for the Calculator Sarcina application.
 
 ## Deployment Options
 
@@ -54,7 +54,7 @@ sudo apt install postgresql postgresql-contrib
 ```bash
 # Clone repository
 git clone <repository-url>
-cd romanian-pension-calculator
+cd calculator-sarcina
 
 # Install dependencies
 npm install
@@ -72,7 +72,7 @@ NODE_ENV=production npm start
 npm install -g pm2
 
 # Start application with PM2
-pm2 start dist/index.js --name pension-calculator
+pm2 start dist/index.js --name calculator-sarcina
 
 # Configure PM2 to start on boot
 pm2 startup
@@ -177,9 +177,9 @@ ANALYTICS_KEY=your-analytics-key
 
 1. **Database Creation:**
 ```sql
-CREATE DATABASE pension_calculator;
-CREATE USER pension_user WITH PASSWORD 'secure_password';
-GRANT ALL PRIVILEGES ON DATABASE pension_calculator TO pension_user;
+CREATE DATABASE calculator_sarcina;
+CREATE USER sarcina_user WITH PASSWORD 'secure_password';
+GRANT ALL PRIVILEGES ON DATABASE calculator_sarcina TO sarcina_user;
 ```
 
 2. **Run Migrations:**
@@ -215,7 +215,7 @@ pg_dump $DATABASE_URL > backup_$DATE.sql
 sudo apt install certbot python3-certbot-nginx
 
 # Obtain certificate
-sudo certbot --nginx -d your-domain.com
+sudo certbot --nginx -d calculatorsarcina.com
 
 # Auto-renewal
 sudo crontab -e
@@ -227,16 +227,16 @@ sudo crontab -e
 ```nginx
 server {
     listen 80;
-    server_name your-domain.com;
+    server_name calculatorsarcina.com;
     return 301 https://$server_name$request_uri;
 }
 
 server {
     listen 443 ssl http2;
-    server_name your-domain.com;
+    server_name calculatorsarcina.com;
 
-    ssl_certificate /etc/letsencrypt/live/your-domain.com/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/your-domain.com/privkey.pem;
+    ssl_certificate /etc/letsencrypt/live/calculatorsarcina.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/calculatorsarcina.com/privkey.pem;
 
     location / {
         proxy_pass http://localhost:5000;

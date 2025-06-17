@@ -1,6 +1,6 @@
-# Contributing to Romanian Pension Calculator
+# Contributing to Calculator Sarcina
 
-Thank you for your interest in contributing to the Romanian Pension Calculator! This document provides guidelines and information for contributors.
+Thank you for your interest in contributing to Calculator Sarcina! This document provides guidelines and information for contributors.
 
 ## Code of Conduct
 
@@ -20,8 +20,8 @@ We are committed to providing a welcoming and inspiring community for all. Pleas
 1. Fork the repository on GitHub
 2. Clone your fork locally:
 ```bash
-git clone https://github.com/your-username/romanian-pension-calculator.git
-cd romanian-pension-calculator
+git clone https://github.com/your-username/calculator-sarcina.git
+cd calculator-sarcina
 ```
 
 3. Install dependencies:

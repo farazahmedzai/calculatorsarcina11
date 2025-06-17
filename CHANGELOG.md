@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2025-06-17
 
 ### Added
-- Initial release of Romanian Pension Calculator
+- Initial release of Calculator Sarcina with pregnancy and pension calculators
 - Core pension calculation algorithm based on 2024 Romanian regulations
 - Support for three pension types: standard, early partial, and early complete
 - Responsive web interface with shadcn/ui components
