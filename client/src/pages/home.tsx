@@ -36,45 +36,45 @@ export default function Home() {
       <SEOHead page="home" />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
-        {/* Decorative Elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse-slow"></div>
-          <div className="absolute top-0 right-1/4 w-72 h-72 bg-gray-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse-slow animation-delay-2000ms"></div>
-          <div className="absolute -bottom-8 left-1/3 w-80 h-80 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse-slow animation-delay-4000ms"></div>
+      <section className="relative overflow-hidden bg-gradient-to-br from-white via-slate-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+        {/* Modern Geometric Background */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
+          <div className="absolute top-40 right-20 w-80 h-80 bg-gradient-to-r from-indigo-400 to-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float animation-delay-2000ms"></div>
+          <div className="absolute -bottom-20 left-1/3 w-72 h-72 bg-gradient-to-r from-violet-400 to-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float animation-delay-4000ms"></div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-6 py-20 lg:py-28">
-          <div className="text-center space-y-8 animate-fade-in">
-            <div className="inline-flex items-center space-x-6">
-              <Badge className="px-6 py-2 text-sm font-semibold bg-gradient-to-r from-blue-100 to-blue-50 text-blue-700 border border-blue-200 rounded-full shadow-sm">
-                <Calculator className="w-4 h-4 mr-2" />
+        <div className="relative max-w-7xl mx-auto px-6 py-24 lg:py-32">
+          <div className="text-center space-y-10">
+            <div className="inline-flex items-center justify-center space-x-4">
+              <Badge className="px-4 py-2 text-sm font-semibold bg-white/90 backdrop-blur-sm text-slate-700 border border-slate-200 rounded-full shadow-lg">
+                <Sparkles className="w-4 h-4 mr-2 text-purple-500" />
                 Calculator Profesional România
               </Badge>
-              <Badge className="px-6 py-2 text-sm font-semibold bg-gradient-to-r from-gray-100 to-gray-50 text-gray-700 border border-gray-200 rounded-full shadow-sm">
+              <Badge className="px-4 py-2 text-sm font-semibold bg-gradient-to-r from-purple-500 to-indigo-500 text-white border-0 rounded-full shadow-lg">
                 <CheckCircle2 className="w-4 h-4 mr-2" />
                 100% Gratuit
               </Badge>
             </div>
             
-            <div className="space-y-6">
-              <h1 className="hero-text text-gray-900 dark:text-white animate-slide-up">
-                Calculează-ți <span className="text-gradient animate-gradient bg-gradient-to-r from-blue-600 via-gray-600 to-blue-600">Sarcina</span> și <span className="text-gradient animate-gradient bg-gradient-to-r from-gray-600 via-blue-600 to-gray-600">Pensia</span>
+            <div className="space-y-8">
+              <h1 className="hero-text font-bold text-slate-900 dark:text-white leading-tight">
+                Calculează-ți <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Sarcina</span> și <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Pensia</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-600 dark:text-slate-300 max-w-4xl mx-auto leading-relaxed animate-slide-up animation-delay-200ms">
-                Platformă completă pentru planificarea viitorului tău financiar și familial
+              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
+                Platformá modernă și precisă pentru planificarea viitorului tău financiar și familial, conform legislației românești
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-scale-in animation-delay-400ms">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <Link href="/calculator-sarcina">
-                <Button size="lg" className="group px-8 py-4 text-lg font-semibold bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-premium hover:shadow-premium-lg transition-all duration-300 hover:scale-105">
-                  <Baby className="w-5 h-5 mr-3 group-hover:animate-bounce" />
+                <Button size="lg" className="group px-8 py-4 text-lg font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-0">
+                  <Baby className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform" />
                   Calculator Sarcină
                   <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="group px-8 py-4 text-lg font-semibold border-2 border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105" onClick={() => {
+              <Button size="lg" variant="outline" className="group px-8 py-4 text-lg font-semibold border-2 border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105" onClick={() => {
                 const calculatorSection = document.getElementById('pension-calculator');
                 calculatorSection?.scrollIntoView({ behavior: 'smooth' });
               }}>
@@ -85,18 +85,18 @@ export default function Home() {
             </div>
             
             {/* Trust Indicators */}
-            <div className="flex flex-wrap justify-center items-center gap-8 pt-8 animate-fade-in animation-delay-600ms">
-              <div className="flex items-center space-x-2 text-gray-600 dark:text-slate-400">
-                <Shield className="w-5 h-5 text-blue-600" />
-                <span className="text-sm font-medium">Date Securizate</span>
+            <div className="flex flex-wrap justify-center items-center gap-8 pt-12">
+              <div className="flex items-center space-x-3 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full border border-slate-200 shadow-sm">
+                <Shield className="w-5 h-5 text-green-500" />
+                <span className="text-sm font-medium text-slate-700">Date Securizate</span>
               </div>
-              <div className="flex items-center space-x-2 text-gray-600 dark:text-slate-400">
-                <Clock className="w-5 h-5 text-gray-600" />
-                <span className="text-sm font-medium">Rezultate Instant</span>
+              <div className="flex items-center space-x-3 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full border border-slate-200 shadow-sm">
+                <Zap className="w-5 h-5 text-yellow-500" />
+                <span className="text-sm font-medium text-slate-700">Rezultate Instant</span>
               </div>
-              <div className="flex items-center space-x-2 text-gray-600 dark:text-slate-400">
-                <Award className="w-5 h-5 text-blue-600" />
-                <span className="text-sm font-medium">Legislație 2024</span>
+              <div className="flex items-center space-x-3 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full border border-slate-200 shadow-sm">
+                <Award className="w-5 h-5 text-blue-500" />
+                <span className="text-sm font-medium text-slate-700">Legislație 2024</span>
               </div>
             </div>
           </div>
@@ -104,127 +104,124 @@ export default function Home() {
       </section>
 
       {/* Features Grid */}
-      <section className="py-16 bg-white dark:from-slate-800 dark:via-slate-900 dark:to-slate-800">
+      <section className="py-20 bg-white dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center space-y-4 mb-16 animate-fade-in">
-            <Badge className="px-4 py-2 text-xs font-semibold bg-gradient-to-r from-blue-50 to-gray-50 text-gray-700 border border-gray-200 rounded-full">
-              <Star className="w-3 h-3 mr-2" />
+          <div className="text-center space-y-6 mb-16">
+            <Badge className="px-4 py-2 text-sm font-medium bg-purple-50 text-purple-700 border border-purple-200 rounded-full">
+              <Star className="w-4 h-4 mr-2" />
               De ce să ne alegi
             </Badge>
-            <h2 className="section-title text-gray-900 dark:text-white">
-              Avantajele Platformei <span className="text-gradient">Calculator Sarcina</span>
+            <h2 className="section-title text-slate-900 dark:text-white">
+              Soluții Complete pentru <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Viitorul Tău</span>
             </h2>
-            <p className="text-lg text-gray-600 dark:text-slate-300 max-w-3xl mx-auto">
-              Tehnologie avansată pentru calculul precis al sarcinii și pensiei, cu respectarea legislației românești
+            <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+              Tehnologie avansată și calcule precise conform legislației românești actuale
             </p>
           </div>
           
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Feature 1 - Pregnancy Calculator */}
-            <Card className="group relative overflow-hidden text-center p-8 bg-gradient-to-br from-blue-50 to-blue-100/50 border-2 border-blue-100 hover:border-blue-200 hover:shadow-premium transition-all duration-500 hover:-translate-y-2 animate-slide-up">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-200/20 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
-              <CardContent className="relative space-y-4 pt-0">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+            <Card className="group relative overflow-hidden p-8 bg-gradient-to-br from-pink-50 to-purple-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 rounded-2xl">
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-pink-400 to-purple-400 rounded-full opacity-10 group-hover:opacity-20 group-hover:scale-125 transition-all duration-500"></div>
+              <CardContent className="relative space-y-6 p-0">
+                <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <Baby className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-blue-800 dark:text-blue-600">Calculator Sarcină</h3>
-                <p className="text-gray-600 dark:text-slate-300 leading-relaxed">
-                  Calculează data nașterii, săptămâna de sarcină și etapele importante ale dezvoltării bebelușului
-                </p>
-                <div className="flex items-center justify-center space-x-4 text-sm text-blue-600">
-                  <div className="flex items-center space-x-1">
-                    <CheckCircle2 className="w-4 h-4" />
-                    <span>DPM, Concepție</span>
-                  </div>
-                  <div className="flex items-center space-x-1">
-                    <CheckCircle2 className="w-4 h-4" />
-                    <span>Ecografie</span>
-                  </div>
+                <div className="space-y-3">
+                  <h3 className="text-xl font-bold text-slate-800">Calculator Sarcină</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Calculează data nașterii, săptămâna de sarcină și etapele importante ale dezvoltării bebelușului
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-2 pt-2">
+                  <Badge variant="secondary" className="text-xs bg-pink-100 text-pink-700 border-0">DPM</Badge>
+                  <Badge variant="secondary" className="text-xs bg-purple-100 text-purple-700 border-0">Concepție</Badge>
+                  <Badge variant="secondary" className="text-xs bg-indigo-100 text-indigo-700 border-0">Ecografie</Badge>
                 </div>
               </CardContent>
             </Card>
             
             {/* Feature 2 - Pension Calculator */}
-            <Card className="group relative overflow-hidden text-center p-8 bg-gradient-to-br from-gray-50 to-gray-100/50 border-2 border-gray-100 hover:border-gray-200 hover:shadow-premium transition-all duration-500 hover:-translate-y-2 animate-slide-up animation-delay-200ms">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gray-200/20 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
-              <CardContent className="relative space-y-4 pt-0">
-                <div className="w-16 h-16 bg-gradient-to-br from-gray-500 to-gray-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+            <Card className="group relative overflow-hidden p-8 bg-gradient-to-br from-blue-50 to-indigo-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 rounded-2xl">
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-blue-400 to-indigo-400 rounded-full opacity-10 group-hover:opacity-20 group-hover:scale-125 transition-all duration-500"></div>
+              <CardContent className="relative space-y-6 p-0">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <Calculator className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 dark:text-gray-600">Calculator Pensie</h3>
-                <p className="text-gray-600 dark:text-slate-300 leading-relaxed">
-                  Calculează pensia viitoare bazată pe contribuții, vârstă și tipul de pensie dorit
-                </p>
-                <div className="flex items-center justify-center space-x-4 text-sm text-gray-600">
-                  <div className="flex items-center space-x-1">
-                    <CheckCircle2 className="w-4 h-4" />
-                    <span>Toate tipurile</span>
-                  </div>
-                  <div className="flex items-center space-x-1">
-                    <CheckCircle2 className="w-4 h-4" />
-                    <span>Legislație 2024</span>
-                  </div>
+                <div className="space-y-3">
+                  <h3 className="text-xl font-bold text-slate-800">Calculator Pensie</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Calculează pensia viitoare bazată pe contribuții, vârstă și tipul de pensie dorit
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-2 pt-2">
+                  <Badge variant="secondary" className="text-xs bg-blue-100 text-blue-700 border-0">Toate tipurile</Badge>
+                  <Badge variant="secondary" className="text-xs bg-indigo-100 text-indigo-700 border-0">Legislație 2024</Badge>
                 </div>
               </CardContent>
             </Card>
             
             {/* Feature 3 - Security & Trust */}
-            <Card className="group relative overflow-hidden text-center p-8 bg-gradient-to-br from-slate-50 to-slate-100/50 border-2 border-slate-100 hover:border-slate-200 hover:shadow-premium transition-all duration-500 hover:-translate-y-2 animate-slide-up animation-delay-400ms">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-slate-200/20 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
-              <CardContent className="relative space-y-4 pt-0">
-                <div className="w-16 h-16 bg-gradient-to-br from-slate-500 to-slate-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+            <Card className="group relative overflow-hidden p-8 bg-gradient-to-br from-emerald-50 to-teal-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 rounded-2xl">
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-emerald-400 to-teal-400 rounded-full opacity-10 group-hover:opacity-20 group-hover:scale-125 transition-all duration-500"></div>
+              <CardContent className="relative space-y-6 p-0">
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-800 dark:text-slate-600">Securitate Maximă</h3>
-                <p className="text-gray-600 dark:text-slate-300 leading-relaxed">
-                  Datele personale sunt protejate și nu sunt stocate pe servere externe
-                </p>
-                <div className="flex items-center justify-center space-x-4 text-sm text-slate-600">
-                  <div className="flex items-center space-x-1">
-                    <CheckCircle2 className="w-4 h-4" />
-                    <span>GDPR</span>
-                  </div>
-                  <div className="flex items-center space-x-1">
-                    <CheckCircle2 className="w-4 h-4" />
-                    <span>SSL</span>
-                  </div>
+                <div className="space-y-3">
+                  <h3 className="text-xl font-bold text-slate-800">Securitate Maximă</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Datele personale sunt protejate și nu sunt stocate pe servere externe
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-2 pt-2">
+                  <Badge variant="secondary" className="text-xs bg-emerald-100 text-emerald-700 border-0">GDPR</Badge>
+                  <Badge variant="secondary" className="text-xs bg-teal-100 text-teal-700 border-0">SSL</Badge>
                 </div>
               </CardContent>
             </Card>
           </div>
           
           {/* Additional Benefits */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 animate-fade-in animation-delay-800ms">
-            <div className="text-center space-y-3 p-6 rounded-2xl bg-white border border-gray-200 hover:shadow-md transition-all duration-300">
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto">
-                <Zap className="w-6 h-6 text-blue-600" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+            <div className="text-center space-y-4 p-6 rounded-2xl bg-white/80 backdrop-blur-sm border border-slate-200 hover:shadow-lg hover:border-purple-300 transition-all duration-300 group">
+              <div className="w-14 h-14 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform">
+                <Zap className="w-7 h-7 text-white" />
               </div>
-              <h4 className="font-semibold text-gray-800">Rezultate Instant</h4>
-              <p className="text-sm text-gray-600">Sub 5 secunde</p>
+              <div>
+                <h4 className="font-bold text-slate-800">Rezultate Instant</h4>
+                <p className="text-sm text-slate-600 mt-1">Sub 5 secunde</p>
+              </div>
             </div>
             
-            <div className="text-center space-y-3 p-6 rounded-2xl bg-white border border-gray-200 hover:shadow-md transition-all duration-300">
-              <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mx-auto">
-                <Users className="w-6 h-6 text-gray-600" />
+            <div className="text-center space-y-4 p-6 rounded-2xl bg-white/80 backdrop-blur-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all duration-300 group">
+              <div className="w-14 h-14 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform">
+                <Users className="w-7 h-7 text-white" />
               </div>
-              <h4 className="font-semibold text-gray-800">50,000+ Utilizatori</h4>
-              <p className="text-sm text-gray-600">Încredere verificată</p>
+              <div>
+                <h4 className="font-bold text-slate-800">50,000+ Utilizatori</h4>
+                <p className="text-sm text-slate-600 mt-1">Încredere verificată</p>
+              </div>
             </div>
             
-            <div className="text-center space-y-3 p-6 rounded-2xl bg-white border border-gray-200 hover:shadow-md transition-all duration-300">
-              <div className="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center mx-auto">
-                <BookOpen className="w-6 h-6 text-slate-600" />
+            <div className="text-center space-y-4 p-6 rounded-2xl bg-white/80 backdrop-blur-sm border border-slate-200 hover:shadow-lg hover:border-emerald-300 transition-all duration-300 group">
+              <div className="w-14 h-14 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform">
+                <BookOpen className="w-7 h-7 text-white" />
               </div>
-              <h4 className="font-semibold text-gray-800">Ghiduri Complete</h4>
-              <p className="text-sm text-gray-600">Educație gratuită</p>
+              <div>
+                <h4 className="font-bold text-slate-800">Ghiduri Complete</h4>
+                <p className="text-sm text-slate-600 mt-1">Educație gratuită</p>
+              </div>
             </div>
             
-            <div className="text-center space-y-3 p-6 rounded-2xl bg-white border border-gray-200 hover:shadow-md transition-all duration-300">
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto">
-                <Award className="w-6 h-6 text-blue-600" />
+            <div className="text-center space-y-4 p-6 rounded-2xl bg-white/80 backdrop-blur-sm border border-slate-200 hover:shadow-lg hover:border-blue-300 transition-all duration-300 group">
+              <div className="w-14 h-14 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform">
+                <Award className="w-7 h-7 text-white" />
               </div>
-              <h4 className="font-semibold text-gray-800">Legislație 2024</h4>
-              <p className="text-sm text-gray-600">Mereu actualizat</p>
+              <div>
+                <h4 className="font-bold text-slate-800">Legislație 2024</h4>
+                <p className="text-sm text-slate-600 mt-1">Mereu actualizat</p>
+              </div>
             </div>
           </div>
         </div>
