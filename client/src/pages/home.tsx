@@ -33,15 +33,15 @@ export default function Home() {
       
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-gold-50/30 via-forest-50/20 to-gold-100/40 dark:from-gold-900/10 dark:via-forest-900/5 dark:to-gold-800/15"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gold-200/20 via-transparent to-transparent dark:from-gold-700/15"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-forest-200/20 via-transparent to-transparent dark:from-forest-800/15"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50/30 via-gray-50/20 to-slate-100/40 dark:from-slate-900/10 dark:via-gray-900/5 dark:to-slate-800/15"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-200/20 via-transparent to-transparent dark:from-blue-700/15"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-slate-200/20 via-transparent to-transparent dark:from-slate-800/15"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 lg:py-32">
           <div className="text-center space-y-12 animate-fade-in">
             <div className="space-y-8">
-              <Badge variant="secondary" className="px-8 py-3 text-sm font-bold bg-gradient-to-r from-gold-500/10 to-forest-500/10 text-gold-700 dark:text-gold-300 border border-gold-200/50 dark:border-gold-700/50 rounded-full shadow-premium backdrop-blur-xl">
-                <Sparkles className="w-5 h-5 mr-3 text-gold-500 animate-pulse-slow" />
+              <Badge variant="secondary" className="px-8 py-3 text-sm font-bold bg-gradient-to-r from-blue-500/10 to-slate-500/10 text-blue-700 dark:text-blue-300 border border-blue-200/50 dark:border-blue-700/50 rounded-full shadow-premium backdrop-blur-xl">
+                <Sparkles className="w-5 h-5 mr-3 text-blue-500 animate-pulse-slow" />
                 Calculator #1 pentru Pensii în România
               </Badge>
               
