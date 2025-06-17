@@ -413,7 +413,7 @@ export default function Home() {
                   <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="group px-8 py-4 text-lg font-semibold border-2 border-white/50 text-white hover:bg-white/10 hover:border-white transition-all duration-300 hover:scale-105" onClick={() => {
+              <Button size="lg" variant="outline" className="group px-8 py-4 text-lg font-semibold border-2 border-white/50 text-[#683fe7] hover:bg-white/10 hover:border-white transition-all duration-300 hover:scale-105" onClick={() => {
                 const calculatorSection = document.getElementById('pension-calculator');
                 calculatorSection?.scrollIntoView({ behavior: 'smooth' });
               }}>

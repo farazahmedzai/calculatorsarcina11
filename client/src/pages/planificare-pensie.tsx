@@ -248,7 +248,7 @@ export default function PlanificareePensie() {
                     </Button>
                   </Link>
                   <Link href="/tipuri-pensii">
-                    <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+                    <Button variant="outline" className="border-white text-[#3c445c] hover:bg-white hover:text-primary">
                       Explorează Tipurile de Pensii
                     </Button>
                   </Link>
