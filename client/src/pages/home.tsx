@@ -28,58 +28,65 @@ export default function Home() {
   const latestPosts = blogPosts?.slice(0, 3) || [];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
+    <div className="min-h-screen bg-background">
       <SEOHead page="home" />
       
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/3 via-transparent to-accent/3"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-purple-50/30 to-emerald-50/40 dark:from-blue-950/20 dark:via-purple-950/10 dark:to-emerald-950/20"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-100/20 via-transparent to-transparent dark:from-blue-900/20"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-purple-100/20 via-transparent to-transparent dark:from-purple-900/20"></div>
         
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 lg:py-24">
-          <div className="text-center space-y-8 animate-fade-in">
-            <div className="space-y-6">
-              <Badge variant="secondary" className="px-6 py-2 text-sm font-medium bg-primary/10 text-primary border-primary/20 rounded-full shadow-lg backdrop-blur-sm">
-                <Sparkles className="w-4 h-4 mr-2" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 lg:py-32">
+          <div className="text-center space-y-12 animate-fade-in">
+            <div className="space-y-8">
+              <Badge variant="secondary" className="px-8 py-3 text-sm font-bold bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-700 dark:text-blue-300 border border-blue-200/50 dark:border-blue-700/50 rounded-full shadow-premium backdrop-blur-xl">
+                <Sparkles className="w-5 h-5 mr-3 text-amber-500 animate-pulse-slow" />
                 Calculator #1 pentru Pensii în România
               </Badge>
               
-              <div className="space-y-4">
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-foreground leading-[0.9] tracking-tight">
-                  Calculează-ți
-                  <span className="block bg-gradient-to-r from-primary via-primary to-accent bg-clip-text text-transparent"> 
+              <div className="space-y-6">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.85] tracking-tight">
+                  <span className="block text-foreground font-['Poppins']">
+                    Calculează-ți
+                  </span>
+                  <span className="block text-gradient animate-gradient font-['Poppins']"> 
                     pensia viitoare
                   </span>
                 </h1>
-                <p className="text-xl md:text-2xl font-light text-muted-foreground">
-                  în doar 30 de secunde
+                <p className="text-2xl md:text-3xl font-light text-muted-foreground font-['Inter']">
+                  în doar <span className="text-gradient-warm font-bold">30 de secunde</span>
                 </p>
               </div>
               
-              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-light">
+              <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light">
                 Planifică-ți viitorul financiar cu cel mai avansat calculator de pensii din România. 
-                <span className="text-primary font-medium">Complet gratuit.</span>
+                <span className="text-gradient font-bold">Complet gratuit.</span>
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-2">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
               <Button 
                 size="lg"
-                className="h-14 px-8 text-lg font-bold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-500 bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary transform hover:scale-105 hover:-translate-y-1"
+                className="relative h-16 px-12 text-xl font-bold rounded-2xl shadow-premium-lg hover:shadow-glow transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 group overflow-hidden"
                 onClick={() => document.getElementById('calculator')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                <Calculator className="w-5 h-5 mr-2" />
-                Începe Calculul
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <div className="absolute inset-0 gradient-primary opacity-100 group-hover:opacity-90 transition-opacity"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 opacity-0 group-hover:opacity-100 transition-opacity animate-gradient"></div>
+                <div className="relative flex items-center text-white">
+                  <Calculator className="w-6 h-6 mr-3" />
+                  Începe Calculul
+                  <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" />
+                </div>
               </Button>
               
               <Link href="/planificare-pensie">
                 <Button 
                   variant="outline" 
                   size="lg"
-                  className="h-14 px-8 text-lg font-semibold rounded-full border-2 border-primary/30 hover:border-primary hover:bg-primary/5 transition-all duration-300 backdrop-blur-sm"
+                  className="h-16 px-12 text-xl font-bold rounded-2xl border-2 border-primary/20 hover:border-primary/40 hover:bg-primary/5 dark:hover:bg-primary/10 transition-all duration-300 backdrop-blur-xl glass group"
                 >
-                  <BookOpen className="w-5 h-5 mr-2" />
+                  <BookOpen className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />
                   Ghid Complet
                 </Button>
               </Link>
@@ -87,12 +94,12 @@ export default function Home() {
           </div>
           
           {/* Calculator Section */}
-          <div id="calculator" className="mt-20 animate-slide-up">
-            <div className="max-w-2xl mx-auto">
+          <div id="calculator" className="mt-24 animate-slide-up">
+            <div className="max-w-3xl mx-auto">
               <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary via-accent to-primary rounded-3xl blur-xl opacity-40 group-hover:opacity-60 transition duration-500"></div>
-                <div className="relative bg-card/95 backdrop-blur-xl rounded-3xl shadow-2xl border border-primary/10 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5"></div>
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-emerald-500/20 rounded-3xl blur-3xl opacity-60 group-hover:opacity-80 transition duration-700 animate-pulse-slow"></div>
+                <div className="relative glass rounded-3xl shadow-premium-lg border border-border/50 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-purple-50/20 to-emerald-50/30 dark:from-blue-900/20 dark:via-purple-900/10 dark:to-emerald-900/20"></div>
                   <div className="relative">
                     <PensionCalculator />
                   </div>

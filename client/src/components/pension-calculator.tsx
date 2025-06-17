@@ -61,15 +61,28 @@ export function PensionCalculator() {
   };
 
   return (
-    <Card className="w-full max-w-2xl mx-auto bg-white/90 backdrop-blur-sm shadow-2xl border-0 overflow-hidden">
-      <CardHeader className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center py-8">
-        <CardTitle className="text-2xl font-bold flex items-center justify-center gap-3">
-          <div className="bg-white/20 rounded-full p-2">
-            <Calculator className="w-6 h-6" />
+    <Card className="w-full mx-auto glass border-0 overflow-hidden">
+      <CardHeader className="gradient-primary text-white text-center py-12 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 animate-gradient"></div>
+        <div className="relative">
+          <CardTitle className="text-3xl font-black flex items-center justify-center gap-4 mb-3">
+            <div className="relative">
+              <div className="absolute inset-0 bg-white/30 rounded-2xl blur-lg"></div>
+              <div className="relative bg-white/20 rounded-2xl p-3 backdrop-blur-xl">
+                <Calculator className="w-8 h-8" />
+              </div>
+            </div>
+            Calculator Pensie Premium
+          </CardTitle>
+          <p className="text-blue-100 mt-3 text-lg font-medium">
+            Calculează pensia <span className="text-yellow-300 font-bold">rapidă și precisă</span>
+          </p>
+          <div className="flex items-center justify-center gap-2 mt-4">
+            <div className="h-1 w-8 bg-white/30 rounded-full"></div>
+            <div className="h-1 w-12 bg-yellow-400 rounded-full"></div>
+            <div className="h-1 w-8 bg-white/30 rounded-full"></div>
           </div>
-          Calculator Pensie Inteligent
-        </CardTitle>
-        <p className="text-blue-100 mt-2">Calculează pensia rapidă și precisă</p>
+        </div>
       </CardHeader>
       <CardContent className="space-y-8 p-8">
         <Form {...form}>
