@@ -26,7 +26,7 @@ export default function Home() {
   const latestPosts = blogPosts?.slice(0, 3) || [];
 
   return (
-    <div className="min-h-screen bg-neutral-50">
+    <div className="min-h-screen bg-slate-50">
       <SEOHead page="home" />
       
       {/* Hero Section */}
@@ -283,32 +283,34 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <div className="bg-accent/10 rounded-lg p-3 w-fit mb-4">
-                  <TrendingUp className="w-6 h-6 text-accent" />
+            <Card className="bg-white hover:shadow-xl transition-all duration-300 border-0 shadow-md hover:-translate-y-1">
+              <CardContent className="p-8">
+                <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl p-3 w-fit mb-6 shadow-lg">
+                  <TrendingUp className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-neutral-800 mb-2">Calculator Contribuții Pilon III</h3>
-                <p className="text-neutral-600 mb-4">
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Calculator Contribuții Pilon III</h3>
+                <p className="text-slate-600 mb-6 leading-relaxed">
                   Estimează contribuțiile optime pentru pilonul III de pensii.
                 </p>
-                <Button variant="link" className="p-0 text-primary hover:text-secondary font-medium">
-                  Calculează contribuțiile →
+                <Button variant="link" className="p-0 text-green-600 hover:text-green-700 font-semibold group">
+                  Calculează contribuțiile 
+                  <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="bg-white shadow-sm hover:shadow-md transition-shadow md:col-span-2 lg:col-span-1">
-              <CardContent className="p-6">
-                <div className="bg-orange-500/10 rounded-lg p-3 w-fit mb-4">
-                  <BarChart3 className="w-6 h-6 text-orange-500" />
+            <Card className="bg-white hover:shadow-xl transition-all duration-300 border-0 shadow-md hover:-translate-y-1 md:col-span-2 lg:col-span-1">
+              <CardContent className="p-8">
+                <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl p-3 w-fit mb-6 shadow-lg">
+                  <BarChart3 className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-neutral-800 mb-2">Calculator Stagiu Cotizare</h3>
-                <p className="text-neutral-600 mb-4">
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Calculator Stagiu Cotizare</h3>
+                <p className="text-slate-600 mb-6 leading-relaxed">
                   Verifică și calculează stagiul de cotizare necesar pentru pensionare.
                 </p>
-                <Button variant="link" className="p-0 text-primary hover:text-secondary font-medium">
-                  Verifică stagiul →
+                <Button variant="link" className="p-0 text-purple-600 hover:text-purple-700 font-semibold group">
+                  Verifică stagiul 
+                  <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
                 </Button>
               </CardContent>
             </Card>
