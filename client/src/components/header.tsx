@@ -67,19 +67,13 @@ export function Header() {
               {navigation.map((item) => (
                 <Link key={item.name} href={item.href}>
                   <span
-                    className={`relative px-4 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 cursor-pointer group ${
+                    className={`relative px-4 py-2.5 rounded-lg font-medium text-sm transition-all duration-200 cursor-pointer ${
                       item.current
-                        ? "bg-primary/10 text-primary shadow-glow"
-                        : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                        ? "bg-primary text-primary-foreground"
+                        : "text-muted-foreground hover:text-foreground hover:bg-muted"
                     }`}
                   >
-                    {item.current && (
-                      <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-purple-500/20 rounded-xl blur-lg"></div>
-                    )}
-                    <span className="relative">{item.name}</span>
-                    {item.current && (
-                      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 h-0.5 bg-gradient-to-r from-primary to-purple-500 rounded-full"></div>
-                    )}
+                    {item.name}
                   </span>
                 </Link>
               ))}
@@ -123,13 +117,13 @@ export function Header() {
               </SheetTrigger>
               <SheetContent side="right" className="w-[280px] glass border-l border-border/50">
                 <div className="mt-8">
-                  <div className="flex items-center space-x-3 mb-8 pb-6 border-b border-border/50">
-                    <div className="gradient-primary rounded-xl p-2">
-                      <Calculator className="w-5 h-5 text-white" />
+                  <div className="flex items-center space-x-3 mb-8 pb-6 border-b border-border">
+                    <div className="bg-primary rounded-xl p-2">
+                      <Calculator className="w-5 h-5 text-primary-foreground" />
                     </div>
                     <div>
-                      <h2 className="font-bold text-lg text-gradient">Calculator Pensii</h2>
-                      <p className="text-xs text-muted-foreground">România • Premium</p>
+                      <h2 className="font-bold text-lg text-foreground">Calculator Pensii</h2>
+                      <p className="text-xs text-muted-foreground">România</p>
                     </div>
                   </div>
                   
@@ -137,15 +131,15 @@ export function Header() {
                     {navigation.map((item) => (
                       <Link key={item.name} href={item.href}>
                         <span
-                          className={`relative flex items-center px-4 py-3 rounded-xl font-semibold transition-all duration-300 cursor-pointer group ${
+                          className={`relative flex items-center px-4 py-3 rounded-lg font-medium transition-all duration-200 cursor-pointer ${
                             item.current
                               ? "bg-primary/10 text-primary"
-                              : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                              : "text-muted-foreground hover:text-foreground hover:bg-muted"
                           }`}
                           onClick={() => setIsOpen(false)}
                         >
                           {item.current && (
-                            <div className="absolute left-0 w-1 h-6 bg-gradient-to-b from-primary to-purple-500 rounded-r-full"></div>
+                            <div className="absolute left-0 w-1 h-6 bg-primary rounded-r-full"></div>
                           )}
                           <span className="relative ml-2">{item.name}</span>
                         </span>

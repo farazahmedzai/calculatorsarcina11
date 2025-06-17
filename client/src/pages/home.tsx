@@ -175,7 +175,7 @@ export default function Home() {
                     <p className="text-muted-foreground text-sm line-clamp-3">{post.excerpt}</p>
                     <div className="flex items-center justify-between">
                       <span className="text-xs text-muted-foreground">
-                        {new Date(post.publishedAt).toLocaleDateString('ro-RO')}
+                        {new Date(post.createdAt).toLocaleDateString('ro-RO')}
                       </span>
                       <Button variant="ghost" size="sm">
                         Citește
