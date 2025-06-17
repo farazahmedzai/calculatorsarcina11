@@ -12,6 +12,7 @@ export function Header() {
 
   const navigation = [
     { name: "Acasă", href: "/", current: location === "/" },
+    { name: "Calculator Sarcină", href: "/calculator-sarcina", current: location === "/calculator-sarcina" },
     { name: "Planificare Pensie", href: "/planificare-pensie", current: location === "/planificare-pensie" },
     { name: "Tipuri de Pensii", href: "/tipuri-pensii", current: location === "/tipuri-pensii" },
     { name: "Legislație", href: "/legislatie-resurse", current: location === "/legislatie-resurse" },

@@ -18,7 +18,8 @@ import {
   CheckCircle2,
   Zap,
   Clock,
-  Award
+  Award,
+  Baby
 } from "lucide-react";
 import type { BlogPost } from "@shared/schema";
 
@@ -47,21 +48,26 @@ export default function Home() {
               
               <div className="space-y-6">
                 <h1 className="hero-text text-gradient">
-                  Calculează-ți Pensia Viitoare
+                  Calculează-ți Sarcina și Pensia
                 </h1>
                 <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-                  Planifică-ți viitorul financiar cu cel mai avansat calculator de pensii din România
+                  Planifică-ți viitorul cu calculatoarele noastre avansate pentru sarcină și pensie
                 </p>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button size="lg" className="px-8 py-4 text-lg font-semibold">
+                <Link href="/calculator-sarcina">
+                  <Button size="lg" className="px-8 py-4 text-lg font-semibold bg-pink-600 hover:bg-pink-700">
+                    <Baby className="w-5 h-5 mr-2" />
+                    Calculator Sarcină
+                  </Button>
+                </Link>
+                <Button size="lg" className="px-8 py-4 text-lg font-semibold" onClick={() => {
+                  const calculatorSection = document.getElementById('pension-calculator');
+                  calculatorSection?.scrollIntoView({ behavior: 'smooth' });
+                }}>
                   <Calculator className="w-5 h-5 mr-2" />
-                  Începe Calculul
-                </Button>
-                <Button variant="outline" size="lg" className="px-8 py-4 text-lg">
-                  <BookOpen className="w-5 h-5 mr-2" />
-                  Află Mai Multe
+                  Calculator Pensie
                 </Button>
               </div>
             </div>
@@ -143,6 +149,20 @@ export default function Home() {
               <div className="text-primary-foreground/80">Rating Utilizatori</div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Pension Calculator Section */}
+      <section id="pension-calculator" className="py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center space-y-6 mb-16">
+            <h2 className="section-title">Calculator de Pensii</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Calculează-ți pensia viitoare pe baza contribuțiilor actuale
+            </p>
+          </div>
+          
+          <PensionCalculator />
         </div>
       </section>
 

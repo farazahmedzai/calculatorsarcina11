@@ -9,16 +9,21 @@ export interface SEOData {
 }
 
 export const defaultSEO: SEOData = {
-  title: "Calculator Sarcina 2024 - Calculează Online Pensia Rapid și Corect | calculatorsarcina.com",
-  description: "Folosește cel mai precis calculator de pensie online pentru a-ți estima venitul la bătrânețe. Planifică-ți viitorul financiar cu instrumentele și ghidurile noastre complete.",
-  keywords: "calculator pensie, calcul pensie, simulator pensie online, pensia mea, calculatorsarcina.com",
+  title: "Calculator Sarcina 2024 - Calculează Online Sarcina și Pensia | calculatorsarcina.com",
+  description: "Folosește calculatorul de sarcină și pensie online pentru a-ți estima data nașterii și venitul la bătrânețe. Planifică-ți viitorul cu instrumentele noastre complete.",
+  keywords: "calculator sarcina, calculator pensie, data nasterii, sarcina romania, pensie romania, calculatorsarcina.com",
 };
 
 export const pageSEO: Record<string, SEOData> = {
   home: {
-    title: "Calculator Sarcina Online: Află Pensia Ta în Câteva Secunde | calculatorsarcina.com",
-    description: "Folosește cel mai precis calculator de pensie online pentru a-ți estima venitul la bătrânețe. Planifică-ți viitorul financiar cu instrumentele și ghidurile noastre complete.",
-    keywords: "calculator pensie, calcul pensie, simulator pensie online, pensia mea",
+    title: "Calculator Sarcina și Pensie Online | calculatorsarcina.com",
+    description: "Calculatoare online pentru sarcină și pensie. Află data nașterii și estimează pensia viitoare cu instrumentele noastre complete.",
+    keywords: "calculator sarcina, calculator pensie, data nasterii, sarcina romania, pensie romania",
+  },
+  "calculator-sarcina": {
+    title: "Calculator Sarcină Online - Calculează Data Nașterii și Săptămânile de Sarcină",
+    description: "Calculator sarcină precis pentru calcularea datei nașterii, săptămânilor de sarcină și jaloanelor importante. Introdu data ultimei menstruații sau a concepției pentru rezultate exacte.",
+    keywords: "calculator sarcina, data nasterii, saptamani sarcina, calculul sarcinii, trimestre sarcina, dezvoltare bebelus",
   },
   planificare: {
     title: "Ghid Complet pentru Planificarea Pensiei în România | calculatorsarcina.com",
