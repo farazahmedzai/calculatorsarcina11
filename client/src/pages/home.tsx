@@ -6,15 +6,17 @@ import { Badge } from "@/components/ui/badge";
 import { SEOHead } from "@/components/seo-head";
 import { PensionCalculator } from "@/components/pension-calculator";
 import { 
-  CheckCircle, 
+  ArrowRight, 
   Shield, 
   BarChart3, 
-  Award, 
+  Star, 
   TrendingUp, 
   FileText, 
   Calculator,
   Users,
-  BookOpen
+  BookOpen,
+  CheckCircle2,
+  Sparkles
 } from "lucide-react";
 import type { BlogPost } from "@shared/schema";
 
@@ -26,346 +28,232 @@ export default function Home() {
   const latestPosts = blogPosts?.slice(0, 3) || [];
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-neutral-100">
       <SEOHead page="home" />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 text-slate-900 overflow-hidden">
-        <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                  <CheckCircle className="w-4 h-4 mr-2" />
-                  Calculatorul #1 din România
-                </div>
-                <h1 className="text-5xl lg:text-6xl font-bold text-slate-900 leading-tight tracking-tight">
-                  Calculează-ți
-                  <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"> pensia </span>
-                  în secunde
-                </h1>
-                <p className="text-xl text-slate-600 leading-relaxed max-w-lg">
-                  Planifică-ți viitorul financiar cu precizie. Estimează pensia pe baza contribuțiilor și proiectează veniturile la bătrânețe.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
-                  onClick={() => document.getElementById('calculator')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  <Calculator className="w-5 h-5 mr-2" />
-                  Calculează Acum
-                </Button>
-                <Link href="/planificare-pensie">
-                  <Button variant="outline" className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 px-8 py-4 rounded-xl font-semibold transition-all">
-                    <BookOpen className="w-5 h-5 mr-2" />
-                    Ghid Complet
-                  </Button>
-                </Link>
-              </div>
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
+        <div className="relative max-w-6xl mx-auto px-6 py-20 lg:py-32">
+          <div className="text-center space-y-8">
+            <div className="space-y-6">
+              <Badge variant="secondary" className="px-6 py-2 text-sm font-medium bg-primary/10 text-primary border-primary/20">
+                <Sparkles className="w-4 h-4 mr-2" />
+                Calculator Oficial de Pensii România
+              </Badge>
+              
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
+                Calculează-ți
+                <span className="block text-primary"> pensia viitoare</span>
+                <span className="text-3xl md:text-5xl lg:text-6xl text-muted-foreground">în 30 de secunde</span>
+              </h1>
+              
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                Instrument gratuit pentru planificarea pensiei tale. Estimează valoarea pensiei pe baza contribuțiilor actuale.
+              </p>
             </div>
             
-            <div id="calculator" className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl blur opacity-20"></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button 
+                size="lg"
+                className="h-14 px-8 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 bg-primary hover:bg-primary/90"
+                onClick={() => document.getElementById('calculator')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                <Calculator className="w-5 h-5 mr-2" />
+                Începe Calculul
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+              
+              <Link href="/planificare-pensie">
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="h-14 px-8 text-lg font-semibold rounded-full border-2 hover:bg-primary/5 transition-all duration-300"
+                >
+                  <BookOpen className="w-5 h-5 mr-2" />
+                  Ghid Complet
+                </Button>
+              </Link>
+            </div>
+          </div>
+          
+          {/* Calculator Section */}
+          <div id="calculator" className="mt-20">
+            <div className="max-w-2xl mx-auto">
               <div className="relative">
-                <PensionCalculator />
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Trust indicators */}
-        <div className="border-t border-slate-200/60 bg-white/50 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="flex flex-col items-center text-center">
-                <div className="bg-green-100 rounded-full p-3 mb-3">
-                  <CheckCircle className="w-6 h-6 text-green-600" />
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-3xl blur opacity-30"></div>
+                <div className="relative bg-card rounded-3xl shadow-2xl overflow-hidden">
+                  <PensionCalculator />
                 </div>
-                <span className="text-sm font-semibold text-slate-900">100% Gratuit</span>
-                <span className="text-xs text-slate-500">Fără costuri ascunse</span>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <div className="bg-blue-100 rounded-full p-3 mb-3">
-                  <Shield className="w-6 h-6 text-blue-600" />
-                </div>
-                <span className="text-sm font-semibold text-slate-900">Date Securizate</span>
-                <span className="text-xs text-slate-500">Protejate SSL</span>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <div className="bg-purple-100 rounded-full p-3 mb-3">
-                  <BarChart3 className="w-6 h-6 text-purple-600" />
-                </div>
-                <span className="text-sm font-semibold text-slate-900">Calcule Precise</span>
-                <span className="text-xs text-slate-500">Algoritm verificat</span>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <div className="bg-orange-100 rounded-full p-3 mb-3">
-                  <Award className="w-6 h-6 text-orange-600" />
-                </div>
-                <span className="text-sm font-semibold text-slate-900">Legislație 2024</span>
-                <span className="text-xs text-slate-500">Actualizat recent</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Main Content Silos */}
-      <section className="py-24 bg-gradient-to-b from-white to-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium mb-6">
-              <BookOpen className="w-4 h-4 mr-2" />
-              Resurse Complete
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
-              Planifică-ți Viitorul cu
-              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"> Încredere</span>
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Descoperă ghidurile complete și instrumentele de calcul pentru a-ți planifica pensia în mod eficient
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* Silo 1: Planificarea Pensiei */}
-            <Card className="bg-white hover:shadow-2xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-1">
-              <CardContent className="p-8">
-                <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-4 w-fit mb-6 shadow-lg">
-                  <TrendingUp className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">Planificarea Pensiei</h3>
-                <p className="text-slate-600 mb-8 leading-relaxed">
-                  Ghid complet pentru planificarea pensiei în România. Strategii de investiții, 
-                  diferențe între piloni și greșeli de evitat.
-                </p>
-                <div className="space-y-3 mb-6">
-                  <Link href="/blog">
-                    <span className="block text-primary hover:text-secondary transition-colors font-medium cursor-pointer">
-                      • Top 5 Greșeli de Evitat în Planificarea Pensiei
-                    </span>
-                  </Link>
-                  <Link href="/blog">
-                    <span className="block text-primary hover:text-secondary transition-colors font-medium cursor-pointer">
-                      • Pilonul II vs. Pilonul III: Ghid de Decizie
-                    </span>
-                  </Link>
-                  <Link href="/blog">
-                    <span className="block text-primary hover:text-secondary transition-colors font-medium cursor-pointer">
-                      • Strategii de Investiții pentru o Pensie Liniștită
-                    </span>
-                  </Link>
-                </div>
-                <Link href="/planificare-pensie">
-                  <Button variant="link" className="p-0 text-primary hover:text-secondary font-semibold">
-                    Vezi ghidul complet →
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-
-            {/* Silo 2: Tipuri de Pensii */}
-            <Card className="bg-white hover:shadow-2xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-1">
-              <CardContent className="p-8">
-                <div className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl p-4 w-fit mb-6 shadow-lg">
-                  <Users className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">Tipuri de Pensii</h3>
-                <p className="text-slate-600 mb-8 leading-relaxed">
-                  Ghid exhaustiv despre toate tipurile de pensii disponibile în sistemul public din România.
-                </p>
-                <div className="space-y-3 mb-6">
-                  <Link href="/blog">
-                    <span className="block text-primary hover:text-secondary transition-colors font-medium cursor-pointer">
-                      • Totul despre Pensia pentru Limită de Vârstă
-                    </span>
-                  </Link>
-                  <Link href="/blog">
-                    <span className="block text-primary hover:text-secondary transition-colors font-medium cursor-pointer">
-                      • Ghid Detaliat: Pensia Anticipată Parțială
-                    </span>
-                  </Link>
-                  <Link href="/blog">
-                    <span className="block text-primary hover:text-secondary transition-colors font-medium cursor-pointer">
-                      • Pensia de Urmaș: Condiții de Acordare și Calcul
-                    </span>
-                  </Link>
-                  <Link href="/blog">
-                    <span className="block text-primary hover:text-secondary transition-colors font-medium cursor-pointer">
-                      • Pensia de Invaliditate: Grade și Condiții
-                    </span>
-                  </Link>
-                </div>
-                <Link href="/tipuri-pensii">
-                  <Button variant="link" className="p-0 text-primary hover:text-secondary font-semibold">
-                    Explorează tipurile de pensii →
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-
-            {/* Silo 3: Legislație și Resurse */}
-            <Card className="bg-white hover:shadow-2xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-1">
-              <CardContent className="p-8">
-                <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl p-4 w-fit mb-6 shadow-lg">
-                  <FileText className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">Legislație și Resurse</h3>
-                <p className="text-slate-600 mb-8 leading-relaxed">
-                  Legea pensiilor 2024 pe înțelesul tuturor, vârsta de pensionare și procedurile oficiale.
-                </p>
-                <div className="space-y-3 mb-6">
-                  <Link href="/blog">
-                    <span className="block text-primary hover:text-secondary transition-colors font-medium cursor-pointer">
-                      • Vârsta Standard de Pensionare: Tabel Complet
-                    </span>
-                  </Link>
-                  <Link href="/blog">
-                    <span className="block text-primary hover:text-secondary transition-colors font-medium cursor-pointer">
-                      • Cum se Calculează Corect Stagiul de Cotizare?
-                    </span>
-                  </Link>
-                  <Link href="/blog">
-                    <span className="block text-primary hover:text-secondary transition-colors font-medium cursor-pointer">
-                      • Indexarea Pensiilor: Mecanism și Impact
-                    </span>
-                  </Link>
-                  <Link href="/blog">
-                    <span className="block text-primary hover:text-secondary transition-colors font-medium cursor-pointer">
-                      • Cum Cumperi Vechime în Muncă: Procedură
-                    </span>
-                  </Link>
-                </div>
-                <Link href="/legislatie-resurse">
-                  <Button variant="link" className="p-0 text-primary hover:text-secondary font-semibold">
-                    Citește ghidul legislativ →
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Calculator Tools */}
-      <section className="py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center px-4 py-2 bg-purple-50 text-purple-700 rounded-full text-sm font-medium mb-6">
-              <Calculator className="w-4 h-4 mr-2" />
-              Instrumente Avansate
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
-              Calculatoare
-              <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"> Specializate</span>
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Instrumente dedicate pentru situații specifice de pensionare și planificare financiară
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-white hover:shadow-xl transition-all duration-300 border-0 shadow-md hover:-translate-y-1">
-              <CardContent className="p-8">
-                <div className="bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl p-3 w-fit mb-6 shadow-lg">
-                  <Calculator className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Calculator Sarcina Anticipată</h3>
-                <p className="text-slate-600 mb-6 leading-relaxed">
-                  Calculează penalizarea și valoarea pensiei anticipate parțiale sau complete.
-                </p>
-                <Button variant="link" className="p-0 text-blue-600 hover:text-blue-700 font-semibold group">
-                  Utilizează calculatorul 
-                  <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white hover:shadow-xl transition-all duration-300 border-0 shadow-md hover:-translate-y-1">
-              <CardContent className="p-8">
-                <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl p-3 w-fit mb-6 shadow-lg">
-                  <TrendingUp className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Calculator Contribuții Pilon III</h3>
-                <p className="text-slate-600 mb-6 leading-relaxed">
-                  Estimează contribuțiile optime pentru pilonul III de pensii.
-                </p>
-                <Button variant="link" className="p-0 text-green-600 hover:text-green-700 font-semibold group">
-                  Calculează contribuțiile 
-                  <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white hover:shadow-xl transition-all duration-300 border-0 shadow-md hover:-translate-y-1 md:col-span-2 lg:col-span-1">
-              <CardContent className="p-8">
-                <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl p-3 w-fit mb-6 shadow-lg">
-                  <BarChart3 className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Calculator Stagiu Cotizare</h3>
-                <p className="text-slate-600 mb-6 leading-relaxed">
-                  Verifică și calculează stagiul de cotizare necesar pentru pensionare.
-                </p>
-                <Button variant="link" className="p-0 text-purple-600 hover:text-purple-700 font-semibold group">
-                  Verifică stagiul 
-                  <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Blog Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Features Section */}
+      <section className="py-24 bg-muted/30">
+        <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-neutral-800 mb-4">
-              Învață Totul Despre Sistemul de Pensii din România
+            <Badge variant="secondary" className="px-4 py-2 text-sm font-medium bg-accent/10 text-accent border-accent/20 mb-6">
+              <BarChart3 className="w-4 h-4 mr-2" />
+              Resurse Complete
+            </Badge>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
+              Tot ce ai nevoie pentru
+              <span className="block text-primary"> planificarea pensiei</span>
             </h2>
-            <p className="text-xl text-neutral-600">
-              Articole actualizate cu cele mai recente modificări legislative și sfaturi practice
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Ghiduri complete, calculatoare avansate și legislație actualizată pentru deciții informate
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Feature 1 */}
+            <Card className="bg-card border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <CardContent className="p-8">
+                <div className="bg-primary/10 rounded-2xl p-4 w-fit mb-6">
+                  <TrendingUp className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-4">Planificare Strategică</h3>
+                <p className="text-muted-foreground mb-6">
+                  Strategii complete pentru maximizarea pensiei tale viitoare și optimizarea contribuțiilor.
+                </p>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground">Strategii de investiții</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground">Optimizarea contribuțiilor</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground">Greșeli de evitat</span>
+                  </li>
+                </ul>
+                <Link href="/planificare-pensie">
+                  <Button variant="link" className="p-0 text-primary hover:text-primary/80 font-semibold group">
+                    Explorează ghidul
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Feature 2 */}
+            <Card className="bg-card border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <CardContent className="p-8">
+                <div className="bg-accent/10 rounded-2xl p-4 w-fit mb-6">
+                  <Users className="w-8 h-8 text-accent" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-4">Tipuri de Pensii</h3>
+                <p className="text-muted-foreground mb-6">
+                  Ghid complet despre toate tipurile de pensii disponibile în sistemul românesc.
+                </p>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground">Pensia pentru limită de vârstă</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground">Pensia anticipată</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground">Pensia de invaliditate</span>
+                  </li>
+                </ul>
+                <Link href="/tipuri-pensii">
+                  <Button variant="link" className="p-0 text-primary hover:text-primary/80 font-semibold group">
+                    Vezi toate tipurile
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Feature 3 */}
+            <Card className="bg-card border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <CardContent className="p-8">
+                <div className="bg-primary/10 rounded-2xl p-4 w-fit mb-6">
+                  <FileText className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-4">Legislație Actualizată</h3>
+                <p className="text-muted-foreground mb-6">
+                  Legea pensiilor 2024 explicată simplu, vârsta de pensionare și proceduri.
+                </p>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground">Vârsta de pensionare</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground">Stagiul de cotizare</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground">Proceduri oficiale</span>
+                  </li>
+                </ul>
+                <Link href="/legislatie-resurse">
+                  <Button variant="link" className="p-0 text-primary hover:text-primary/80 font-semibold group">
+                    Citește legislația
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Simple Blog Preview */}
+      <section className="py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Ultimele Articole
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Informații actualizate despre sistemul de pensii din România
             </p>
           </div>
 
           {isLoading ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-8">
               {[1, 2, 3].map((i) => (
-                <Card key={i} className="bg-neutral-50 animate-pulse">
-                  <div className="h-48 bg-neutral-200 rounded-t-xl"></div>
+                <Card key={i} className="bg-card animate-pulse">
+                  <div className="h-32 bg-muted rounded-t-xl"></div>
                   <CardContent className="p-6">
-                    <div className="h-4 bg-neutral-200 rounded mb-2"></div>
-                    <div className="h-6 bg-neutral-200 rounded mb-3"></div>
-                    <div className="h-4 bg-neutral-200 rounded mb-4"></div>
-                    <div className="h-4 bg-neutral-200 rounded w-1/2"></div>
+                    <div className="h-4 bg-muted rounded mb-2"></div>
+                    <div className="h-6 bg-muted rounded mb-3"></div>
+                    <div className="h-4 bg-muted rounded"></div>
                   </CardContent>
                 </Card>
               ))}
             </div>
           ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-8">
               {latestPosts.map((post) => (
-                <Card key={post.id} className="bg-neutral-50 hover:shadow-lg transition-shadow">
-                  <img 
-                    src={post.imageUrl || "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"} 
-                    alt={post.title}
-                    className="w-full h-48 object-cover rounded-t-xl"
-                  />
+                <Card key={post.id} className="bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                   <CardContent className="p-6">
-                    <Badge variant="secondary" className="mb-2">
+                    <Badge variant="secondary" className="mb-3 bg-primary/10 text-primary">
                       {post.category}
                     </Badge>
-                    <h3 className="text-lg font-semibold text-neutral-800 mb-3">
+                    <h3 className="text-lg font-bold text-foreground mb-3 line-clamp-2">
                       {post.title}
                     </h3>
-                    <p className="text-neutral-600 mb-4">
+                    <p className="text-muted-foreground mb-4 text-sm line-clamp-3">
                       {post.excerpt}
                     </p>
                     <Link href={`/blog/${post.slug}`}>
-                      <Button variant="link" className="p-0 text-primary hover:text-secondary font-medium">
-                        Citește articolul →
+                      <Button variant="link" className="p-0 text-primary hover:text-primary/80 font-semibold group">
+                        Citește mai mult
+                        <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                       </Button>
                     </Link>
                   </CardContent>
@@ -376,9 +264,13 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <Link href="/blog">
-              <Button className="bg-primary hover:bg-secondary text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="h-12 px-8 font-semibold rounded-full border-2 hover:bg-primary/5"
+              >
+                <BookOpen className="w-5 h-5 mr-2" />
                 Vezi toate articolele
-                <BookOpen className="w-5 h-5 ml-2" />
               </Button>
             </Link>
           </div>
@@ -386,26 +278,23 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-            Începe să-ți Planifici Pensia Astăzi
+      <section className="py-20 bg-primary text-primary-foreground">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Calculează-ți pensia în 30 de secunde
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Nu lăsa viitorul financiar la întâmplare. Folosește instrumentele noastre gratuite 
-            și ghidurile complete pentru a-ți asigura o pensie decentă.
+          <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
+            Instrument gratuit pentru planificarea viitorului tău financiar. Fără înregistrare, fără costuri.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              className="bg-accent hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105"
-              onClick={() => document.getElementById('calculator')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Calculează Pensia Acum
-            </Button>
-            <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-lg font-semibold transition-all">
-              Descarcă Ghidul PDF
-            </Button>
-          </div>
+          <Button 
+            size="lg"
+            variant="secondary"
+            className="h-14 px-8 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
+            onClick={() => document.getElementById('calculator')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            <Calculator className="w-5 h-5 mr-2" />
+            Începe Calculul Acum
+          </Button>
         </div>
       </section>
     </div>
