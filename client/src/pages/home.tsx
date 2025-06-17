@@ -382,11 +382,11 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-beige-600 via-beige-700 to-cream-600 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-purple-600 via-indigo-600 to-purple-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent"></div>
         <div className="absolute top-0 left-0 w-full h-full">
           <div className="absolute top-8 left-8 w-32 h-32 bg-white/5 rounded-full animate-float"></div>
-          <div className="absolute bottom-8 right-8 w-24 h-24 bg-cream-300/20 rounded-full animate-float animation-delay-2000ms"></div>
+          <div className="absolute bottom-8 right-8 w-24 h-24 bg-pink-300/20 rounded-full animate-float animation-delay-2000ms"></div>
           <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white/10 rounded-full animate-pulse-slow"></div>
         </div>
         
@@ -397,8 +397,8 @@ export default function Home() {
                 <Sparkles className="w-4 h-4 mr-2" />
                 Începe acum calcularea
               </Badge>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                Planifică-ți <span className="text-cream-200">Viitorul</span> cu Încredere
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white">
+                Planifică-ți <span className="text-pink-200">Viitorul</span> cu Încredere
               </h2>
               <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
                 Fie că aștepți un copil sau plănuiești pensia, te ajutăm să iei deciziile corecte pentru familia ta
@@ -407,7 +407,7 @@ export default function Home() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/calculator-sarcina">
-                <Button size="lg" className="group px-8 py-4 text-lg font-semibold bg-white text-beige-700 hover:bg-cream-50 hover:text-cream-700 shadow-premium hover:shadow-premium-lg transition-all duration-300 hover:scale-105">
+                <Button size="lg" className="group px-8 py-4 text-lg font-semibold bg-white text-purple-700 hover:bg-purple-50 hover:text-purple-800 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
                   <Baby className="w-5 h-5 mr-3 group-hover:animate-bounce" />
                   Calculator Sarcină
                   <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
@@ -423,18 +423,18 @@ export default function Home() {
               </Button>
             </div>
             
-            <div className="flex flex-wrap justify-center items-center gap-8 pt-8 text-white/80">
+            <div className="flex flex-wrap justify-center items-center gap-8 pt-8 text-white/90">
               <div className="flex items-center space-x-2">
-                <CheckCircle2 className="w-5 h-5 text-cream-300" />
-                <span className="text-sm font-medium">100% Gratuit</span>
+                <CheckCircle2 className="w-5 h-5 text-pink-300" />
+                <span className="text-sm font-medium text-white">100% Gratuit</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle2 className="w-5 h-5 text-cream-300" />
-                <span className="text-sm font-medium">Rezultate Instant</span>
+                <CheckCircle2 className="w-5 h-5 text-pink-300" />
+                <span className="text-sm font-medium text-white">Rezultate Instant</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle2 className="w-5 h-5 text-cream-300" />
-                <span className="text-sm font-medium">Date Securizate</span>
+                <CheckCircle2 className="w-5 h-5 text-pink-300" />
+                <span className="text-sm font-medium text-white">Date Securizate</span>
               </div>
             </div>
           </div>
