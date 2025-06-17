@@ -38,29 +38,29 @@ export default function LegislatieResurse() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <SEOHead page="legislatie" />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-500 to-red-500 text-white">
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold mb-6">
             Legea Pensiilor 2024 pe Înțelesul Tuturor
           </h1>
-          <p className="text-xl text-orange-100 max-w-2xl mx-auto">
+          <p className="text-xl text-purple-100 max-w-2xl mx-auto">
             Ghid complet despre legislația pensiilor din România, modificările recente și procedurile oficiale.
           </p>
         </div>
       </section>
 
       {/* Current Law Overview */}
-      <section className="py-16">
+      <section className="py-16 bg-white dark:bg-slate-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-neutral-800 mb-4">
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
               Legislația Actuală în 2024
             </h2>
-            <p className="text-xl text-neutral-600">
+            <p className="text-xl text-slate-600 dark:text-slate-300">
               Principalele prevederi ale Legii nr. 263/2010 privind sistemul unitar de pensii publice
             </p>
           </div>

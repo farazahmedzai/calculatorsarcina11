@@ -287,12 +287,12 @@ export default function Blog() {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-16 bg-gradient-to-r from-primary to-secondary text-white">
+      <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="text-2xl lg:text-3xl font-bold mb-4">
             Rămâi la Curent cu Modificările Legislative
           </h3>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
             Abonează-te pentru a primi notificări despre articolele noi și modificările importante din legislația pensiilor.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
@@ -300,14 +300,14 @@ export default function Blog() {
               <input 
                 type="email" 
                 placeholder="Adresa ta de email"
-                className="w-full px-4 py-3 rounded-lg text-neutral-800 focus:ring-2 focus:ring-accent focus:outline-none"
+                className="w-full px-4 py-3 rounded-lg text-neutral-800 focus:ring-2 focus:ring-purple-500 focus:outline-none"
               />
             </div>
-            <Button className="bg-accent hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold whitespace-nowrap">
+            <Button className="bg-white/20 hover:bg-white/30 text-white border border-white/30 hover:border-white/50 px-6 py-3 rounded-lg font-semibold whitespace-nowrap transition-all duration-300">
               Abonează-te
             </Button>
           </div>
-          <p className="text-sm text-blue-200 mt-4">
+          <p className="text-sm text-purple-200 mt-4">
             Fără spam. Poți să te dezabonezi oricând.
           </p>
         </div>

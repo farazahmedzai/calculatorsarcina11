@@ -6,23 +6,23 @@ import { TrendingUp, DollarSign, Shield, Target, AlertTriangle, CheckCircle } fr
 
 export default function PlanificareePensie() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <SEOHead page="planificare" />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold mb-6">
             Ghid Complet pentru Planificarea Pensiei în România
           </h1>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+          <p className="text-xl text-purple-100 max-w-2xl mx-auto">
             Totul ce trebuie să știi pentru a-ți planifica o pensie decentă. Strategii, piloni și greșeli de evitat.
           </p>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="py-20">
+      <section className="py-20 bg-white dark:bg-slate-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Introduction */}
@@ -235,20 +235,20 @@ export default function PlanificareePensie() {
 
           {/* Call to Action */}
           <div className="text-center">
-            <Card className="bg-gradient-to-r from-primary to-secondary text-white">
+            <Card className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-4">Începe Planificarea Acum</h3>
-                <p className="text-blue-100 mb-6">
+                <p className="text-purple-100 mb-6">
                   Folosește calculatorul nostru pentru a vedea cum arată pensia ta cu strategiile recomandate.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/">
-                    <Button className="bg-accent hover:bg-green-600 text-white">
+                    <Button className="bg-white/20 hover:bg-white/30 text-white border border-white/30 hover:border-white/50 transition-all duration-300">
                       Calculează Pensia
                     </Button>
                   </Link>
                   <Link href="/tipuri-pensii">
-                    <Button variant="outline" className="border-white text-[#3c445c] hover:bg-white hover:text-primary">
+                    <Button variant="outline" className="border-white text-white hover:bg-white hover:text-purple-600 transition-all duration-300">
                       Explorează Tipurile de Pensii
                     </Button>
                   </Link>
