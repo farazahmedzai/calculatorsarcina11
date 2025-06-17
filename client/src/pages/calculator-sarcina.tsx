@@ -14,18 +14,18 @@ export default function CalculatorSarcina() {
       />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 dark:from-pink-950/20 dark:via-purple-950/20 dark:to-blue-950/20">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-pink-500/5 via-transparent to-transparent"></div>
+      <section className="relative overflow-hidden bg-gradient-to-br from-orange-50 via-teal-50 to-orange-50 dark:from-orange-950/20 dark:via-teal-950/20 dark:to-orange-950/20">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-500/5 via-transparent to-transparent"></div>
         
         <div className="relative max-w-6xl mx-auto px-6 py-24 lg:py-32">
           <div className="text-center space-y-8">
-            <Badge className="px-6 py-2 text-sm font-semibold bg-pink-100 text-pink-700 border border-pink-200 rounded-full dark:bg-pink-900/30 dark:text-pink-300">
+            <Badge className="px-6 py-2 text-sm font-semibold bg-orange-100 text-orange-700 border border-orange-200 rounded-full dark:bg-orange-900/30 dark:text-orange-300">
               <Baby className="w-4 h-4 mr-2" />
               Calculator Sarcină România
             </Badge>
             
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-6xl font-bold text-gradient">
                 Calculează-ți Sarcina
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
