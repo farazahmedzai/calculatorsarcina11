@@ -9,7 +9,7 @@ export interface SEOData {
 }
 
 export const defaultSEO: SEOData = {
-  title: "Calculator Sarcina 2024 - Calculează Online Sarcina și Pensia | calculatorsarcina.com",
+  title: "Calculator Sarcina 2025 - Calculează Online Sarcina și Pensia | calculatorsarcina.com",
   description: "Folosește calculatorul de sarcină și pensie online pentru a-ți estima data nașterii și venitul la bătrânețe. Planifică-ți viitorul cu instrumentele noastre complete.",
   keywords: "calculator sarcina, calculator pensie, data nasterii, sarcina romania, pensie romania, calculatorsarcina.com",
 };
@@ -36,9 +36,9 @@ export const pageSEO: Record<string, SEOData> = {
     keywords: "tipuri de pensii România, pensie de stat, pensie anticipată, pensie de urmaș",
   },
   legislatie: {
-    title: "Legea Pensiilor 2024 pe Înțelesul Tuturor | calculatorsarcina.com",
+    title: "Legea Pensiilor 2025 pe Înțelesul Tuturor | calculatorsarcina.com",
     description: "Ghid complet despre legislația pensiilor din România, vârsta de pensionare, stagiul de cotizare și procedurile oficiale.",
-    keywords: "legea pensiilor 2024, vârsta de pensionare, stagiu cotizare, legislație pensii",
+    keywords: "legea pensiilor 2025, vârsta de pensionare, stagiu cotizare, legislație pensii",
   },
   blog: {
     title: "Blog Pensii România - Ghiduri și Sfaturi pentru Planificarea Pensiei | calculatorsarcina.com",

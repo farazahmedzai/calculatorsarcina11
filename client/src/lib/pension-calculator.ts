@@ -18,9 +18,9 @@ export interface PensionCalculationResult {
 export function calculatePension(input: PensionCalculationInput): PensionCalculationResult {
   const { currentAge, monthlySalary, contributionYears, pensionType } = input;
   
-  // Romanian pension calculation logic based on 2024 regulations
+  // Romanian pension calculation logic based on 2025 regulations
   const averageGrossSalary = 6000; // RON - approximate national average
-  const pensionPoint = 87.5; // RON - 2024 pension point value
+  const pensionPoint = 87.5; // RON - 2025 pension point value
   const minContributionYears = 15;
   const standardRetirementAge = 65;
   
