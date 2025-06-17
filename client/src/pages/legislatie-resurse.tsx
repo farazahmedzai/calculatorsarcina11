@@ -40,7 +40,6 @@ export default function LegislatieResurse() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <SEOHead page="legislatie" />
-      
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -52,7 +51,6 @@ export default function LegislatieResurse() {
           </p>
         </div>
       </section>
-
       {/* Current Law Overview */}
       <section className="py-16 bg-white dark:bg-slate-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -97,7 +95,7 @@ export default function LegislatieResurse() {
 
             <Card className="border-2 border-accent/20">
               <CardHeader>
-                <CardTitle className="flex items-center text-accent">
+                <CardTitle className="flex items-center text-[#7c3bed]">
                   <TrendingUp className="w-6 h-6 mr-2" />
                   Parametri Cheie 2024
                 </CardTitle>
@@ -106,7 +104,7 @@ export default function LegislatieResurse() {
                 <div className="space-y-4">
                   <div className="bg-accent/10 p-4 rounded-lg">
                     <h4 className="font-semibold text-neutral-800 mb-2">Valoarea punctului de pensie</h4>
-                    <p className="text-2xl font-bold text-accent">87,5 RON</p>
+                    <p className="text-2xl font-bold text-[#7c3bed]">87,5 RON</p>
                   </div>
                   <div className="bg-primary/10 p-4 rounded-lg">
                     <h4 className="font-semibold text-neutral-800 mb-2">Pensia minimă</h4>
@@ -122,7 +120,6 @@ export default function LegislatieResurse() {
           </div>
         </div>
       </section>
-
       {/* Retirement Age Table */}
       <section className="py-16 bg-neutral-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -185,7 +182,6 @@ export default function LegislatieResurse() {
           </div>
         </div>
       </section>
-
       {/* Recent Legislative Changes */}
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -220,7 +216,6 @@ export default function LegislatieResurse() {
           </div>
         </div>
       </section>
-
       {/* Calculation Methods */}
       <section className="py-16 bg-neutral-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -279,7 +274,6 @@ export default function LegislatieResurse() {
           </Card>
         </div>
       </section>
-
       {/* Official Resources */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -325,7 +319,6 @@ export default function LegislatieResurse() {
           </div>
         </div>
       </section>
-
       {/* Call to Action */}
       <section className="py-16 bg-gradient-to-r from-primary to-secondary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

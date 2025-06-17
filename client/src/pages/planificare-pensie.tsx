@@ -68,7 +68,7 @@ export default function PlanificareePensie() {
 
               <Card className="border-2 border-accent/20">
                 <CardHeader>
-                  <CardTitle className="text-accent">Pilonul II</CardTitle>
+                  <CardTitle className="text-[#c051d7]">Pilonul II</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-neutral-600 mb-4">
@@ -248,7 +248,7 @@ export default function PlanificareePensie() {
                     </Button>
                   </Link>
                   <Link href="/tipuri-pensii">
-                    <Button variant="outline" className="border-white text-white hover:bg-white hover:text-purple-600 transition-all duration-300">
+                    <Button variant="outline" className="border-white text-white bg-white/10 hover:bg-white hover:text-purple-600 transition-all duration-300">
                       Explorează Tipurile de Pensii
                     </Button>
                   </Link>

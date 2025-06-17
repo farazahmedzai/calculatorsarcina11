@@ -270,7 +270,7 @@ export default function TipuriPensii() {
               </Button>
             </Link>
             <Link href="/legislatie-resurse">
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-purple-600 transition-all duration-300">
+              <Button variant="outline" className="bg-[#9961ed] border-white text-white hover:bg-white hover:text-purple-600 transition-all duration-300">
                 Citește Legislația
               </Button>
             </Link>
