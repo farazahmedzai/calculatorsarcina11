@@ -2,7 +2,7 @@ import { Link, useLocation } from "wouter";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Calculator, Sparkles, Moon, Sun } from "lucide-react";
+import { Menu, Calculator, Sparkles, Moon, Sun, ArrowRight } from "lucide-react";
 
 export function Header() {
   const [location] = useLocation();
@@ -66,18 +66,21 @@ export function Header() {
           </div>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:block">
+          <nav className="hidden lg:block">
             <div className="flex items-center space-x-1">
               {navigation.map((item) => (
                 <Link key={item.name} href={item.href}>
                   <span
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer ${
+                    className={`group relative px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 cursor-pointer ${
                       item.current
-                        ? "bg-primary text-primary-foreground"
-                        : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                        ? "bg-gradient-to-r from-teal-500 to-orange-500 text-white shadow-lg"
+                        : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-slate-800/50"
                     }`}
                   >
                     {item.name}
+                    {item.current && (
+                      <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-orange-400 rounded-full"></div>
+                    )}
                   </span>
                 </Link>
               ))}
@@ -87,62 +90,72 @@ export function Header() {
                 variant="ghost"
                 size="sm"
                 onClick={toggleTheme}
-                className="ml-2 h-8 w-8 p-0"
+                className="ml-4 h-10 w-10 p-0 rounded-xl bg-slate-100/80 dark:bg-slate-800/50 hover:bg-slate-200/80 dark:hover:bg-slate-700/50 transition-all duration-300"
               >
                 {isDark ? (
-                  <Sun className="h-4 w-4 text-amber-500" />
+                  <Sun className="h-5 h-5 text-amber-500" />
                 ) : (
-                  <Moon className="h-4 w-4 text-slate-600" />
+                  <Moon className="h-5 w-5 text-slate-600 dark:text-slate-400" />
                 )}
               </Button>
             </div>
           </nav>
           
           {/* Mobile Navigation */}
-          <div className="md:hidden flex items-center space-x-2">
+          <div className="lg:hidden flex items-center space-x-3">
             <Button
               variant="ghost"
               size="sm"
               onClick={toggleTheme}
-              className="h-8 w-8 p-0"
+              className="h-10 w-10 p-0 rounded-xl bg-slate-100/80 dark:bg-slate-800/50 hover:bg-slate-200/80 dark:hover:bg-slate-700/50 transition-all duration-300"
             >
               {isDark ? (
-                <Sun className="h-4 w-4 text-amber-500" />
+                <Sun className="h-5 w-5 text-amber-500" />
               ) : (
-                <Moon className="h-4 w-4 text-slate-600" />
+                <Moon className="h-5 w-5 text-slate-600 dark:text-slate-400" />
               )}
             </Button>
             
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
-                  <Menu className="h-4 w-4" />
+                <Button variant="ghost" size="sm" className="h-10 w-10 p-0 rounded-xl bg-slate-100/80 dark:bg-slate-800/50 hover:bg-slate-200/80 dark:hover:bg-slate-700/50 transition-all duration-300">
+                  <Menu className="h-5 w-5 text-slate-600 dark:text-slate-400" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[280px]">
-                <div className="mt-6">
-                  <div className="flex items-center space-x-2 mb-6 pb-4 border-b border-border">
-                    <div className="bg-primary rounded-lg p-1.5">
-                      <Calculator className="w-4 h-4 text-primary-foreground" />
+              <SheetContent side="right" className="w-[320px] bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg border-l border-slate-200/50 dark:border-slate-700/50">
+                <div className="mt-8">
+                  <div className="flex items-center space-x-3 mb-8 pb-6 border-b border-slate-200 dark:border-slate-700">
+                    <div className="relative">
+                      <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-orange-500 rounded-xl flex items-center justify-center shadow-lg">
+                        <Calculator className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="absolute -top-1 -right-1 w-4 h-4 bg-orange-400 rounded-full flex items-center justify-center">
+                        <Sparkles className="w-2 h-2 text-white" />
+                      </div>
                     </div>
                     <div>
-                      <h2 className="font-semibold text-base text-foreground">Calculator Sarcina</h2>
-                      <p className="text-xs text-muted-foreground">România</p>
+                      <h2 className="text-lg font-bold bg-gradient-to-r from-teal-700 to-orange-600 bg-clip-text text-transparent">Calculator Sarcina</h2>
+                      <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Platformă pentru viitorul tău</p>
                     </div>
                   </div>
                   
-                  <nav className="flex flex-col space-y-1">
+                  <nav className="flex flex-col space-y-2">
                     {navigation.map((item) => (
                       <Link key={item.name} href={item.href}>
                         <span
-                          className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer ${
+                          className={`group flex items-center px-4 py-3 rounded-xl text-base font-semibold transition-all duration-300 cursor-pointer ${
                             item.current
-                              ? "bg-primary/10 text-primary"
-                              : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                              ? "bg-gradient-to-r from-teal-500 to-orange-500 text-white shadow-lg"
+                              : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-slate-800/50"
                           }`}
                           onClick={() => setIsOpen(false)}
                         >
-                          {item.name}
+                          <span className="flex-1">{item.name}</span>
+                          {item.current ? (
+                            <div className="w-2 h-2 bg-orange-200 rounded-full"></div>
+                          ) : (
+                            <ArrowRight className="w-4 h-4 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
+                          )}
                         </span>
                       </Link>
                     ))}
