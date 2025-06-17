@@ -94,8 +94,8 @@ export function PensionCalculator() {
                 render={({ field }) => (
                   <FormItem className="space-y-3">
                     <FormLabel className="text-base font-bold text-foreground flex items-center gap-3">
-                      <div className="p-2 rounded-xl bg-blue-500/10 border border-blue-200/50">
-                        <Users className="w-5 h-5 text-blue-600" />
+                      <div className="p-2 rounded-xl bg-gold-500/10 border border-gold-200/50">
+                        <Users className="w-5 h-5 text-gold-600" />
                       </div>
                       Vârsta actuală
                     </FormLabel>

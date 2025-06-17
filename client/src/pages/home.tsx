@@ -33,15 +33,15 @@ export default function Home() {
       
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-purple-50/30 to-emerald-50/40 dark:from-blue-950/20 dark:via-purple-950/10 dark:to-emerald-950/20"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-100/20 via-transparent to-transparent dark:from-blue-900/20"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-purple-100/20 via-transparent to-transparent dark:from-purple-900/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-gold-50/30 via-forest-50/20 to-gold-100/40 dark:from-gold-900/10 dark:via-forest-900/5 dark:to-gold-800/15"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gold-200/20 via-transparent to-transparent dark:from-gold-700/15"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-forest-200/20 via-transparent to-transparent dark:from-forest-800/15"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 lg:py-32">
           <div className="text-center space-y-12 animate-fade-in">
             <div className="space-y-8">
-              <Badge variant="secondary" className="px-8 py-3 text-sm font-bold bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-700 dark:text-blue-300 border border-blue-200/50 dark:border-blue-700/50 rounded-full shadow-premium backdrop-blur-xl">
-                <Sparkles className="w-5 h-5 mr-3 text-amber-500 animate-pulse-slow" />
+              <Badge variant="secondary" className="px-8 py-3 text-sm font-bold bg-gradient-to-r from-gold-500/10 to-forest-500/10 text-gold-700 dark:text-gold-300 border border-gold-200/50 dark:border-gold-700/50 rounded-full shadow-premium backdrop-blur-xl">
+                <Sparkles className="w-5 h-5 mr-3 text-gold-500 animate-pulse-slow" />
                 Calculator #1 pentru Pensii în România
               </Badge>
               
@@ -72,7 +72,7 @@ export default function Home() {
                 onClick={() => document.getElementById('calculator')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <div className="absolute inset-0 gradient-primary opacity-100 group-hover:opacity-90 transition-opacity"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 opacity-0 group-hover:opacity-100 transition-opacity animate-gradient"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-gold-400/20 to-forest-400/20 opacity-0 group-hover:opacity-100 transition-opacity animate-gradient"></div>
                 <div className="relative flex items-center text-white">
                   <Calculator className="w-6 h-6 mr-3" />
                   Începe Calculul
@@ -97,9 +97,9 @@ export default function Home() {
           <div id="calculator" className="mt-24 animate-slide-up">
             <div className="max-w-3xl mx-auto">
               <div className="relative group">
-                <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-emerald-500/20 rounded-3xl blur-3xl opacity-60 group-hover:opacity-80 transition duration-700 animate-pulse-slow"></div>
+                <div className="absolute -inset-4 bg-gradient-to-r from-gold-500/20 via-forest-500/20 to-gold-600/20 rounded-3xl blur-3xl opacity-60 group-hover:opacity-80 transition duration-700 animate-pulse-slow"></div>
                 <div className="relative glass rounded-3xl shadow-premium-lg border border-border/50 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-purple-50/20 to-emerald-50/30 dark:from-blue-900/20 dark:via-purple-900/10 dark:to-emerald-900/20"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-gold-50/30 via-forest-50/20 to-gold-100/30 dark:from-gold-900/20 dark:via-forest-900/10 dark:to-gold-800/20"></div>
                   <div className="relative">
                     <PensionCalculator />
                   </div>
