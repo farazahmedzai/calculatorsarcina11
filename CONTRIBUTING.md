@@ -231,4 +231,4 @@ By contributing to this project, you agree that your contributions will be licen
 
 ---
 
-Thank you for contributing to the Romanian Pension Calculator! Your efforts help make pension planning more accessible and accurate for Romanian citizens.
+Thank you for contributing to Calculator Sarcina! Your efforts help make pregnancy and pension calculations more accessible and accurate for Romanian citizens.

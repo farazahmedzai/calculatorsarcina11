@@ -375,10 +375,10 @@ The pension calculator implements current Romanian pension regulations:
 ## Changelog
 
 ### Version 1.0.0 - June 17, 2025
-- **Initial Release:** Complete Romanian pension calculator
-- **Features:** Multi-type pension calculations, educational content
+- **Initial Release:** Calculator Sarcina with pregnancy and pension calculators
+- **Features:** Multi-type calculations, educational content
 - **Architecture:** React + Express.js with TypeScript
-- **Deployment:** Replit-optimized configuration
+- **Deployment:** Replit-optimized configuration at calculatorsarcina.com
 - **Documentation:** Comprehensive documentation suite
 
 ### Development History
@@ -403,9 +403,9 @@ The pension calculator implements current Romanian pension regulations:
 
 ### Community
 - Romanian developers welcome to contribute
-- Pension experts invited for calculation validation
+- Medical and pension experts invited for calculation validation
 - UX designers for accessibility improvements
-- Content creators for educational materials
+- Content creators for pregnancy and pension educational materials
 
 ---
 
