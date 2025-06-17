@@ -108,7 +108,7 @@ export function PensionCalculator() {
                           onChange={(e) => field.onChange(parseInt(e.target.value) || 0)}
                           className="w-full px-6 py-4 text-lg font-semibold border-2 border-border rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all bg-background/50 hover:bg-background group-hover:shadow-premium backdrop-blur-sm"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-gold-500/5 to-forest-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
                       </div>
                     </FormControl>
                     <FormMessage className="text-sm font-medium" />
@@ -122,8 +122,8 @@ export function PensionCalculator() {
                 render={({ field }) => (
                   <FormItem className="space-y-3">
                     <FormLabel className="text-base font-bold text-foreground flex items-center gap-3">
-                      <div className="p-2 rounded-xl bg-emerald-500/10 border border-emerald-200/50">
-                        <TrendingUp className="w-5 h-5 text-emerald-600" />
+                      <div className="p-2 rounded-xl bg-forest-500/10 border border-forest-200/50">
+                        <TrendingUp className="w-5 h-5 text-forest-600" />
                       </div>
                       Salariul brut lunar (RON)
                     </FormLabel>
@@ -136,7 +136,7 @@ export function PensionCalculator() {
                           onChange={(e) => field.onChange(parseInt(e.target.value) || 0)}
                           className="w-full px-6 py-4 text-lg font-semibold border-2 border-border rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all bg-background/50 hover:bg-background group-hover:shadow-premium backdrop-blur-sm"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-forest-500/5 to-gold-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
                       </div>
                     </FormControl>
                     <FormMessage className="text-sm font-medium" />
@@ -152,8 +152,8 @@ export function PensionCalculator() {
                 render={({ field }) => (
                   <FormItem className="space-y-3">
                     <FormLabel className="text-base font-bold text-foreground flex items-center gap-3">
-                      <div className="p-2 rounded-xl bg-purple-500/10 border border-purple-200/50">
-                        <BarChart3 className="w-5 h-5 text-purple-600" />
+                      <div className="p-2 rounded-xl bg-crimson-500/10 border border-crimson-200/50">
+                        <BarChart3 className="w-5 h-5 text-crimson-600" />
                       </div>
                       Ani de contribuție
                     </FormLabel>
@@ -166,7 +166,7 @@ export function PensionCalculator() {
                           onChange={(e) => field.onChange(parseInt(e.target.value) || 0)}
                           className="w-full px-6 py-4 text-lg font-semibold border-2 border-border rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all bg-background/50 hover:bg-background group-hover:shadow-premium backdrop-blur-sm"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-crimson-500/5 to-gold-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
                       </div>
                     </FormControl>
                     <FormMessage className="text-sm font-medium" />
@@ -180,8 +180,8 @@ export function PensionCalculator() {
                 render={({ field }) => (
                   <FormItem className="space-y-3">
                     <FormLabel className="text-base font-bold text-foreground flex items-center gap-3">
-                      <div className="p-2 rounded-xl bg-amber-500/10 border border-amber-200/50">
-                        <Award className="w-5 h-5 text-amber-600" />
+                      <div className="p-2 rounded-xl bg-slate-500/10 border border-slate-200/50">
+                        <Award className="w-5 h-5 text-slate-600" />
                       </div>
                       Tipul pensiei
                     </FormLabel>
@@ -191,7 +191,7 @@ export function PensionCalculator() {
                           <SelectTrigger className="w-full px-6 py-4 text-lg font-semibold border-2 border-border rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all bg-background/50 hover:bg-background group-hover:shadow-premium backdrop-blur-sm">
                             <SelectValue placeholder="Selectează tipul pensiei" />
                           </SelectTrigger>
-                          <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                          <div className="absolute inset-0 bg-gradient-to-r from-slate-500/5 to-gold-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
                         </div>
                       </FormControl>
                       <SelectContent className="rounded-2xl border-2 border-border/50 shadow-premium-lg backdrop-blur-xl">
@@ -212,7 +212,7 @@ export function PensionCalculator() {
               disabled={calculateMutation.isPending}
             >
               <div className="absolute inset-0 gradient-primary opacity-100 group-hover:opacity-90 transition-opacity"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 opacity-0 group-hover:opacity-100 transition-opacity animate-gradient"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-gold-400/20 to-forest-400/20 opacity-0 group-hover:opacity-100 transition-opacity animate-gradient"></div>
               <div className="relative flex items-center justify-center text-white">
                 {calculateMutation.isPending ? (
                   <>
@@ -232,9 +232,9 @@ export function PensionCalculator() {
 
         {result && (
           <div className="relative group animate-scale-in">
-            <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 rounded-2xl blur-xl opacity-60"></div>
-            <Alert className="relative glass border border-emerald-200/50 dark:border-emerald-700/50 rounded-2xl p-6">
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/50 to-blue-50/30 dark:from-emerald-900/20 dark:to-blue-900/20 rounded-2xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-gold-500/20 to-forest-500/20 rounded-2xl blur-xl opacity-60"></div>
+            <Alert className="relative glass border border-gold-200/50 dark:border-gold-700/50 rounded-2xl p-6">
+              <div className="absolute inset-0 bg-gradient-to-br from-gold-50/50 to-forest-50/30 dark:from-gold-900/20 dark:to-forest-900/20 rounded-2xl"></div>
               <div className="relative">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 rounded-xl bg-emerald-500/10 border border-emerald-200/50">
