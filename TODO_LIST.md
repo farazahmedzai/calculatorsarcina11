@@ -2,7 +2,16 @@
 
 This document tracks pending tasks, improvements, and feature requests for the Calculator Sarcina application.
 
-## High Priority Tasks
+## Critical Priority Tasks
+
+### 🚨 Major Gap - Missing Core Feature
+- [ ] **Implement Pregnancy Calculator (URGENT)**
+  - Create pregnancy calculator component with due date calculations
+  - Add pregnancy milestone tracking functionality
+  - Implement pregnancy week-by-week information
+  - Add pregnancy validation schemas and API endpoints
+  - Update navigation to include pregnancy calculator pages
+  - **Status:** CRITICAL - Project branding promises pregnancy calculator but none exists
 
 ### 🔧 Technical Improvements
 
