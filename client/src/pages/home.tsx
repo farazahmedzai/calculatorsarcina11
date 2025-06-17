@@ -30,65 +30,82 @@ export default function Home() {
       <SEOHead page="home" />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary to-secondary text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                Calculator Sarcina Online: Află Pensia Ta în Câteva Secunde
-              </h1>
-              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                Planifică-ți viitorul financiar cu cel mai precis calculator de pensie din România. 
-                Estimează-ți pensia pe baza contribuțiilor actuale și proiectează-ți veniturile la bătrânețe.
-              </p>
+      <section className="relative bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 text-slate-900 overflow-hidden">
+        <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                  <CheckCircle className="w-4 h-4 mr-2" />
+                  Calculatorul #1 din România
+                </div>
+                <h1 className="text-5xl lg:text-6xl font-bold text-slate-900 leading-tight tracking-tight">
+                  Calculează-ți
+                  <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"> pensia </span>
+                  în secunde
+                </h1>
+                <p className="text-xl text-slate-600 leading-relaxed max-w-lg">
+                  Planifică-ți viitorul financiar cu precizie. Estimează pensia pe baza contribuțiilor și proiectează veniturile la bătrânețe.
+                </p>
+              </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
-                  className="bg-accent hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105"
+                  className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
                   onClick={() => document.getElementById('calculator')?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  Calculează Pensia Acum
+                  <Calculator className="w-5 h-5 mr-2" />
+                  Calculează Acum
                 </Button>
                 <Link href="/planificare-pensie">
-                  <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-lg font-semibold transition-all">
-                    Ghid Complet Pensii
+                  <Button variant="outline" className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 px-8 py-4 rounded-xl font-semibold transition-all">
+                    <BookOpen className="w-5 h-5 mr-2" />
+                    Ghid Complet
                   </Button>
                 </Link>
               </div>
             </div>
             
-            <div id="calculator">
-              <PensionCalculator />
+            <div id="calculator" className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl blur opacity-20"></div>
+              <div className="relative">
+                <PensionCalculator />
+              </div>
             </div>
           </div>
         </div>
         
         {/* Trust indicators */}
-        <div className="border-t border-blue-400/20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div className="flex flex-col items-center">
-                <div className="bg-white/10 rounded-full p-3 mb-2">
-                  <CheckCircle className="w-6 h-6" />
+        <div className="border-t border-slate-200/60 bg-white/50 backdrop-blur-sm">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="flex flex-col items-center text-center">
+                <div className="bg-green-100 rounded-full p-3 mb-3">
+                  <CheckCircle className="w-6 h-6 text-green-600" />
                 </div>
-                <span className="text-sm font-medium">100% Gratuit</span>
+                <span className="text-sm font-semibold text-slate-900">100% Gratuit</span>
+                <span className="text-xs text-slate-500">Fără costuri ascunse</span>
               </div>
-              <div className="flex flex-col items-center">
-                <div className="bg-white/10 rounded-full p-3 mb-2">
-                  <Shield className="w-6 h-6" />
+              <div className="flex flex-col items-center text-center">
+                <div className="bg-blue-100 rounded-full p-3 mb-3">
+                  <Shield className="w-6 h-6 text-blue-600" />
                 </div>
-                <span className="text-sm font-medium">Date Securizate</span>
+                <span className="text-sm font-semibold text-slate-900">Date Securizate</span>
+                <span className="text-xs text-slate-500">Protejate SSL</span>
               </div>
-              <div className="flex flex-col items-center">
-                <div className="bg-white/10 rounded-full p-3 mb-2">
-                  <BarChart3 className="w-6 h-6" />
+              <div className="flex flex-col items-center text-center">
+                <div className="bg-purple-100 rounded-full p-3 mb-3">
+                  <BarChart3 className="w-6 h-6 text-purple-600" />
                 </div>
-                <span className="text-sm font-medium">Calcule Precise</span>
+                <span className="text-sm font-semibold text-slate-900">Calcule Precise</span>
+                <span className="text-xs text-slate-500">Algoritm verificat</span>
               </div>
-              <div className="flex flex-col items-center">
-                <div className="bg-white/10 rounded-full p-3 mb-2">
-                  <Award className="w-6 h-6" />
+              <div className="flex flex-col items-center text-center">
+                <div className="bg-orange-100 rounded-full p-3 mb-3">
+                  <Award className="w-6 h-6 text-orange-600" />
                 </div>
-                <span className="text-sm font-medium">Legislație 2024</span>
+                <span className="text-sm font-semibold text-slate-900">Legislație 2024</span>
+                <span className="text-xs text-slate-500">Actualizat recent</span>
               </div>
             </div>
           </div>

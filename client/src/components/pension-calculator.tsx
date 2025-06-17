@@ -9,7 +9,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Loader2, CheckCircle, Calculator } from "lucide-react";
+import { Loader2, CheckCircle, Calculator, Users, TrendingUp, BarChart3, Award } from "lucide-react";
 import { calculatePension, validatePensionInput, type PensionCalculationInput, type PensionCalculationResult } from "@/lib/pension-calculator";
 import { apiRequest } from "@/lib/queryClient";
 
@@ -61,112 +61,117 @@ export function PensionCalculator() {
   };
 
   return (
-    <Card className="w-full max-w-2xl mx-auto shadow-2xl">
-      <CardHeader className="text-center">
-        <CardTitle className="text-2xl font-bold text-neutral-800 flex items-center justify-center gap-2">
-          <Calculator className="w-6 h-6 text-primary" />
-          Calculator Sarcina Principală
+    <Card className="w-full max-w-2xl mx-auto bg-white/90 backdrop-blur-sm shadow-2xl border-0 overflow-hidden">
+      <CardHeader className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center py-8">
+        <CardTitle className="text-2xl font-bold flex items-center justify-center gap-3">
+          <div className="bg-white/20 rounded-full p-2">
+            <Calculator className="w-6 h-6" />
+          </div>
+          Calculator Pensie Inteligent
         </CardTitle>
+        <p className="text-blue-100 mt-2">Calculează pensia rapidă și precisă</p>
       </CardHeader>
-      <CardContent className="space-y-6">
+      <CardContent className="space-y-8 p-8">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-            <FormField
-              control={form.control}
-              name="currentAge"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-sm font-medium text-neutral-700">
-                    Vârsta actuală
-                  </FormLabel>
-                  <FormControl>
-                    <Input
-                      type="number"
-                      placeholder="35"
-                      {...field}
-                      onChange={(e) => field.onChange(parseInt(e.target.value) || 0)}
-                      className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="monthlySalary"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-sm font-medium text-neutral-700">
-                    Salariul brut lunar (RON)
-                  </FormLabel>
-                  <FormControl>
-                    <Input
-                      type="number"
-                      placeholder="5000"
-                      {...field}
-                      onChange={(e) => field.onChange(parseInt(e.target.value) || 0)}
-                      className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="contributionYears"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-sm font-medium text-neutral-700">
-                    Stagiul de cotizare (ani)
-                  </FormLabel>
-                  <FormControl>
-                    <Input
-                      type="number"
-                      placeholder="10"
-                      {...field}
-                      onChange={(e) => field.onChange(parseInt(e.target.value) || 0)}
-                      className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="pensionType"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-sm font-medium text-neutral-700">
-                    Tipul pensiei
-                  </FormLabel>
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
+            <div className="grid md:grid-cols-2 gap-6">
+              <FormField
+                control={form.control}
+                name="currentAge"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-semibold text-slate-700 flex items-center gap-2">
+                      <Users className="w-4 h-4 text-blue-600" />
+                      Vârsta actuală
+                    </FormLabel>
                     <FormControl>
-                      <SelectTrigger className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors">
-                        <SelectValue placeholder="Selectează tipul pensiei" />
-                      </SelectTrigger>
+                      <Input
+                        type="number"
+                        placeholder="35"
+                        {...field}
+                        onChange={(e) => field.onChange(parseInt(e.target.value) || 0)}
+                        className="w-full px-4 py-4 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-slate-50 hover:bg-white"
+                      />
                     </FormControl>
-                    <SelectContent>
-                      <SelectItem value="Pensie pentru limită de vârstă">
-                        Pensie pentru limită de vârstă
-                      </SelectItem>
-                      <SelectItem value="Pensie anticipată parțială">
-                        Pensie anticipată parțială
-                      </SelectItem>
-                      <SelectItem value="Pensie anticipată completă">
-                        Pensie anticipată completă
-                      </SelectItem>
-                    </SelectContent>
-                  </Select>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="monthlySalary"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-semibold text-slate-700 flex items-center gap-2">
+                      <TrendingUp className="w-4 h-4 text-green-600" />
+                      Salariul brut lunar (RON)
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        type="number"
+                        placeholder="5000"
+                        {...field}
+                        onChange={(e) => field.onChange(parseInt(e.target.value) || 0)}
+                        className="w-full px-4 py-4 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-slate-50 hover:bg-white"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <FormField
+                control={form.control}
+                name="contributionYears"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-semibold text-slate-700 flex items-center gap-2">
+                      <BarChart3 className="w-4 h-4 text-purple-600" />
+                      Ani de contribuție
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        type="number"
+                        placeholder="10"
+                        {...field}
+                        onChange={(e) => field.onChange(parseInt(e.target.value) || 0)}
+                        className="w-full px-4 py-4 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-slate-50 hover:bg-white"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="pensionType"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-semibold text-slate-700 flex items-center gap-2">
+                      <Award className="w-4 h-4 text-orange-600" />
+                      Tipul pensiei
+                    </FormLabel>
+                    <Select onValueChange={field.onChange} value={field.value}>
+                      <FormControl>
+                        <SelectTrigger className="w-full px-4 py-4 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-slate-50 hover:bg-white">
+                          <SelectValue placeholder="Selectează tipul pensiei" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        <SelectItem value="standard">Pensie pentru limită de vârstă</SelectItem>
+                        <SelectItem value="early-partial">Pensie anticipată parțială</SelectItem>
+                        <SelectItem value="early-complete">Pensie anticipată completă</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
 
             <Button 
               type="submit" 
