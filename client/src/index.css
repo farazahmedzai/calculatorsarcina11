@@ -5,50 +5,50 @@
 @tailwind utilities;
 
 :root {
-  /* Light Beige Theme */
-  --background: hsl(45, 20%, 98%);
-  --foreground: hsl(30, 15%, 25%);
-  --muted: hsl(45, 25%, 95%);
-  --muted-foreground: hsl(30, 10%, 45%);
-  --popover: hsl(45, 20%, 98%);
-  --popover-foreground: hsl(30, 15%, 25%);
-  --card: hsl(45, 30%, 96%);
-  --card-foreground: hsl(30, 15%, 25%);
-  --border: hsl(45, 20%, 88%);
-  --input: hsl(45, 20%, 88%);
-  --primary: hsl(35, 25%, 65%);
+  /* Clean Light Theme */
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(222, 15%, 20%);
+  --muted: hsl(210, 40%, 98%);
+  --muted-foreground: hsl(215, 16%, 47%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(222, 15%, 20%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(222, 15%, 20%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(214, 32%, 91%);
+  --primary: hsl(220, 13%, 69%);
   --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(45, 25%, 92%);
-  --secondary-foreground: hsl(30, 15%, 25%);
-  --accent: hsl(45, 25%, 92%);
-  --accent-foreground: hsl(30, 15%, 25%);
+  --secondary: hsl(210, 40%, 98%);
+  --secondary-foreground: hsl(222, 15%, 20%);
+  --accent: hsl(210, 40%, 98%);
+  --accent-foreground: hsl(222, 15%, 20%);
   --destructive: hsl(0, 65%, 55%);
-  --destructive-foreground: hsl(45, 20%, 98%);
-  --ring: hsl(35, 25%, 65%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --ring: hsl(220, 13%, 69%);
   --radius: 0.75rem;
   
-  /* Light Beige Color Palette */
-  --beige-50: hsl(45, 30%, 98%);
-  --beige-100: hsl(45, 25%, 95%);
-  --beige-200: hsl(45, 20%, 90%);
-  --beige-300: hsl(40, 18%, 82%);
-  --beige-400: hsl(35, 15%, 70%);
-  --beige-500: hsl(35, 25%, 65%);
-  --beige-600: hsl(30, 20%, 55%);
-  --beige-700: hsl(30, 25%, 45%);
-  --beige-800: hsl(25, 30%, 35%);
-  --beige-900: hsl(25, 35%, 25%);
+  /* Modern Gray Color Palette */
+  --gray-50: hsl(210, 40%, 98%);
+  --gray-100: hsl(210, 40%, 96%);
+  --gray-200: hsl(214, 32%, 91%);
+  --gray-300: hsl(213, 27%, 84%);
+  --gray-400: hsl(215, 20%, 65%);
+  --gray-500: hsl(215, 16%, 47%);
+  --gray-600: hsl(215, 19%, 35%);
+  --gray-700: hsl(215, 25%, 27%);
+  --gray-800: hsl(217, 33%, 17%);
+  --gray-900: hsl(222, 47%, 11%);
   
-  --cream-50: hsl(50, 40%, 98%);
-  --cream-100: hsl(50, 35%, 95%);
-  --cream-200: hsl(48, 30%, 90%);
-  --cream-300: hsl(45, 25%, 82%);
-  --cream-400: hsl(42, 20%, 72%);
-  --cream-500: hsl(40, 18%, 62%);
-  --cream-600: hsl(38, 16%, 52%);
-  --cream-700: hsl(35, 18%, 42%);
-  --cream-800: hsl(32, 20%, 32%);
-  --cream-900: hsl(30, 25%, 22%);
+  --blue-50: hsl(214, 100%, 97%);
+  --blue-100: hsl(214, 95%, 93%);
+  --blue-200: hsl(213, 97%, 87%);
+  --blue-300: hsl(212, 96%, 78%);
+  --blue-400: hsl(213, 94%, 68%);
+  --blue-500: hsl(217, 91%, 60%);
+  --blue-600: hsl(221, 83%, 53%);
+  --blue-700: hsl(224, 76%, 48%);
+  --blue-800: hsl(226, 71%, 40%);
+  --blue-900: hsl(224, 64%, 33%);
   
   --crimson-50: hsl(0, 86%, 97%);
   --crimson-100: hsl(0, 93%, 94%);
@@ -300,29 +300,29 @@
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   }
 
-  /* Light Beige gradients */
+  /* Modern gradients */
   .gradient-primary {
-    background: linear-gradient(135deg, hsl(35, 25%, 65%) 0%, hsl(30, 20%, 55%) 100%);
+    background: linear-gradient(135deg, hsl(220, 13%, 69%) 0%, hsl(215, 19%, 35%) 100%);
   }
 
   .gradient-secondary {
-    background: linear-gradient(135deg, hsl(40, 18%, 62%) 0%, hsl(38, 16%, 52%) 100%);
+    background: linear-gradient(135deg, hsl(217, 91%, 60%) 0%, hsl(224, 76%, 48%) 100%);
   }
 
   .gradient-accent {
-    background: linear-gradient(135deg, hsl(35, 25%, 65%) 0%, hsl(40, 18%, 62%) 100%);
+    background: linear-gradient(135deg, hsl(220, 13%, 69%) 0%, hsl(217, 91%, 60%) 100%);
   }
 
   .gradient-hero {
-    background: linear-gradient(135deg, hsl(45, 30%, 98%) 0%, hsl(50, 40%, 98%) 100%);
+    background: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(210, 40%, 98%) 100%);
   }
 
   .gradient-card {
-    background: linear-gradient(145deg, hsl(45, 20%, 98%) 0%, hsl(45, 30%, 96%) 100%);
+    background: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(210, 40%, 98%) 100%);
   }
 
   .gradient-dark {
-    background: linear-gradient(135deg, hsl(30, 15%, 8%) 0%, hsl(30, 10%, 15%) 100%);
+    background: linear-gradient(135deg, hsl(222, 47%, 11%) 0%, hsl(217, 33%, 17%) 100%);
   }
 
   /* Enhanced shadows */
@@ -347,14 +347,14 @@
 
   /* Modern typography */
   .text-gradient {
-    background: linear-gradient(135deg, hsl(35, 25%, 65%) 0%, hsl(30, 25%, 45%) 100%);
+    background: linear-gradient(135deg, hsl(217, 91%, 60%) 0%, hsl(215, 19%, 35%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .text-gradient-muted {
-    background: linear-gradient(135deg, hsl(30, 10%, 45%) 0%, hsl(30, 15%, 25%) 100%);
+    background: linear-gradient(135deg, hsl(215, 16%, 47%) 0%, hsl(222, 15%, 20%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
