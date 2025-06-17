@@ -68,19 +68,19 @@ export default function Home() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <Link href="/calculator-sarcina">
-                <Button size="lg" className="group px-8 py-4 text-lg font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-0">
-                  <Baby className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform" />
-                  Calculator Sarcină
-                  <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
+                <Button size="lg" className="group px-8 py-4 text-lg font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white hover:text-white rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-0 [&>*]:text-white">
+                  <Baby className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform text-white" />
+                  <span className="text-white">Calculator Sarcină</span>
+                  <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform text-white" />
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="group px-8 py-4 text-lg font-semibold border-2 border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105" onClick={() => {
+              <Button size="lg" variant="outline" className="group px-8 py-4 text-lg font-semibold border-2 border-slate-300 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 hover:border-slate-400 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 bg-white dark:bg-slate-800" onClick={() => {
                 const calculatorSection = document.getElementById('pension-calculator');
                 calculatorSection?.scrollIntoView({ behavior: 'smooth' });
               }}>
-                <Calculator className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform" />
-                Calculator Pensie
-                <TrendingUp className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
+                <Calculator className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform text-slate-700 dark:text-slate-200" />
+                <span className="text-slate-700 dark:text-slate-200">Calculator Pensie</span>
+                <TrendingUp className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform text-slate-700 dark:text-slate-200" />
               </Button>
             </div>
             
