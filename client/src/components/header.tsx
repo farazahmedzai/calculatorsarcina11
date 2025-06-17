@@ -24,7 +24,7 @@ export function Header() {
             <div className="flex-shrink-0">
               <Link href="/">
                 <h1 className="text-xl font-bold text-primary cursor-pointer">
-                  CalculatorSarcina.ro
+                  Calculator Sarcina
                 </h1>
               </Link>
             </div>

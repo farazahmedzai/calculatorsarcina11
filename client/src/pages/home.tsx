@@ -35,7 +35,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                Calculator Pensie Online: Află Pensia Ta în Câteva Secunde
+                Calculator Sarcina Online: Află Pensia Ta în Câteva Secunde
               </h1>
               <p className="text-xl text-blue-100 mb-8 leading-relaxed">
                 Planifică-ți viitorul financiar cu cel mai precis calculator de pensie din România. 
@@ -245,7 +245,7 @@ export default function Home() {
                 <div className="bg-primary/10 rounded-lg p-3 w-fit mb-4">
                   <Calculator className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold text-neutral-800 mb-2">Calculator Pensie Anticipată</h3>
+                <h3 className="text-lg font-semibold text-neutral-800 mb-2">Calculator Sarcina Anticipată</h3>
                 <p className="text-neutral-600 mb-4">
                   Calculează penalizarea și valoarea pensiei anticipate parțiale sau complete.
                 </p>

@@ -9,29 +9,29 @@ export interface SEOData {
 }
 
 export const defaultSEO: SEOData = {
-  title: "Calculator Pensie 2024 - Calculează Online Pensia Rapid și Corect | calculatorsarcina.ro",
+  title: "Calculator Sarcina 2024 - Calculează Online Pensia Rapid și Corect | calculatorsarcina.com",
   description: "Folosește cel mai precis calculator de pensie online pentru a-ți estima venitul la bătrânețe. Planifică-ți viitorul financiar cu instrumentele și ghidurile noastre complete.",
-  keywords: "calculator pensie, calcul pensie, simulator pensie online, pensia mea, calculatorsarcina.ro",
+  keywords: "calculator pensie, calcul pensie, simulator pensie online, pensia mea, calculatorsarcina.com",
 };
 
 export const pageSEO: Record<string, SEOData> = {
   home: {
-    title: "Calculator Pensie Online: Află Pensia Ta în Câteva Secunde | calculatorsarcina.ro",
+    title: "Calculator Sarcina Online: Află Pensia Ta în Câteva Secunde | calculatorsarcina.com",
     description: "Folosește cel mai precis calculator de pensie online pentru a-ți estima venitul la bătrânețe. Planifică-ți viitorul financiar cu instrumentele și ghidurile noastre complete.",
     keywords: "calculator pensie, calcul pensie, simulator pensie online, pensia mea",
   },
   planificare: {
-    title: "Ghid Complet pentru Planificarea Pensiei în România | calculatorsarcina.ro",
+    title: "Ghid Complet pentru Planificarea Pensiei în România | calculatorsarcina.com",
     description: "Descoperă strategiile de planificare a pensiei, diferențele între piloni și greșelile de evitat. Ghid complet pentru o pensie liniștită.",
     keywords: "planificare pensie, pilonul II, pilonul III, strategii investiții pensie",
   },
   tipuri: {
-    title: "Ghid Exhaustiv: Tipuri de Pensii din România | calculatorsarcina.ro",
+    title: "Ghid Exhaustiv: Tipuri de Pensii din România | calculatorsarcina.com",
     description: "Descoperă ghidul exhaustiv despre toate tipurile de pensii disponibile în România: pensia pentru limită de vârstă, anticipată, de urmaș, de invaliditate.",
     keywords: "tipuri de pensii România, pensie de stat, pensie anticipată, pensie de urmaș",
   },
   legislatie: {
-    title: "Legea Pensiilor 2024 pe Înțelesul Tuturor | calculatorsarcina.ro",
+    title: "Legea Pensiilor 2024 pe Înțelesul Tuturor | calculatorsarcina.com",
     description: "Ghid complet despre legislația pensiilor din România, vârsta de pensionare, stagiul de cotizare și procedurile oficiale.",
     keywords: "legea pensiilor 2024, vârsta de pensionare, stagiu cotizare, legislație pensii",
   },
