@@ -5,50 +5,50 @@
 @tailwind utilities;
 
 :root {
-  /* Modern Clean Theme */
+  /* Modern Teal & Orange Theme */
   --background: hsl(0, 0%, 100%);
-  --foreground: hsl(224, 71.4%, 4.1%);
-  --muted: hsl(220, 14.3%, 95.9%);
-  --muted-foreground: hsl(220, 8.9%, 46.1%);
+  --foreground: hsl(210, 24%, 16%);
+  --muted: hsl(210, 40%, 96%);
+  --muted-foreground: hsl(215, 13%, 34%);
   --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(224, 71.4%, 4.1%);
+  --popover-foreground: hsl(210, 24%, 16%);
   --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(224, 71.4%, 4.1%);
-  --border: hsl(220, 13%, 91%);
-  --input: hsl(220, 13%, 91%);
-  --primary: hsl(262, 83%, 58%);
-  --primary-foreground: hsl(210, 20%, 98%);
-  --secondary: hsl(220, 14.3%, 95.9%);
-  --secondary-foreground: hsl(220.9, 39.3%, 11%);
-  --accent: hsl(220, 14.3%, 95.9%);
-  --accent-foreground: hsl(220.9, 39.3%, 11%);
+  --card-foreground: hsl(210, 24%, 16%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(214, 32%, 91%);
+  --primary: hsl(173, 58%, 39%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(210, 24%, 16%);
+  --accent: hsl(210, 40%, 96%);
+  --accent-foreground: hsl(210, 24%, 16%);
   --destructive: hsl(0, 84.2%, 60.2%);
   --destructive-foreground: hsl(210, 20%, 98%);
-  --ring: hsl(262, 83%, 58%);
+  --ring: hsl(173, 58%, 39%);
   --radius: 0.75rem;
   
-  /* Golden-Green Color Palette */
-  --gold-50: hsl(48, 100%, 96%);
-  --gold-100: hsl(48, 96%, 89%);
-  --gold-200: hsl(48, 97%, 77%);
-  --gold-300: hsl(46, 97%, 65%);
-  --gold-400: hsl(43, 96%, 56%);
-  --gold-500: hsl(47, 96%, 53%);
-  --gold-600: hsl(45, 93%, 47%);
-  --gold-700: hsl(38, 92%, 50%);
-  --gold-800: hsl(32, 95%, 44%);
-  --gold-900: hsl(26, 90%, 37%);
+  /* Teal & Orange Color Palette */
+  --teal-50: hsl(166, 76%, 97%);
+  --teal-100: hsl(167, 85%, 89%);
+  --teal-200: hsl(168, 84%, 78%);
+  --teal-300: hsl(171, 77%, 64%);
+  --teal-400: hsl(172, 66%, 50%);
+  --teal-500: hsl(173, 58%, 39%);
+  --teal-600: hsl(175, 60%, 33%);
+  --teal-700: hsl(175, 64%, 26%);
+  --teal-800: hsl(176, 69%, 21%);
+  --teal-900: hsl(178, 75%, 18%);
   
-  --forest-50: hsl(138, 76%, 97%);
-  --forest-100: hsl(141, 84%, 93%);
-  --forest-200: hsl(141, 79%, 85%);
-  --forest-300: hsl(142, 77%, 73%);
-  --forest-400: hsl(142, 69%, 58%);
-  --forest-500: hsl(142, 71%, 45%);
-  --forest-600: hsl(142, 76%, 36%);
-  --forest-700: hsl(142, 72%, 29%);
-  --forest-800: hsl(143, 64%, 24%);
-  --forest-900: hsl(144, 61%, 20%);
+  --orange-50: hsl(33, 100%, 96%);
+  --orange-100: hsl(34, 100%, 92%);
+  --orange-200: hsl(32, 98%, 83%);
+  --orange-300: hsl(31, 97%, 72%);
+  --orange-400: hsl(27, 96%, 61%);
+  --orange-500: hsl(25, 95%, 53%);
+  --orange-600: hsl(21, 90%, 48%);
+  --orange-700: hsl(17, 88%, 40%);
+  --orange-800: hsl(15, 79%, 34%);
+  --orange-900: hsl(15, 75%, 28%);
   
   --crimson-50: hsl(0, 86%, 97%);
   --crimson-100: hsl(0, 93%, 94%);
@@ -74,26 +74,26 @@
 }
 
 .dark {
-  /* Dark Modern Theme */
-  --background: hsl(224, 71.4%, 4.1%);
-  --foreground: hsl(210, 20%, 98%);
-  --muted: hsl(215, 27.9%, 16.9%);
-  --muted-foreground: hsl(217.9, 10.6%, 64.9%);
-  --popover: hsl(224, 71.4%, 4.1%);
-  --popover-foreground: hsl(210, 20%, 98%);
-  --card: hsl(224, 71.4%, 4.1%);
-  --card-foreground: hsl(210, 20%, 98%);
-  --border: hsl(215, 27.9%, 16.9%);
-  --input: hsl(215, 27.9%, 16.9%);
-  --primary: hsl(263, 70%, 50%);
-  --primary-foreground: hsl(210, 20%, 98%);
-  --secondary: hsl(215, 27.9%, 16.9%);
-  --secondary-foreground: hsl(210, 20%, 98%);
-  --accent: hsl(215, 27.9%, 16.9%);
-  --accent-foreground: hsl(210, 20%, 98%);
+  /* Dark Teal & Orange Theme */
+  --background: hsl(222, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217, 32.6%, 17.5%);
+  --muted-foreground: hsl(215, 20.2%, 65.1%);
+  --popover: hsl(222, 84%, 4.9%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --card: hsl(222, 84%, 4.9%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217, 32.6%, 17.5%);
+  --input: hsl(217, 32.6%, 17.5%);
+  --primary: hsl(173, 58%, 39%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(217, 32.6%, 17.5%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --accent: hsl(217, 32.6%, 17.5%);
+  --accent-foreground: hsl(210, 40%, 98%);
   --destructive: hsl(0, 62.8%, 30.6%);
-  --destructive-foreground: hsl(210, 20%, 98%);
-  --ring: hsl(263, 70%, 50%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(173, 58%, 39%);
 }
 
 @layer base {
@@ -229,29 +229,29 @@
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   }
 
-  /* Modern gradients */
+  /* Modern Teal & Orange gradients */
   .gradient-primary {
-    background: linear-gradient(135deg, hsl(262, 83%, 58%) 0%, hsl(263, 70%, 50%) 100%);
+    background: linear-gradient(135deg, hsl(173, 58%, 39%) 0%, hsl(175, 60%, 33%) 100%);
   }
 
   .gradient-secondary {
-    background: linear-gradient(135deg, hsl(220, 14.3%, 95.9%) 0%, hsl(220, 13%, 91%) 100%);
+    background: linear-gradient(135deg, hsl(25, 95%, 53%) 0%, hsl(21, 90%, 48%) 100%);
   }
 
   .gradient-accent {
-    background: linear-gradient(135deg, hsl(262, 83%, 58%) 0%, hsl(220, 14.3%, 95.9%) 100%);
+    background: linear-gradient(135deg, hsl(173, 58%, 39%) 0%, hsl(25, 95%, 53%) 100%);
   }
 
   .gradient-hero {
-    background: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(220, 14.3%, 95.9%) 100%);
+    background: linear-gradient(135deg, hsl(166, 76%, 97%) 0%, hsl(33, 100%, 96%) 100%);
   }
 
   .gradient-card {
-    background: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(220, 14.3%, 97%) 100%);
+    background: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(166, 76%, 97%) 100%);
   }
 
   .gradient-dark {
-    background: linear-gradient(135deg, hsl(224, 71.4%, 4.1%) 0%, hsl(215, 27.9%, 16.9%) 100%);
+    background: linear-gradient(135deg, hsl(222, 84%, 4.9%) 0%, hsl(217, 32.6%, 17.5%) 100%);
   }
 
   /* Enhanced shadows */
@@ -276,14 +276,14 @@
 
   /* Modern typography */
   .text-gradient {
-    background: linear-gradient(135deg, hsl(262, 83%, 58%) 0%, hsl(263, 70%, 50%) 100%);
+    background: linear-gradient(135deg, hsl(173, 58%, 39%) 0%, hsl(25, 95%, 53%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .text-gradient-muted {
-    background: linear-gradient(135deg, hsl(220, 8.9%, 46.1%) 0%, hsl(220.9, 39.3%, 11%) 100%);
+    background: linear-gradient(135deg, hsl(215, 13%, 34%) 0%, hsl(210, 24%, 16%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

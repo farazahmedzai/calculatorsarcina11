@@ -61,13 +61,13 @@ export function PensionCalculator() {
   };
 
   return (
-    <Card className="w-full mx-auto border shadow-lg">
-      <CardHeader className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center py-6">
+    <Card className="w-full mx-auto border border-teal-200 shadow-lg">
+      <CardHeader className="bg-gradient-to-r from-teal-600 to-teal-700 text-white text-center py-6">
         <CardTitle className="text-xl font-semibold flex items-center justify-center gap-2">
           <Calculator className="w-5 h-5" />
           Calculator Pensie
         </CardTitle>
-        <p className="text-blue-100 text-sm">
+        <p className="text-teal-100 text-sm">
           Calculează pensia rapidă și precisă
         </p>
       </CardHeader>
@@ -81,7 +81,7 @@ export function PensionCalculator() {
                 render={({ field }) => (
                   <FormItem className="space-y-2">
                     <FormLabel className="text-sm font-medium text-foreground flex items-center gap-2">
-                      <Users className="w-4 h-4 text-primary" />
+                      <Users className="w-4 h-4 text-teal-600" />
                       Vârsta actuală
                     </FormLabel>
                     <FormControl>
@@ -107,7 +107,7 @@ export function PensionCalculator() {
                 render={({ field }) => (
                   <FormItem className="space-y-2">
                     <FormLabel className="text-sm font-medium text-foreground flex items-center gap-2">
-                      <TrendingUp className="w-4 h-4 text-primary" />
+                      <TrendingUp className="w-4 h-4 text-orange-600" />
                       Salariul brut lunar (RON)
                     </FormLabel>
                     <FormControl>
@@ -132,7 +132,7 @@ export function PensionCalculator() {
                 render={({ field }) => (
                   <FormItem className="space-y-2">
                     <FormLabel className="text-sm font-medium text-foreground flex items-center gap-2">
-                      <BarChart3 className="w-4 h-4 text-primary" />
+                      <BarChart3 className="w-4 h-4 text-teal-600" />
                       Ani de contribuție
                     </FormLabel>
                     <FormControl>
@@ -155,7 +155,7 @@ export function PensionCalculator() {
                 render={({ field }) => (
                   <FormItem className="space-y-2">
                     <FormLabel className="text-sm font-medium text-foreground flex items-center gap-2">
-                      <Award className="w-4 h-4 text-primary" />
+                      <Award className="w-4 h-4 text-orange-600" />
                       Tipul pensiei
                     </FormLabel>
                     <Select onValueChange={field.onChange} value={field.value}>
@@ -197,18 +197,18 @@ export function PensionCalculator() {
         </Form>
 
         {result && (
-          <Alert className="border-green-200 bg-green-50 dark:border-green-800 dark:bg-green-950">
-            <CheckCircle className="h-4 w-4 text-green-600" />
+          <Alert className="border-teal-200 bg-teal-50 dark:border-teal-800 dark:bg-teal-950">
+            <CheckCircle className="h-4 w-4 text-teal-600" />
             <AlertDescription>
               <div className="space-y-3">
                 <div className="flex items-center gap-2">
-                  <h4 className="font-semibold text-green-800 dark:text-green-200">Rezultatul calculului</h4>
+                  <h4 className="font-semibold text-teal-800 dark:text-teal-200">Rezultatul calculului</h4>
                 </div>
-                <div className="p-3 rounded-md bg-white dark:bg-green-900/20 border border-green-200 dark:border-green-800">
-                  <p className="text-xl font-bold text-green-800 dark:text-green-200 mb-1">
+                <div className="p-3 rounded-md bg-white dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800">
+                  <p className="text-xl font-bold text-teal-800 dark:text-teal-200 mb-1">
                     {result.amount.toLocaleString()} RON/lună
                   </p>
-                  <p className="text-sm text-green-700 dark:text-green-300">{result.details}</p>
+                  <p className="text-sm text-teal-700 dark:text-teal-300">{result.details}</p>
                 </div>
                 
                 {(result.breakdown.penalties > 0 || result.breakdown.contributionBonus > 0) && (
@@ -222,9 +222,9 @@ export function PensionCalculator() {
                       </div>
                     )}
                     {result.breakdown.contributionBonus > 0 && (
-                      <div className="flex items-center justify-between p-2 rounded bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-800">
-                        <span className="text-xs font-medium text-blue-700 dark:text-blue-300">Bonus vechime</span>
-                        <span className="text-sm font-semibold text-blue-600 dark:text-blue-400">
+                      <div className="flex items-center justify-between p-2 rounded bg-orange-50 dark:bg-orange-950/20 border border-orange-200 dark:border-orange-800">
+                        <span className="text-xs font-medium text-orange-700 dark:text-orange-300">Bonus vechime</span>
+                        <span className="text-sm font-semibold text-orange-600 dark:text-orange-400">
                           +{result.breakdown.contributionBonus.toLocaleString()} RON
                         </span>
                       </div>
