@@ -126,12 +126,12 @@ export default function Blog() {
       <SEOHead page="blog" />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold mb-6">
             Blog Pensii România
           </h1>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+          <p className="text-xl text-purple-100 max-w-2xl mx-auto">
             Ghiduri și sfaturi pentru planificarea pensiei, modificări legislative și strategii de investiții
           </p>
         </div>

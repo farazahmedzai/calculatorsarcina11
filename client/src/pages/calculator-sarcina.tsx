@@ -14,12 +14,12 @@ export default function CalculatorSarcina() {
       />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-orange-50 via-teal-50 to-orange-50 dark:from-orange-950/20 dark:via-teal-950/20 dark:to-orange-950/20">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-500/5 via-transparent to-transparent"></div>
+      <section className="relative overflow-hidden bg-gradient-to-br from-purple-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-500/5 via-transparent to-transparent"></div>
         
         <div className="relative max-w-6xl mx-auto px-6 py-24 lg:py-32">
           <div className="text-center space-y-8">
-            <Badge className="px-6 py-2 text-sm font-semibold bg-orange-100 text-orange-700 border border-orange-200 rounded-full dark:bg-orange-900/30 dark:text-orange-300">
+            <Badge className="px-6 py-2 text-sm font-semibold bg-purple-100 text-purple-700 border border-purple-200 rounded-full dark:bg-purple-900/30 dark:text-purple-300">
               <Baby className="w-4 h-4 mr-2" />
               Calculator Sarcină România
             </Badge>

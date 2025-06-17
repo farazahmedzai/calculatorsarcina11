@@ -95,26 +95,26 @@ export default function TipuriPensii() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-400 via-green-500 to-green-600">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <SEOHead page="tipuri" />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-green-400/80 to-green-600/80 text-white backdrop-blur-sm">
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold mb-6">
             Ghid Exhaustiv: Tipuri de Pensii din România
           </h1>
-          <p className="text-xl text-green-100 max-w-2xl mx-auto">
+          <p className="text-xl text-purple-100 max-w-2xl mx-auto">
             Descoperă toate tipurile de pensii disponibile în sistemul public din România și condițiile de acordare.
           </p>
         </div>
       </section>
 
       {/* Introduction */}
-      <section className="py-16 bg-white/10 backdrop-blur-sm">
+      <section className="py-16 bg-white dark:bg-slate-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
-            <p className="text-xl text-white/90 leading-relaxed mb-8">
+            <p className="text-xl text-slate-600 dark:text-slate-300 leading-relaxed mb-8">
               Sistemul public de pensii din România oferă mai multe tipuri de pensii, fiecare cu condițiile și 
               avantajele sale specifice. Înțelegerea acestor diferențe te ajută să iei decizii informate despre 
               planificarea pensiei tale.
@@ -124,7 +124,7 @@ export default function TipuriPensii() {
       </section>
 
       {/* Pension Types */}
-      <section className="py-16 bg-white/5 backdrop-blur-sm">
+      <section className="py-16 bg-slate-50 dark:bg-slate-800">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-12">
             {pensionTypes.map((pension, index) => (
@@ -193,9 +193,9 @@ export default function TipuriPensii() {
       </section>
 
       {/* Comparison Table */}
-      <section className="py-16 bg-white/10 backdrop-blur-sm">
+      <section className="py-16 bg-white dark:bg-slate-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">
+          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 text-center">
             Comparație Rapidă: Tipuri de Pensii
           </h2>
           
@@ -257,10 +257,10 @@ export default function TipuriPensii() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-green-600/90 to-green-700/90 text-white backdrop-blur-sm">
+      <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="text-2xl font-bold mb-4">Calculează-ți Pensia pentru Fiecare Tip</h3>
-          <p className="text-green-100 mb-6">
+          <p className="text-purple-100 mb-6">
             Folosește calculatorul nostru pentru a vedea care tip de pensie se potrivește cel mai bine situației tale.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -270,7 +270,7 @@ export default function TipuriPensii() {
               </Button>
             </Link>
             <Link href="/legislatie-resurse">
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-green-600 transition-all duration-300">
+              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-purple-600 transition-all duration-300">
                 Citește Legislația
               </Button>
             </Link>
