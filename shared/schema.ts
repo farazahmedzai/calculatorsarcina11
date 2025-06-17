@@ -18,6 +18,21 @@ export const pensionCalculations = pgTable("pension_calculations", {
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 
+export const pregnancyCalculations = pgTable("pregnancy_calculations", {
+  id: serial("id").primaryKey(),
+  calculationType: text("calculation_type").notNull(),
+  lastMenstrualPeriod: text("last_menstrual_period"),
+  cycleLength: integer("cycle_length"),
+  conceptionDate: text("conception_date"),
+  ultrasoundDate: text("ultrasound_date"),
+  ultrasoundWeeks: integer("ultrasound_weeks"),
+  ultrasoundDays: integer("ultrasound_days"),
+  calculatedDueDate: text("calculated_due_date").notNull(),
+  currentWeek: integer("current_week").notNull(),
+  currentDay: integer("current_day").notNull(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
 export const blogPosts = pgTable("blog_posts", {
   id: serial("id").primaryKey(),
   title: text("title").notNull(),
@@ -41,6 +56,11 @@ export const insertPensionCalculationSchema = createInsertSchema(pensionCalculat
   createdAt: true,
 });
 
+export const insertPregnancyCalculationSchema = createInsertSchema(pregnancyCalculations).omit({
+  id: true,
+  createdAt: true,
+});
+
 export const insertBlogPostSchema = createInsertSchema(blogPosts).omit({
   id: true,
   createdAt: true,
@@ -51,5 +71,7 @@ export type User = typeof users.$inferSelect;
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type PensionCalculation = typeof pensionCalculations.$inferSelect;
 export type InsertPensionCalculation = z.infer<typeof insertPensionCalculationSchema>;
+export type PregnancyCalculation = typeof pregnancyCalculations.$inferSelect;
+export type InsertPregnancyCalculation = z.infer<typeof insertPregnancyCalculationSchema>;
 export type BlogPost = typeof blogPosts.$inferSelect;
 export type InsertBlogPost = z.infer<typeof insertBlogPostSchema>;

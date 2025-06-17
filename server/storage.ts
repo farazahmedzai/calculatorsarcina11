@@ -1,11 +1,14 @@
 import { 
   users, 
   pensionCalculations, 
+  pregnancyCalculations,
   blogPosts,
   type User, 
   type InsertUser,
   type PensionCalculation,
   type InsertPensionCalculation,
+  type PregnancyCalculation,
+  type InsertPregnancyCalculation,
   type BlogPost,
   type InsertBlogPost
 } from "@shared/schema";
@@ -18,6 +21,9 @@ export interface IStorage {
   createPensionCalculation(calculation: InsertPensionCalculation): Promise<PensionCalculation>;
   getPensionCalculations(): Promise<PensionCalculation[]>;
   
+  createPregnancyCalculation(calculation: InsertPregnancyCalculation): Promise<PregnancyCalculation>;
+  getPregnancyCalculations(): Promise<PregnancyCalculation[]>;
+  
   getBlogPosts(): Promise<BlogPost[]>;
   getBlogPost(slug: string): Promise<BlogPost | undefined>;
   createBlogPost(post: InsertBlogPost): Promise<BlogPost>;
@@ -26,9 +32,11 @@ export interface IStorage {
 export class MemStorage implements IStorage {
   private users: Map<number, User>;
   private pensionCalculations: Map<number, PensionCalculation>;
+  private pregnancyCalculations: Map<number, PregnancyCalculation>;
   private blogPosts: Map<number, BlogPost>;
   private currentUserId: number;
   private currentCalculationId: number;
+  private currentPregnancyCalculationId: number;
   private currentBlogPostId: number;
 
   constructor() {
