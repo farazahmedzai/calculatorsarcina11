@@ -303,15 +303,15 @@ export default function Home() {
       </section>
 
       {/* Blog Section */}
-      <section className="py-20 bg-gradient-to-br from-cream-50 via-beige-50/30 to-cream-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-purple-50/30 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center space-y-4 mb-16 animate-fade-in">
-            <Badge className="px-4 py-2 text-xs font-semibold bg-gradient-to-r from-cream-50 to-beige-50 text-slate-700 border border-slate-200 rounded-full">
-              <BookOpen className="w-3 h-3 mr-2" />
+          <div className="text-center space-y-6 mb-16">
+            <Badge className="px-4 py-2 text-sm font-medium bg-indigo-50 text-indigo-700 border border-indigo-200 rounded-full">
+              <BookOpen className="w-4 h-4 mr-2" />
               Educație și informare
             </Badge>
-            <h2 className="section-title text-gray-900 dark:text-white">
-              Ghiduri și <span className="text-gradient">Resurse</span> Educaționale
+            <h2 className="section-title text-slate-900 dark:text-white">
+              Ghiduri și <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Resurse</span> Educaționale
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
               Articole specializate despre sarcină, pensii și planificare financiară, scrise de experți
@@ -321,9 +321,9 @@ export default function Home() {
           <div className="grid lg:grid-cols-3 gap-8">
             {isLoading ? (
               Array.from({ length: 3 }).map((_, i) => (
-                <Card key={i} className="group p-8 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm border border-slate-200 dark:border-slate-700 rounded-3xl animate-pulse">
+                <Card key={i} className="group p-8 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm border border-slate-200 dark:border-slate-700 rounded-2xl animate-pulse">
                   <div className="space-y-4">
-                    <div className="w-12 h-12 bg-slate-200 dark:bg-slate-700 rounded-xl"></div>
+                    <div className="w-14 h-14 bg-slate-200 dark:bg-slate-700 rounded-2xl"></div>
                     <div className="h-6 bg-slate-200 dark:bg-slate-700 rounded w-3/4"></div>
                     <div className="space-y-2">
                       <div className="h-4 bg-slate-100 dark:bg-slate-600 rounded w-full"></div>
@@ -336,22 +336,22 @@ export default function Home() {
             ) : (
               latestPosts.map((post, index) => {
                 const colors = [
-                  { bg: 'from-cream-50 to-cream-100/50', border: 'border-cream-100 hover:border-cream-200', icon: 'bg-cream-500', text: 'text-cream-700', button: 'text-cream-600 hover:text-cream-700 hover:bg-cream-50' },
-                  { bg: 'from-beige-50 to-beige-100/50', border: 'border-beige-100 hover:border-beige-200', icon: 'bg-beige-500', text: 'text-beige-700', button: 'text-beige-600 hover:text-beige-700 hover:bg-beige-50' },
-                  { bg: 'from-slate-50 to-slate-100/50', border: 'border-slate-100 hover:border-slate-200', icon: 'bg-slate-500', text: 'text-slate-700', button: 'text-slate-600 hover:text-slate-700 hover:bg-slate-50' }
+                  { bg: 'from-purple-50 to-purple-100/50', border: 'border-0', icon: 'bg-gradient-to-br from-purple-500 to-purple-600', text: 'text-purple-800', button: 'text-purple-600 hover:text-purple-700 hover:bg-purple-50' },
+                  { bg: 'from-indigo-50 to-indigo-100/50', border: 'border-0', icon: 'bg-gradient-to-br from-indigo-500 to-indigo-600', text: 'text-indigo-800', button: 'text-indigo-600 hover:text-indigo-700 hover:bg-indigo-50' },
+                  { bg: 'from-blue-50 to-blue-100/50', border: 'border-0', icon: 'bg-gradient-to-br from-blue-500 to-blue-600', text: 'text-blue-800', button: 'text-blue-600 hover:text-blue-700 hover:bg-blue-50' }
                 ];
                 const colorScheme = colors[index % colors.length];
                 
                 return (
-                  <Card key={post.id} className={`group relative overflow-hidden p-8 bg-gradient-to-br ${colorScheme.bg} border-2 ${colorScheme.border} hover:shadow-premium transition-all duration-500 hover:-translate-y-2 rounded-3xl animate-slide-up`} style={{ animationDelay: `${index * 200}ms` }}>
-                    <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full -translate-y-12 translate-x-12 group-hover:scale-150 transition-transform duration-700"></div>
-                    <CardContent className="relative space-y-5 p-0">
-                      <div className={`w-14 h-14 ${colorScheme.icon} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
-                        <FileText className="w-7 h-7 text-white" />
+                  <Card key={post.id} className={`group relative overflow-hidden p-8 bg-gradient-to-br ${colorScheme.bg} ${colorScheme.border} shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 rounded-2xl`}>
+                    <div className="absolute -top-4 -right-4 w-24 h-24 bg-white/20 rounded-full group-hover:scale-125 transition-transform duration-500"></div>
+                    <CardContent className="relative space-y-6 p-0">
+                      <div className={`w-16 h-16 ${colorScheme.icon} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
+                        <FileText className="w-8 h-8 text-white" />
                       </div>
                       <div className="space-y-3">
-                        <h3 className={`text-xl font-bold ${colorScheme.text} dark:text-slate-200 line-clamp-2 leading-tight`}>{post.title}</h3>
-                        <p className="text-slate-600 dark:text-slate-300 line-clamp-3 leading-relaxed">{post.excerpt}</p>
+                        <h3 className={`text-xl font-bold ${colorScheme.text} dark:text-slate-200 leading-tight`}>{post.title}</h3>
+                        <p className="text-slate-600 dark:text-slate-300 leading-relaxed">{post.excerpt}</p>
                       </div>
                       <div className="flex items-center justify-between pt-2">
                         <span className="text-sm text-slate-500 dark:text-slate-400 font-medium">
@@ -369,8 +369,8 @@ export default function Home() {
             )}
           </div>
           
-          <div className="text-center mt-16 animate-fade-in animation-delay-800ms">
-            <Button variant="outline" size="lg" className="px-8 py-4 text-base font-semibold border-2 border-beige-300 text-beige-700 hover:bg-beige-50 hover:border-beige-400 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105" asChild>
+          <div className="text-center mt-16">
+            <Button variant="outline" size="lg" className="px-8 py-4 text-base font-semibold border-2 border-purple-300 text-purple-700 hover:bg-purple-50 hover:border-purple-400 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105" asChild>
               <Link href="/blog">
                 <BookOpen className="w-5 h-5 mr-3" />
                 Explorează Toate Ghidurile
