@@ -33,27 +33,25 @@ export function Header() {
   };
 
   return (
-    <header className={`glass sticky top-0 z-50 transition-all duration-500 ${
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-background/95 backdrop-blur-2xl shadow-premium border-b border-border/50' 
-        : 'bg-background/80 backdrop-blur-xl'
+        ? 'bg-background/95 backdrop-blur-sm shadow-sm border-b border-border/50' 
+        : 'bg-background/80 backdrop-blur-sm'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <Link href="/">
-                <div className="flex items-center space-x-3 cursor-pointer group">
-                  <div className="relative">
-                    <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform">
-                      <Calculator className="w-6 h-6 text-primary-foreground" />
-                    </div>
+                <div className="flex items-center space-x-2 cursor-pointer group">
+                  <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform">
+                    <Calculator className="w-4 h-4 text-primary-foreground" />
                   </div>
-                  <div className="space-y-1">
-                    <h1 className="text-xl font-bold text-foreground leading-none">
-                      Calculator Pensii
+                  <div>
+                    <h1 className="text-lg font-bold text-foreground leading-tight">
+                      Calculator Sarcina
                     </h1>
-                    <p className="text-xs font-medium text-muted-foreground leading-none">
+                    <p className="text-xs text-muted-foreground leading-tight">
                       România
                     </p>
                   </div>
@@ -64,11 +62,11 @@ export function Header() {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:block">
-            <div className="ml-10 flex items-center space-x-2">
+            <div className="flex items-center space-x-1">
               {navigation.map((item) => (
                 <Link key={item.name} href={item.href}>
                   <span
-                    className={`relative px-4 py-2.5 rounded-lg font-medium text-sm transition-all duration-200 cursor-pointer ${
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer ${
                       item.current
                         ? "bg-primary text-primary-foreground"
                         : "text-muted-foreground hover:text-foreground hover:bg-muted"
@@ -82,14 +80,14 @@ export function Header() {
               {/* Theme Toggle */}
               <Button
                 variant="ghost"
-                size="icon"
+                size="sm"
                 onClick={toggleTheme}
-                className="ml-4 hover:bg-muted/50 rounded-xl transition-all duration-300"
+                className="ml-2 h-8 w-8 p-0"
               >
                 {isDark ? (
-                  <Sun className="h-5 w-5 text-amber-500" />
+                  <Sun className="h-4 w-4 text-amber-500" />
                 ) : (
-                  <Moon className="h-5 w-5 text-slate-600" />
+                  <Moon className="h-4 w-4 text-slate-600" />
                 )}
               </Button>
             </div>
@@ -99,50 +97,47 @@ export function Header() {
           <div className="md:hidden flex items-center space-x-2">
             <Button
               variant="ghost"
-              size="icon"
+              size="sm"
               onClick={toggleTheme}
-              className="hover:bg-muted/50 rounded-xl"
+              className="h-8 w-8 p-0"
             >
               {isDark ? (
-                <Sun className="h-5 w-5 text-amber-500" />
+                <Sun className="h-4 w-4 text-amber-500" />
               ) : (
-                <Moon className="h-5 w-5 text-slate-600" />
+                <Moon className="h-4 w-4 text-slate-600" />
               )}
             </Button>
             
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="hover:bg-muted/50 rounded-xl">
-                  <Menu className="h-6 w-6" />
+                <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
+                  <Menu className="h-4 w-4" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[280px] glass border-l border-border/50">
-                <div className="mt-8">
-                  <div className="flex items-center space-x-3 mb-8 pb-6 border-b border-border">
-                    <div className="bg-primary rounded-xl p-2">
-                      <Calculator className="w-5 h-5 text-primary-foreground" />
+              <SheetContent side="right" className="w-[280px]">
+                <div className="mt-6">
+                  <div className="flex items-center space-x-2 mb-6 pb-4 border-b border-border">
+                    <div className="bg-primary rounded-lg p-1.5">
+                      <Calculator className="w-4 h-4 text-primary-foreground" />
                     </div>
                     <div>
-                      <h2 className="font-bold text-lg text-foreground">Calculator Pensii</h2>
+                      <h2 className="font-semibold text-base text-foreground">Calculator Sarcina</h2>
                       <p className="text-xs text-muted-foreground">România</p>
                     </div>
                   </div>
                   
-                  <nav className="flex flex-col space-y-2">
+                  <nav className="flex flex-col space-y-1">
                     {navigation.map((item) => (
                       <Link key={item.name} href={item.href}>
                         <span
-                          className={`relative flex items-center px-4 py-3 rounded-lg font-medium transition-all duration-200 cursor-pointer ${
+                          className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer ${
                             item.current
                               ? "bg-primary/10 text-primary"
                               : "text-muted-foreground hover:text-foreground hover:bg-muted"
                           }`}
                           onClick={() => setIsOpen(false)}
                         >
-                          {item.current && (
-                            <div className="absolute left-0 w-1 h-6 bg-primary rounded-r-full"></div>
-                          )}
-                          <span className="relative ml-2">{item.name}</span>
+                          {item.name}
                         </span>
                       </Link>
                     ))}

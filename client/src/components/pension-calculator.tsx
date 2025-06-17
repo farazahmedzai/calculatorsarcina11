@@ -105,56 +105,46 @@ export function PensionCalculator() {
                 control={form.control}
                 name="monthlySalary"
                 render={({ field }) => (
-                  <FormItem className="space-y-3">
-                    <FormLabel className="text-base font-bold text-foreground flex items-center gap-3">
-                      <div className="p-2 rounded-xl bg-forest-500/10 border border-forest-200/50">
-                        <TrendingUp className="w-5 h-5 text-forest-600" />
-                      </div>
+                  <FormItem className="space-y-2">
+                    <FormLabel className="text-sm font-medium text-foreground flex items-center gap-2">
+                      <TrendingUp className="w-4 h-4 text-primary" />
                       Salariul brut lunar (RON)
                     </FormLabel>
                     <FormControl>
-                      <div className="relative group">
-                        <Input
-                          type="number"
-                          placeholder="5000"
-                          {...field}
-                          onChange={(e) => field.onChange(parseInt(e.target.value) || 0)}
-                          className="w-full px-6 py-4 text-lg font-semibold border-2 border-border rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all bg-background/50 hover:bg-background group-hover:shadow-premium backdrop-blur-sm"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-r from-forest-500/5 to-gold-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
-                      </div>
+                      <Input
+                        type="number"
+                        placeholder="5000"
+                        {...field}
+                        onChange={(e) => field.onChange(parseInt(e.target.value) || 0)}
+                        className="w-full"
+                      />
                     </FormControl>
-                    <FormMessage className="text-sm font-medium" />
+                    <FormMessage />
                   </FormItem>
                 )}
               />
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-4">
               <FormField
                 control={form.control}
                 name="contributionYears"
                 render={({ field }) => (
-                  <FormItem className="space-y-3">
-                    <FormLabel className="text-base font-bold text-foreground flex items-center gap-3">
-                      <div className="p-2 rounded-xl bg-crimson-500/10 border border-crimson-200/50">
-                        <BarChart3 className="w-5 h-5 text-crimson-600" />
-                      </div>
+                  <FormItem className="space-y-2">
+                    <FormLabel className="text-sm font-medium text-foreground flex items-center gap-2">
+                      <BarChart3 className="w-4 h-4 text-primary" />
                       Ani de contribuție
                     </FormLabel>
                     <FormControl>
-                      <div className="relative group">
-                        <Input
-                          type="number"
-                          placeholder="10"
-                          {...field}
-                          onChange={(e) => field.onChange(parseInt(e.target.value) || 0)}
-                          className="w-full px-6 py-4 text-lg font-semibold border-2 border-border rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all bg-background/50 hover:bg-background group-hover:shadow-premium backdrop-blur-sm"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-r from-crimson-500/5 to-gold-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
-                      </div>
+                      <Input
+                        type="number"
+                        placeholder="10"
+                        {...field}
+                        onChange={(e) => field.onChange(parseInt(e.target.value) || 0)}
+                        className="w-full"
+                      />
                     </FormControl>
-                    <FormMessage className="text-sm font-medium" />
+                    <FormMessage />
                   </FormItem>
                 )}
               />
@@ -163,29 +153,24 @@ export function PensionCalculator() {
                 control={form.control}
                 name="pensionType"
                 render={({ field }) => (
-                  <FormItem className="space-y-3">
-                    <FormLabel className="text-base font-bold text-foreground flex items-center gap-3">
-                      <div className="p-2 rounded-xl bg-slate-500/10 border border-slate-200/50">
-                        <Award className="w-5 h-5 text-slate-600" />
-                      </div>
+                  <FormItem className="space-y-2">
+                    <FormLabel className="text-sm font-medium text-foreground flex items-center gap-2">
+                      <Award className="w-4 h-4 text-primary" />
                       Tipul pensiei
                     </FormLabel>
                     <Select onValueChange={field.onChange} value={field.value}>
                       <FormControl>
-                        <div className="relative group">
-                          <SelectTrigger className="w-full px-6 py-4 text-lg font-semibold border-2 border-border rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all bg-background/50 hover:bg-background group-hover:shadow-premium backdrop-blur-sm">
-                            <SelectValue placeholder="Selectează tipul pensiei" />
-                          </SelectTrigger>
-                          <div className="absolute inset-0 bg-gradient-to-r from-slate-500/5 to-gold-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
-                        </div>
+                        <SelectTrigger className="w-full">
+                          <SelectValue placeholder="Selectează tipul pensiei" />
+                        </SelectTrigger>
                       </FormControl>
-                      <SelectContent className="rounded-2xl border-2 border-border/50 shadow-premium-lg backdrop-blur-xl">
-                        <SelectItem value="standard" className="py-3 px-4 rounded-xl">Pensie pentru limită de vârstă</SelectItem>
-                        <SelectItem value="early-partial" className="py-3 px-4 rounded-xl">Pensie anticipată parțială</SelectItem>
-                        <SelectItem value="early-complete" className="py-3 px-4 rounded-xl">Pensie anticipată completă</SelectItem>
+                      <SelectContent>
+                        <SelectItem value="standard">Pensie pentru limită de vârstă</SelectItem>
+                        <SelectItem value="early-partial">Pensie anticipată parțială</SelectItem>
+                        <SelectItem value="early-complete">Pensie anticipată completă</SelectItem>
                       </SelectContent>
                     </Select>
-                    <FormMessage className="text-sm font-medium" />
+                    <FormMessage />
                   </FormItem>
                 )}
               />
@@ -193,72 +178,62 @@ export function PensionCalculator() {
 
             <Button 
               type="submit" 
-              className="relative w-full h-16 text-xl font-black rounded-2xl shadow-premium-lg hover:shadow-glow transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 group overflow-hidden"
+              className="w-full"
               disabled={calculateMutation.isPending}
             >
-              <div className="absolute inset-0 gradient-primary opacity-100 group-hover:opacity-90 transition-opacity"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-gold-400/20 to-forest-400/20 opacity-0 group-hover:opacity-100 transition-opacity animate-gradient"></div>
-              <div className="relative flex items-center justify-center text-white">
-                {calculateMutation.isPending ? (
-                  <>
-                    <Loader2 className="w-6 h-6 mr-3 animate-spin" />
-                    Se calculează...
-                  </>
-                ) : (
-                  <>
-                    <Calculator className="w-6 h-6 mr-3" />
-                    Calculează Pensia
-                  </>
-                )}
-              </div>
+              {calculateMutation.isPending ? (
+                <>
+                  <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                  Se calculează...
+                </>
+              ) : (
+                <>
+                  <Calculator className="w-4 h-4 mr-2" />
+                  Calculează Pensia
+                </>
+              )}
             </Button>
           </form>
         </Form>
 
         {result && (
-          <div className="relative group animate-scale-in">
-            <div className="absolute inset-0 bg-gradient-to-r from-gold-500/20 to-forest-500/20 rounded-2xl blur-xl opacity-60"></div>
-            <Alert className="relative glass border border-gold-200/50 dark:border-gold-700/50 rounded-2xl p-6">
-              <div className="absolute inset-0 bg-gradient-to-br from-gold-50/50 to-forest-50/30 dark:from-gold-900/20 dark:to-forest-900/20 rounded-2xl"></div>
-              <div className="relative">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 rounded-xl bg-forest-500/10 border border-forest-200/50">
-                    <CheckCircle className="h-6 w-6 text-forest-600" />
-                  </div>
-                  <h4 className="text-xl font-bold text-gradient">Rezultatul calculului</h4>
+          <Alert className="border-green-200 bg-green-50 dark:border-green-800 dark:bg-green-950">
+            <CheckCircle className="h-4 w-4 text-green-600" />
+            <AlertDescription>
+              <div className="space-y-3">
+                <div className="flex items-center gap-2">
+                  <h4 className="font-semibold text-green-800 dark:text-green-200">Rezultatul calculului</h4>
                 </div>
-                <AlertDescription>
-                  <div className="space-y-4">
-                    <div className="p-4 rounded-xl bg-gold-500/5 border border-gold-200/30">
-                      <p className="text-3xl font-black text-gradient-warm mb-2">
-                        {result.amount.toLocaleString()} RON/lună
-                      </p>
-                      <p className="text-base text-muted-foreground font-medium">{result.details}</p>
-                    </div>
-                    
-                    <div className="grid gap-3">
-                      {result.breakdown.penalties > 0 && (
-                        <div className="flex items-center justify-between p-3 rounded-xl bg-crimson-50/50 border border-crimson-200/30">
-                          <span className="text-sm font-semibold text-crimson-700">Penalizare</span>
-                          <span className="text-base font-bold text-crimson-600">
-                            -{result.breakdown.penalties.toLocaleString()} RON
-                          </span>
-                        </div>
-                      )}
-                      {result.breakdown.contributionBonus > 0 && (
-                        <div className="flex items-center justify-between p-3 rounded-xl bg-forest-50/50 border border-forest-200/30">
-                          <span className="text-sm font-semibold text-forest-700">Bonus vechime</span>
-                          <span className="text-base font-bold text-forest-600">
-                            +{result.breakdown.contributionBonus.toLocaleString()} RON
-                          </span>
-                        </div>
-                      )}
-                    </div>
+                <div className="p-3 rounded-md bg-white dark:bg-green-900/20 border border-green-200 dark:border-green-800">
+                  <p className="text-xl font-bold text-green-800 dark:text-green-200 mb-1">
+                    {result.amount.toLocaleString()} RON/lună
+                  </p>
+                  <p className="text-sm text-green-700 dark:text-green-300">{result.details}</p>
+                </div>
+                
+                {(result.breakdown.penalties > 0 || result.breakdown.contributionBonus > 0) && (
+                  <div className="space-y-2">
+                    {result.breakdown.penalties > 0 && (
+                      <div className="flex items-center justify-between p-2 rounded bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-800">
+                        <span className="text-xs font-medium text-red-700 dark:text-red-300">Penalizare</span>
+                        <span className="text-sm font-semibold text-red-600 dark:text-red-400">
+                          -{result.breakdown.penalties.toLocaleString()} RON
+                        </span>
+                      </div>
+                    )}
+                    {result.breakdown.contributionBonus > 0 && (
+                      <div className="flex items-center justify-between p-2 rounded bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-800">
+                        <span className="text-xs font-medium text-blue-700 dark:text-blue-300">Bonus vechime</span>
+                        <span className="text-sm font-semibold text-blue-600 dark:text-blue-400">
+                          +{result.breakdown.contributionBonus.toLocaleString()} RON
+                        </span>
+                      </div>
+                    )}
                   </div>
-                </AlertDescription>
+                )}
               </div>
-            </Alert>
-          </div>
+            </AlertDescription>
+          </Alert>
         )}
       </CardContent>
     </Card>
