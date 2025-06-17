@@ -65,7 +65,7 @@ export function PensionCalculator() {
       <CardHeader className="text-center">
         <CardTitle className="text-2xl font-bold text-neutral-800 flex items-center justify-center gap-2">
           <Calculator className="w-6 h-6 text-primary" />
-          Calculator Pensie Principală
+          Calculator Sarcina Principală
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">

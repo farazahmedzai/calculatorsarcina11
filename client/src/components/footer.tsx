@@ -7,7 +7,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">CalculatorSarcina.ro</h3>
+            <h3 className="text-2xl font-bold mb-4">Calculator Sarcina</h3>
             <p className="text-neutral-300 mb-6 max-w-md">
               Resursa de încredere pentru calculul și planificarea pensiilor în România. 
               Informații actualizate conform legislației în vigoare.
@@ -28,14 +28,14 @@ export function Footer() {
               <li>
                 <Link href="/">
                   <span className="hover:text-white transition-colors cursor-pointer">
-                    Calculator Pensie Principală
+                    Calculator Sarcina Principală
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="/">
                   <span className="hover:text-white transition-colors cursor-pointer">
-                    Calculator Pensie Anticipată
+                    Calculator Sarcina Anticipată
                   </span>
                 </Link>
               </li>
@@ -91,7 +91,7 @@ export function Footer() {
         
         <div className="border-t border-neutral-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-neutral-400 text-sm">
-            © 2024 CalculatorSarcina.ro. Toate drepturile rezervate.
+            © 2024 calculatorsarcina.com. Toate drepturile rezervate.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-neutral-400 hover:text-white text-sm transition-colors">

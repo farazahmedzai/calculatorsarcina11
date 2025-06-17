@@ -36,7 +36,7 @@ export const pageSEO: Record<string, SEOData> = {
     keywords: "legea pensiilor 2024, vârsta de pensionare, stagiu cotizare, legislație pensii",
   },
   blog: {
-    title: "Blog Pensii România - Ghiduri și Sfaturi pentru Planificarea Pensiei | calculatorsarcina.ro",
+    title: "Blog Pensii România - Ghiduri și Sfaturi pentru Planificarea Pensiei | calculatorsarcina.com",
     description: "Articole actualizate despre sistemul de pensii din România, modificări legislative și sfaturi practice pentru o pensie decentă.",
     keywords: "blog pensii, ghiduri pensii, sfaturi planificare pensie, modificări legislative",
   },

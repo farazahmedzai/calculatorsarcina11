@@ -380,6 +380,7 @@ The pension calculator implements current Romanian pension regulations:
 - **Architecture:** React + Express.js with TypeScript
 - **Deployment:** Replit-optimized configuration at calculatorsarcina.com
 - **Documentation:** Comprehensive documentation suite
+- **Branding Update:** Complete rebrand from "Calculator Pensie" to "Calculator Sarcina"
 
 ### Development History
 - **Project Setup:** Modern full-stack TypeScript architecture
@@ -387,6 +388,8 @@ The pension calculator implements current Romanian pension regulations:
 - **Calculation Logic:** Romanian pension system implementation
 - **Content Creation:** Educational blog posts and guides
 - **SEO Optimization:** Meta tags and structured content
+- **Branding Consistency:** Updated all references from "Calculator Pensie" to "Calculator Sarcina"
+- **Domain Updates:** Standardized domain references to calculatorsarcina.com
 
 ## Support and Maintenance
 
@@ -410,6 +413,29 @@ The pension calculator implements current Romanian pension regulations:
 ---
 
 *This Replit configuration document is maintained alongside the project. Last updated: June 17, 2025*
+
+## Recent Changes - June 17, 2025
+
+### ✓ Branding and Domain Updates Completed
+- **Title Updates:** Changed all "Calculator Pensie" references to "Calculator Sarcina"
+- **Domain Standardization:** Updated from calculatorsarcina.ro to calculatorsarcina.com across all files
+- **Files Updated:**
+  - `client/index.html` - Updated page title and meta tags
+  - `client/src/components/header.tsx` - Updated site title
+  - `client/src/components/footer.tsx` - Updated branding and calculator names
+  - `client/src/components/pension-calculator.tsx` - Updated calculator title
+  - `client/src/pages/home.tsx` - Updated main heading and calculator references
+  - `client/src/lib/seo-utils.ts` - Updated all SEO titles and domain references
+  - `README.md` - Updated project description and domain
+  - `replit.md` - Updated documentation
+
+### ✓ Current Status
+- **Application:** Running successfully on port 5000
+- **Domain:** All references updated to calculatorsarcina.com
+- **Branding:** Consistent "Calculator Sarcina" branding throughout
+- **SEO:** All meta tags and titles updated
+- **Functionality:** Pension calculator working correctly
+- **Documentation:** All documentation files updated
 
 ## Quick Replit Commands
 
