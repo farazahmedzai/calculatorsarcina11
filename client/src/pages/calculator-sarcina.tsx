@@ -14,7 +14,7 @@ export default function CalculatorSarcina() {
       />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-purple-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+      <section className="relative overflow-hidden bg-gradient-to-br from-purple-50 via-indigo-50 to-purple-50">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-500/5 via-transparent to-transparent"></div>
         
         <div className="relative max-w-6xl mx-auto px-6 py-24 lg:py-32">

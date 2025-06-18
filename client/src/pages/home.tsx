@@ -73,13 +73,13 @@ export default function Home() {
                   <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform text-white" />
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="group px-8 py-4 text-lg font-semibold border-2 border-slate-300 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 hover:border-slate-400 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 bg-white dark:bg-slate-800" onClick={() => {
+              <Button size="lg" variant="outline" className="group px-8 py-4 text-lg font-semibold border-2 border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 bg-white" onClick={() => {
                 const calculatorSection = document.getElementById('pension-calculator');
                 calculatorSection?.scrollIntoView({ behavior: 'smooth' });
               }}>
-                <Calculator className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform text-slate-700 dark:text-slate-200" />
-                <span className="text-slate-700 dark:text-slate-200">Calculator Pensie</span>
-                <TrendingUp className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform text-slate-700 dark:text-slate-200" />
+                <Calculator className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform text-slate-700" />
+                <span className="text-slate-700">Calculator Pensie</span>
+                <TrendingUp className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform text-slate-700" />
               </Button>
             </div>
             
@@ -102,17 +102,17 @@ export default function Home() {
         </div>
       </section>
       {/* Features Grid */}
-      <section className="py-20 bg-white dark:bg-slate-900">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center space-y-6 mb-16">
             <Badge className="px-4 py-2 text-sm font-medium bg-purple-50 text-purple-700 border border-purple-200 rounded-full">
               <Star className="w-4 h-4 mr-2" />
               De ce să ne alegi
             </Badge>
-            <h2 className="section-title text-slate-900 dark:text-white">
+            <h2 className="section-title text-slate-900">
               Soluții Complete pentru <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Viitorul Tău</span>
             </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Tehnologie avansată și calcule precise conform legislației românești actuale
             </p>
           </div>
@@ -288,7 +288,7 @@ export default function Home() {
       <section id="pension-calculator" className="py-12">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center space-y-3 mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Calculator de Pensii</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Calculator de Pensii</h2>
             <p className="text-base text-muted-foreground max-w-2xl mx-auto">
               Calculează-ți pensia viitoare pe baza contribuțiilor actuale
             </p>
@@ -298,17 +298,17 @@ export default function Home() {
         </div>
       </section>
       {/* Blog Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 via-purple-50/30 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-purple-50/30 to-indigo-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center space-y-6 mb-16">
             <Badge className="px-4 py-2 text-sm font-medium bg-indigo-50 text-indigo-700 border border-indigo-200 rounded-full">
               <BookOpen className="w-4 h-4 mr-2" />
               Educație și informare
             </Badge>
-            <h2 className="section-title text-slate-900 dark:text-white">
+            <h2 className="section-title text-slate-900">
               Ghiduri și <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Resurse</span> Educaționale
             </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Articole specializate despre sarcină, pensii și planificare financiară, scrise de experți
             </p>
           </div>
