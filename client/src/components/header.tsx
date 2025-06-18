@@ -2,12 +2,11 @@ import { Link, useLocation } from "wouter";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Calculator, Sparkles, Moon, Sun, ArrowRight } from "lucide-react";
+import { Menu, Calculator, Sparkles, ArrowRight } from "lucide-react";
 
 export function Header() {
   const [location] = useLocation();
   const [isOpen, setIsOpen] = useState(false);
-  const [isDark, setIsDark] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   const navigation = [
@@ -27,16 +26,11 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleTheme = () => {
-    setIsDark(!isDark);
-    document.documentElement.classList.toggle('dark');
-  };
-
   return (
     <header className={`sticky top-0 z-50 transition-all duration-500 ${
       isScrolled 
-        ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg shadow-xl border-b border-slate-200/50 dark:border-slate-700/50' 
-        : 'bg-white/90 dark:bg-slate-900/90 backdrop-blur-md'
+        ? 'bg-white/95 backdrop-blur-lg shadow-xl border-b border-slate-200/50' 
+        : 'bg-white/90 backdrop-blur-md'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -56,7 +50,7 @@ export function Header() {
                     <h1 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent leading-tight">
                       Calculator Sarcina
                     </h1>
-                    <p className="text-xs text-slate-500 dark:text-slate-400 leading-tight font-medium">
+                    <p className="text-xs text-slate-500 leading-tight font-medium">
                       Platformă pentru viitorul tău
                     </p>
                   </div>
@@ -74,7 +68,7 @@ export function Header() {
                     className={`group relative px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 cursor-pointer ${
                       item.current
                         ? "bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg"
-                        : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-slate-800/50"
+                        : "text-slate-600 hover:text-slate-900 hover:bg-slate-100/80"
                     }`}
                   >
                     {item.name}
@@ -84,47 +78,20 @@ export function Header() {
                   </span>
                 </Link>
               ))}
-              
-              {/* Theme Toggle */}
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={toggleTheme}
-                className="ml-4 h-9 w-9 p-0 rounded-lg bg-slate-100/80 dark:bg-slate-800/50 hover:bg-slate-200/80 dark:hover:bg-slate-700/50 transition-all duration-300"
-              >
-                {isDark ? (
-                  <Sun className="h-4 w-4 text-amber-500" />
-                ) : (
-                  <Moon className="h-4 w-4 text-slate-600 dark:text-slate-400" />
-                )}
-              </Button>
             </div>
           </nav>
           
           {/* Mobile Navigation */}
           <div className="lg:hidden flex items-center space-x-3">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={toggleTheme}
-              className="h-9 w-9 p-0 rounded-lg bg-slate-100/80 dark:bg-slate-800/50 hover:bg-slate-200/80 dark:hover:bg-slate-700/50 transition-all duration-300"
-            >
-              {isDark ? (
-                <Sun className="h-4 w-4 text-amber-500" />
-              ) : (
-                <Moon className="h-4 w-4 text-slate-600 dark:text-slate-400" />
-              )}
-            </Button>
-            
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="sm" className="h-9 w-9 p-0 rounded-lg bg-slate-100/80 dark:bg-slate-800/50 hover:bg-slate-200/80 dark:hover:bg-slate-700/50 transition-all duration-300">
-                  <Menu className="h-4 w-4 text-slate-600 dark:text-slate-400" />
+                <Button variant="ghost" size="sm" className="h-9 w-9 p-0 rounded-lg bg-slate-100/80 hover:bg-slate-200/80 transition-all duration-300">
+                  <Menu className="h-4 w-4 text-slate-600" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[320px] bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg border-l border-slate-200/50 dark:border-slate-700/50">
+              <SheetContent side="right" className="w-[320px] bg-white/95 backdrop-blur-lg border-l border-slate-200/50">
                 <div className="mt-8">
-                  <div className="flex items-center space-x-3 mb-8 pb-6 border-b border-slate-200 dark:border-slate-700">
+                  <div className="flex items-center space-x-3 mb-8 pb-6 border-b border-slate-200">
                     <div className="relative">
                       <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
                         <Calculator className="w-6 h-6 text-white" />
@@ -135,7 +102,7 @@ export function Header() {
                     </div>
                     <div>
                       <h2 className="text-lg font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Calculator Sarcina</h2>
-                      <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Platformă pentru viitorul tău</p>
+                      <p className="text-sm text-slate-500 font-medium">Platformă pentru viitorul tău</p>
                     </div>
                   </div>
                   
@@ -146,7 +113,7 @@ export function Header() {
                           className={`group flex items-center px-4 py-3 rounded-lg text-base font-semibold transition-all duration-300 cursor-pointer ${
                             item.current
                               ? "bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg"
-                              : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-slate-800/50"
+                              : "text-slate-600 hover:text-slate-900 hover:bg-slate-100/80"
                           }`}
                           onClick={() => setIsOpen(false)}
                         >

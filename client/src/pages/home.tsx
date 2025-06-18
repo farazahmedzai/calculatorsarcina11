@@ -35,7 +35,7 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <SEOHead page="home" />
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-white via-slate-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+      <section className="relative overflow-hidden bg-gradient-to-br from-white via-slate-50 to-indigo-50">
         {/* Modern Geometric Background */}
         <div className="absolute inset-0 opacity-30">
           <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
@@ -57,10 +57,10 @@ export default function Home() {
             </div>
             
             <div className="space-y-8">
-              <h1 className="hero-text font-bold text-slate-900 dark:text-white leading-tight">
+              <h1 className="hero-text font-bold text-slate-900 leading-tight">
                 Calculează-ți <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Sarcina</span> și <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Pensia</span>
               </h1>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
                 Platformá modernă și precisă pentru planificarea viitorului tău financiar și familial, conform legislației românești
               </p>
             </div>
