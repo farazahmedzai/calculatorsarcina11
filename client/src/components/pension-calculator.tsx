@@ -197,34 +197,34 @@ export function PensionCalculator() {
         </Form>
 
         {result && (
-          <Alert className="border-purple-200 bg-purple-50 dark:border-purple-800 dark:bg-purple-950">
+          <Alert className="border-purple-200 bg-purple-50">
             <CheckCircle className="h-4 w-4 text-purple-600" />
             <AlertDescription>
               <div className="space-y-3">
                 <div className="flex items-center gap-2">
-                  <h4 className="font-semibold text-purple-800 dark:text-purple-200">Rezultatul calculului</h4>
+                  <h4 className="font-semibold text-purple-800">Rezultatul calculului</h4>
                 </div>
-                <div className="p-3 rounded-md bg-white dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800">
-                  <p className="text-xl font-bold text-purple-800 dark:text-purple-200 mb-1">
+                <div className="p-3 rounded-md bg-white border border-purple-200">
+                  <p className="text-xl font-bold text-purple-800 mb-1">
                     {result.amount.toLocaleString()} RON/lună
                   </p>
-                  <p className="text-sm text-purple-700 dark:text-purple-300">{result.details}</p>
+                  <p className="text-sm text-purple-700">{result.details}</p>
                 </div>
                 
                 {(result.breakdown.penalties > 0 || result.breakdown.contributionBonus > 0) && (
                   <div className="space-y-2">
                     {result.breakdown.penalties > 0 && (
-                      <div className="flex items-center justify-between p-2 rounded bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-800">
-                        <span className="text-xs font-medium text-red-700 dark:text-red-300">Penalizare</span>
-                        <span className="text-sm font-semibold text-red-600 dark:text-red-400">
+                      <div className="flex items-center justify-between p-2 rounded bg-red-50 border border-red-200">
+                        <span className="text-xs font-medium text-red-700">Penalizare</span>
+                        <span className="text-sm font-semibold text-red-600">
                           -{result.breakdown.penalties.toLocaleString()} RON
                         </span>
                       </div>
                     )}
                     {result.breakdown.contributionBonus > 0 && (
-                      <div className="flex items-center justify-between p-2 rounded bg-orange-50 dark:bg-orange-950/20 border border-orange-200 dark:border-orange-800">
-                        <span className="text-xs font-medium text-orange-700 dark:text-orange-300">Bonus vechime</span>
-                        <span className="text-sm font-semibold text-orange-600 dark:text-orange-400">
+                      <div className="flex items-center justify-between p-2 rounded bg-orange-50 border border-orange-200">
+                        <span className="text-xs font-medium text-orange-700">Bonus vechime</span>
+                        <span className="text-sm font-semibold text-orange-600">
                           +{result.breakdown.contributionBonus.toLocaleString()} RON
                         </span>
                       </div>

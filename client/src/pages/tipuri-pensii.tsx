@@ -95,7 +95,7 @@ export default function TipuriPensii() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-purple-50 dark:to-slate-900">
       <SEOHead page="tipuri" />
       
       {/* Hero Section */}
@@ -114,7 +114,7 @@ export default function TipuriPensii() {
       <section className="py-16 bg-white dark:bg-slate-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
-            <p className="text-xl text-slate-600 dark:text-slate-300 leading-relaxed mb-8">
+            <p className="text-xl text-slate-600 leading-relaxed mb-8">
               Sistemul public de pensii din România oferă mai multe tipuri de pensii, fiecare cu condițiile și 
               avantajele sale specifice. Înțelegerea acestor diferențe te ajută să iei decizii informate despre 
               planificarea pensiei tale.
@@ -195,7 +195,7 @@ export default function TipuriPensii() {
       {/* Comparison Table */}
       <section className="py-16 bg-white dark:bg-slate-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 text-center">
+          <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
             Comparație Rapidă: Tipuri de Pensii
           </h2>
           

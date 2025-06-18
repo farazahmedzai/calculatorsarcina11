@@ -19,7 +19,7 @@ export default function CalculatorSarcina() {
         
         <div className="relative max-w-6xl mx-auto px-6 py-24 lg:py-32">
           <div className="text-center space-y-8">
-            <Badge className="px-6 py-2 text-sm font-semibold bg-purple-100 text-purple-700 border border-purple-200 rounded-full dark:bg-purple-900/30 dark:text-purple-300">
+            <Badge className="px-6 py-2 text-sm font-semibold bg-purple-100 text-purple-700 border border-purple-200 rounded-full">
               <Baby className="w-4 h-4 mr-2" />
               Calculator Sarcină România
             </Badge>
@@ -156,11 +156,11 @@ export default function CalculatorSarcina() {
               </div>
             </div>
 
-            <div className="mt-12 p-6 bg-yellow-50 border border-yellow-200 rounded-lg dark:bg-yellow-950/20 dark:border-yellow-800">
-              <h4 className="font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
+            <div className="mt-12 p-6 bg-yellow-50 border border-yellow-200 rounded-lg dark:border-yellow-800">
+              <h4 className="font-semibold text-yellow-800 mb-2">
                 Important de știut
               </h4>
-              <p className="text-yellow-700 dark:text-yellow-300 text-sm">
+              <p className="text-yellow-700 text-sm">
                 Calculatorul oferă estimări bazate pe date statistice. Pentru informații medicale precise 
                 și monitorizarea sarcinii, consultă întotdeauna medicul ginecolog. Fiecare sarcină este unică 
                 și poate varia de la calculele standard.

@@ -316,15 +316,15 @@ export default function Home() {
           <div className="grid lg:grid-cols-3 gap-8">
             {isLoading ? (
               Array.from({ length: 3 }).map((_, i) => (
-                <Card key={i} className="group p-8 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm border border-slate-200 dark:border-slate-700 rounded-2xl animate-pulse">
+                <Card key={i} className="group p-8 bg-white/80 backdrop-blur-sm border border-slate-200 rounded-2xl animate-pulse">
                   <div className="space-y-4">
-                    <div className="w-14 h-14 bg-slate-200 dark:bg-slate-700 rounded-2xl"></div>
-                    <div className="h-6 bg-slate-200 dark:bg-slate-700 rounded w-3/4"></div>
+                    <div className="w-14 h-14 bg-slate-200 rounded-2xl"></div>
+                    <div className="h-6 bg-slate-200 rounded w-3/4"></div>
                     <div className="space-y-2">
-                      <div className="h-4 bg-slate-100 dark:bg-slate-600 rounded w-full"></div>
-                      <div className="h-4 bg-slate-100 dark:bg-slate-600 rounded w-2/3"></div>
+                      <div className="h-4 bg-slate-100 rounded w-full"></div>
+                      <div className="h-4 bg-slate-100 rounded w-2/3"></div>
                     </div>
-                    <div className="h-8 bg-slate-100 dark:bg-slate-600 rounded w-24"></div>
+                    <div className="h-8 bg-slate-100 rounded w-24"></div>
                   </div>
                 </Card>
               ))
@@ -345,11 +345,11 @@ export default function Home() {
                         <FileText className="w-8 h-8 text-white" />
                       </div>
                       <div className="space-y-3">
-                        <h3 className={`text-xl font-bold ${colorScheme.text} dark:text-slate-200 leading-tight`}>{post.title}</h3>
-                        <p className="text-slate-600 dark:text-slate-300 leading-relaxed">{post.excerpt}</p>
+                        <h3 className={`text-xl font-bold ${colorScheme.text} leading-tight`}>{post.title}</h3>
+                        <p className="text-slate-600 leading-relaxed">{post.excerpt}</p>
                       </div>
                       <div className="flex items-center justify-between pt-2">
-                        <span className="text-sm text-slate-500 dark:text-slate-400 font-medium">
+                        <span className="text-sm text-slate-500 font-medium">
                           {new Date(post.createdAt).toLocaleDateString('ro-RO', { day: 'numeric', month: 'short', year: 'numeric' })}
                         </span>
                         <Button variant="ghost" size="sm" className={`${colorScheme.button} font-medium group/btn`}>
