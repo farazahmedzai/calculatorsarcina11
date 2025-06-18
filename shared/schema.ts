@@ -54,6 +54,9 @@ export const insertUserSchema = createInsertSchema(users).pick({
 export const insertPensionCalculationSchema = createInsertSchema(pensionCalculations).omit({
   id: true,
   createdAt: true,
+}).extend({
+  monthlySalary: z.union([z.string(), z.number()]).transform(val => String(val)),
+  calculatedAmount: z.union([z.string(), z.number()]).transform(val => String(val)),
 });
 
 export const insertPregnancyCalculationSchema = createInsertSchema(pregnancyCalculations).omit({
