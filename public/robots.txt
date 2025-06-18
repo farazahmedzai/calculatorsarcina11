@@ -4,24 +4,45 @@ Allow: /
 # Sitemap location
 Sitemap: https://calculatorsarcina.com/sitemap.xml
 
-# Allow all calculators and tools
+# Allow all main pages and calculators
 Allow: /calculator-sarcina
 Allow: /planificare-pensie
 Allow: /tipuri-pensii
 Allow: /legislatie-resurse
 Allow: /blog
 
-# Allow CSS, JS, and static assets
+# Allow essential assets for proper indexing
 Allow: /assets/
-Allow: /src/
 Allow: /*.css
 Allow: /*.js
 Allow: /*.png
 Allow: /*.jpg
 Allow: /*.jpeg
-Allow: /*.gif
+Allow: /*.webp
 Allow: /*.svg
 Allow: /*.ico
+Allow: /*.woff
+Allow: /*.woff2
 
-# Crawl delay (optional)
+# Disallow internal development files
+Disallow: /src/
+Disallow: /*.tsx
+Disallow: /*.ts
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /package.json
+Disallow: /vite.config.ts
+
+# Crawl delay for respectful crawling
 Crawl-delay: 1
+
+# Cache optimization
+User-agent: Googlebot
+Crawl-delay: 0
+
+# Additional search engines
+User-agent: Bingbot
+Crawl-delay: 1
+
+User-agent: Slurp
+Crawl-delay: 2
