@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { SEOHead } from "@/components/seo-head";
+import { StructuredData } from "@/components/structured-data";
 import { ArrowLeft, Calendar, User, BookOpen, TrendingUp, FileText, Users } from "lucide-react";
 import type { BlogPost } from "@shared/schema";
 
@@ -56,7 +57,31 @@ export default function Blog() {
 
     return (
       <div className="min-h-screen bg-white">
-        <SEOHead page="blog" title={singlePost.title} description={singlePost.excerpt} />
+        <SEOHead 
+          page="blog" 
+          title={singlePost.title} 
+          description={singlePost.excerpt}
+          article={{
+            publishedTime: singlePost.createdAt,
+            modifiedTime: singlePost.updatedAt,
+            author: "Calculator Sarcina",
+            section: singlePost.category,
+            tags: [singlePost.category, "pensii", "romania"]
+          }}
+        />
+        <StructuredData 
+          type="article" 
+          data={{
+            headline: singlePost.title,
+            description: singlePost.excerpt,
+            image: singlePost.imageUrl || "https://calculatorsarcina.com/assets/default-article.jpg",
+            datePublished: singlePost.createdAt,
+            dateModified: singlePost.updatedAt,
+            url: `https://calculatorsarcina.com/blog/${singlePost.slug}`,
+            section: singlePost.category,
+            keywords: [singlePost.category, "pensii", "romania", "planificare financiara"]
+          }} 
+        />
         
         <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <Link href="/blog">

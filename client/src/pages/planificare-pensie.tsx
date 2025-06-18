@@ -2,12 +2,31 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { SEOHead } from "@/components/seo-head";
+import { StructuredData } from "@/components/structured-data";
 import { TrendingUp, DollarSign, Shield, Target, AlertTriangle, CheckCircle } from "lucide-react";
 
 export default function PlanificareePensie() {
+  const faqData = {
+    questions: [
+      {
+        question: "La ce vârstă ar trebui să încep să-mi planific pensia?",
+        answer: "Cât mai devreme posibil, ideally în primul an de muncă. Cu cât începi mai devreme, cu atât beneficiezi mai mult de efectul compoundului și poți economisi sume mai mici lunar pentru aceeași pensie finală."
+      },
+      {
+        question: "Este suficient doar pilonul I pentru o pensie decentă?",
+        answer: "De obicei nu. Pilonul I (pensia de stat) reprezintă în medie 30-40% din ultimul salariu. Pentru a menține standardul de viață, experții recomandă să ai 70-80% din ultimul salariu, prin combinarea tuturor pilonilor de pensii și economii personale."
+      },
+      {
+        question: "Cât ar trebui să economisesc lunar pentru pensie?",
+        answer: "Regula generală este 10-15% din venit pentru pensie (incluzând toate pilonii). Dacă ai doar pilonul I (25% contribuție), consideră să adaugi încă 5-10% prin pilonul III sau economii personale."
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-purple-50 dark:to-slate-900">
       <SEOHead page="planificare" />
+      <StructuredData type="faq" data={faqData} />
       
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">

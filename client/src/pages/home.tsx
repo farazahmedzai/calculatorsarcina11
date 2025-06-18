@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { SEOHead } from "@/components/seo-head";
+import { StructuredData } from "@/components/structured-data";
 import { PensionCalculator } from "@/components/pension-calculator";
 import { 
   ArrowRight, 
@@ -34,6 +35,29 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead page="home" />
+      <StructuredData 
+        type="website" 
+        data={{}} 
+      />
+      <StructuredData 
+        type="organization" 
+        data={{}} 
+      />
+      <StructuredData 
+        type="calculator" 
+        data={{
+          name: "Calculator Sarcină și Pensie Online",
+          description: "Calculatoare profesionale pentru sarcină și pensie conform legislației românești",
+          url: "https://calculatorsarcina.com",
+          features: [
+            "Calculator sarcină cu 3 metode de calcul",
+            "Calculator pensie conform legii 2025",
+            "Rezultate instant și precise",
+            "Ghiduri complete incluse"
+          ],
+          screenshot: "https://calculatorsarcina.com/assets/calculator-screenshot.jpg"
+        }} 
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-white via-slate-50 to-indigo-50">
         {/* Modern Geometric Background */}
