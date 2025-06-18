@@ -134,14 +134,16 @@ export function PregnancyCalculator() {
 
   return (
     <div className="max-w-4xl mx-auto space-y-8">
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center space-x-2">
-            <Baby className="w-6 h-6 text-pink-500" />
+      <Card className="overflow-hidden rounded-2xl bg-gradient-to-br from-white to-pink-50 border-0 shadow-xl">
+        <CardHeader className="bg-gradient-to-r from-pink-500 to-purple-600 text-white">
+          <CardTitle className="flex items-center space-x-3 text-xl font-bold">
+            <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+              <Baby className="w-6 h-6 text-white" />
+            </div>
             <span>Calculator Sarcină</span>
           </CardTitle>
         </CardHeader>
-        <CardContent>
+        <CardContent className="p-8">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <FormField
@@ -282,17 +284,17 @@ export function PregnancyCalculator() {
 
               <Button 
                 type="submit" 
-                className="w-full" 
+                className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-0" 
                 disabled={calculateMutation.isPending}
               >
                 {calculateMutation.isPending ? (
                   <>
-                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                    <Loader2 className="w-5 h-5 mr-3 animate-spin" />
                     Se calculează...
                   </>
                 ) : (
                   <>
-                    <Baby className="w-4 h-4 mr-2" />
+                    <Baby className="w-5 h-5 mr-3" />
                     Calculează Sarcina
                   </>
                 )}
@@ -305,14 +307,16 @@ export function PregnancyCalculator() {
       {result && (
         <div className="space-y-6">
           {/* Main Results */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center space-x-2">
-                <CheckCircle className="w-6 h-6 text-green-500" />
+          <Card className="overflow-hidden rounded-2xl bg-gradient-to-br from-green-50 to-emerald-50 border-0 shadow-xl">
+            <CardHeader className="bg-gradient-to-r from-green-500 to-emerald-600 text-white">
+              <CardTitle className="flex items-center space-x-3 text-xl font-bold">
+                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                  <CheckCircle className="w-6 h-6 text-white" />
+                </div>
                 <span>Rezultatele calculului</span>
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-6">
+            <CardContent className="space-y-6 p-8">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-4">
                   <div>
@@ -354,16 +358,16 @@ export function PregnancyCalculator() {
 
               <Separator />
 
-              <div className="bg-muted/50 p-4 rounded-lg">
-                <div className="text-sm text-muted-foreground mb-2">Informații despre săptămâna {result.currentWeek}</div>
-                <div className="space-y-2">
+              <div className="bg-gradient-to-r from-pink-50 to-purple-50 p-6 rounded-xl border border-pink-200/50">
+                <div className="text-sm text-slate-600 mb-3 font-medium">Informații despre săptămâna {result.currentWeek}</div>
+                <div className="space-y-3">
                   {(() => {
                     const weekInfo = getWeekInfo(result.currentWeek);
                     return (
                       <>
-                        <div className="font-medium">{weekInfo.title}</div>
-                        <div className="text-sm">{weekInfo.description}</div>
-                        <div className="text-sm text-muted-foreground">
+                        <div className="font-semibold text-slate-800 text-lg">{weekInfo.title}</div>
+                        <div className="text-slate-600">{weekInfo.description}</div>
+                        <div className="text-sm text-slate-500 font-medium">
                           Bebelușul are acum {weekInfo.size}
                         </div>
                       </>
@@ -375,27 +379,29 @@ export function PregnancyCalculator() {
           </Card>
 
           {/* Milestones */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center space-x-2">
-                <CalendarDays className="w-6 h-6 text-purple-500" />
+          <Card className="overflow-hidden rounded-2xl bg-gradient-to-br from-purple-50 to-indigo-50 border-0 shadow-xl">
+            <CardHeader className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white">
+              <CardTitle className="flex items-center space-x-3 text-xl font-bold">
+                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                  <CalendarDays className="w-6 h-6 text-white" />
+                </div>
                 <span>Jaloane importante</span>
               </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="p-8">
               <div className="space-y-4">
                 {result.milestones
                   .filter(milestone => milestone.week >= result.currentWeek)
                   .slice(0, 6)
                   .map((milestone, index) => (
-                    <div key={index} className="flex items-start space-x-4 p-4 rounded-lg border">
-                      <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                    <div key={index} className="flex items-start space-x-4 p-6 rounded-xl bg-white shadow-sm hover:shadow-md transition-all duration-300 border border-purple-100">
+                      <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full flex items-center justify-center shadow-lg">
                         {getMilestoneIcon(milestone.category)}
                       </div>
                       <div className="flex-grow">
-                        <div className="flex items-center space-x-2 mb-1">
-                          <span className="font-medium">{milestone.title}</span>
-                          <Badge variant="outline" className="text-xs">
+                        <div className="flex items-center space-x-2 mb-2">
+                          <span className="font-semibold text-slate-800">{milestone.title}</span>
+                          <Badge variant="outline" className="text-xs bg-purple-50 text-purple-700 border-purple-200">
                             Săptămâna {milestone.week}
                           </Badge>
                         </div>
