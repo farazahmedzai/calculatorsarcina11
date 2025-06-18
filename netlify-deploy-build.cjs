@@ -113,6 +113,7 @@ const html = `<!DOCTYPE html>
         .gradient-bg {
             background: linear-gradient(135deg, #f3e8ff 0%, #dbeafe 50%, #e0e7ff 100%);
             min-height: 100vh;
+            overflow-x: hidden;
         }
         
         .card {
@@ -205,6 +206,33 @@ const html = `<!DOCTYPE html>
             .container { padding: 0 0.5rem; }
             .card { padding: 1.5rem; }
             .hero-title { font-size: 2rem !important; }
+            .hero-badges { flex-wrap: wrap; gap: 0.5rem; }
+            nav { display: none !important; }
+        }
+        
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 64rem;
+            margin: 0 auto;
+            width: 100%;
+            padding: 0 1rem;
+        }
+        
+        .main-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
         }
     </style>
     
@@ -246,7 +274,7 @@ const html = `<!DOCTYPE html>
 
         <!-- Main Content -->
         <main class="gradient-bg">
-            <div class="container" style="padding: 4rem 1rem;">
+            <div class="main-container" style="padding: 4rem 1rem;">
                 <!-- Hero Section -->
                 <div style="text-align: center; margin-bottom: 4rem;">
                     <div class="hero-badge">Nou în 2024</div>
@@ -257,7 +285,7 @@ const html = `<!DOCTYPE html>
                         Folosește cel mai precis calculator online pentru a-ți calcula sarcina sau pentru a-ți estima pensia viitoare. 
                         Planifică-ți viitorul cu instrumentele noastre complete și actualizate conform legislației românești 2024.
                     </p>
-                    <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 2rem;">
+                    <div class="hero-badges">
                         <span style="background: #dcfce7; color: #166534; padding: 0.5rem 1rem; border-radius: 0.5rem; font-size: 0.875rem; font-weight: 500;">✓ Calculatoare Precise</span>
                         <span style="background: #dbeafe; color: #1e40af; padding: 0.5rem 1rem; border-radius: 0.5rem; font-size: 0.875rem; font-weight: 500;">✓ Legislație 2024</span>
                         <span style="background: #fef3c7; color: #92400e; padding: 0.5rem 1rem; border-radius: 0.5rem; font-size: 0.875rem; font-weight: 500;">✓ Gratuit</span>
@@ -265,7 +293,7 @@ const html = `<!DOCTYPE html>
                 </div>
 
                 <!-- Calculator Cards -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; max-width: 64rem; margin: 0 auto;">
+                <div class="card-grid">
                     <!-- Pregnancy Calculator -->
                     <div class="card">
                         <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
