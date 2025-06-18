@@ -1,9 +1,9 @@
 [build]
   publish = "dist/public"
-  command = "node netlify-simple-build.js"
+  command = "node netlify-deploy-build.cjs"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "18"
 
 [[redirects]]
   from = "/*"
