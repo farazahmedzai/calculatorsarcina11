@@ -414,7 +414,17 @@ The pension calculator implements current Romanian pension regulations:
 
 *This Replit configuration document is maintained alongside the project. Last updated: June 17, 2025*
 
-## Recent Changes - June 17, 2025
+## Recent Changes - June 18, 2025
+
+### ✓ Dark Mode Removal Completed
+
+**Latest Updates (June 18, 2025 - 7:04 AM):**
+- **Complete Dark Mode Removal:** Removed all dark mode functionality and theme toggle buttons
+- **Header Cleanup:** Removed dark/light mode toggle from navigation header completely
+- **CSS Cleanup:** Removed all dark mode CSS variables and classes from index.css
+- **Page Styling:** Cleaned up all dark mode classes from all page components
+- **Consistent Header Colors:** Updated calculator-sarcina page header to match the light gradient used across other pages
+- **Light Mode Only:** Application now uses clean, professional light-only design throughout
 
 ### ✓ Professional UI Complete Redesign Completed
 
