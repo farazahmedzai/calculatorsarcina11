@@ -34,7 +34,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead page="home" />
+      <SEOHead 
+        page="home" 
+        title="Calculator Sarcină Online Gratuit și Calculator Pensie România | CalculatorSarcina.com"
+        description="Calculator sarcină online gratuit ✓ Calculator pensie România ✓ Calculează data nașterii, săptămânile de gestație și pensia viitoare ✓ Instrumente precise și medicale"
+        keywords="calculator sarcina, calculator pensie, calculator sarcina online gratuit, data nasterii, saptamani gestatie, pensie romania, calculator gestatie"
+      />
       <StructuredData 
         type="website" 
         data={{}} 
