@@ -62,7 +62,7 @@ export function SEOHead({
     if (finalKeywords) {
       updateOrCreateMeta('keywords', finalKeywords);
     }
-    updateOrCreateMeta('robots', 'index, follow');
+    updateOrCreateMeta('robots', seoData.robots || 'index, follow');
     updateOrCreateMeta('viewport', 'width=device-width, initial-scale=1');
 
     // Canonical URL

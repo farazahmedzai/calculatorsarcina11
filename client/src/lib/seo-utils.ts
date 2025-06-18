@@ -6,6 +6,8 @@ export interface SEOData {
   ogDescription?: string;
   ogImage?: string;
   canonical?: string;
+  robots?: string;
+  structuredData?: any;
 }
 
 export const defaultSEO: SEOData = {
@@ -19,6 +21,14 @@ export const pageSEO: Record<string, SEOData> = {
     title: "Calculator Sarcina și Pensie Online | calculatorsarcina.com",
     description: "Calculatoare online pentru sarcină și pensie. Află data nașterii și estimează pensia viitoare cu instrumentele noastre complete.",
     keywords: "calculator sarcina, calculator pensie, data nasterii, sarcina romania, pensie romania",
+    robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+    ogImage: "https://calculatorsarcina.com/assets/og-home.jpg",
+  },
+  "404": {
+    title: "Pagina nu a fost găsită - 404 | Calculator Sarcina",
+    description: "Pagina pe care o cauți nu există. Explorează calculatoarele noastre pentru sarcină și pensie sau navighează prin secțiunile principale.",
+    keywords: "404, pagina nu a fost gasita, calculator sarcina, eroare",
+    robots: "noindex, follow",
   },
   "calculator-sarcina": {
     title: "Calculator Sarcină Online - Calculează Data Nașterii și Săptămânile de Sarcină",
