@@ -6,7 +6,8 @@ import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { SEOHead } from "@/components/seo-head";
 import { StructuredData } from "@/components/structured-data";
-import { ArrowLeft, Calendar, User, BookOpen, TrendingUp, FileText, Users } from "lucide-react";
+import { EducationalContentSection, pensionEducationalContent } from "@/components/educational-content-section";
+import { ArrowLeft, Calendar, User, BookOpen, TrendingUp, FileText, Users, Calculator } from "lucide-react";
 import type { BlogPost } from "@shared/schema";
 
 export default function Blog() {
@@ -223,8 +224,69 @@ export default function Blog() {
         </div>
       </section>
 
+      {/* Educational Content Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-neutral-800 mb-4">
+              Ghiduri Educaționale
+            </h2>
+            <p className="text-xl text-neutral-600">
+              Conținut educațional structurat pentru înțelegerea sistemului de pensii
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200 hover:shadow-xl transition-all duration-300 group">
+              <CardContent className="p-8 text-center">
+                <div className="bg-blue-500 rounded-full p-4 w-fit mx-auto mb-6">
+                  <BookOpen className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-neutral-800 mb-4">Ghiduri pentru Începători</h3>
+                <p className="text-neutral-600 mb-6">
+                  Concepte de bază ale sistemului de pensii explicate simplu
+                </p>
+                <Button variant="outline" className="group-hover:bg-blue-500 group-hover:text-white transition-colors">
+                  Explorează Ghidurile
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-green-50 to-green-100 border-green-200 hover:shadow-xl transition-all duration-300 group">
+              <CardContent className="p-8 text-center">
+                <div className="bg-green-500 rounded-full p-4 w-fit mx-auto mb-6">
+                  <Calculator className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-neutral-800 mb-4">Calculatoare Avansate</h3>
+                <p className="text-neutral-600 mb-6">
+                  Instrumente pentru simulări și planificare detaliată
+                </p>
+                <Button variant="outline" className="group-hover:bg-green-500 group-hover:text-white transition-colors">
+                  Folosește Calculatoarele
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200 hover:shadow-xl transition-all duration-300 group">
+              <CardContent className="p-8 text-center">
+                <div className="bg-purple-500 rounded-full p-4 w-fit mx-auto mb-6">
+                  <TrendingUp className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-neutral-800 mb-4">Strategii de Investiții</h3>
+                <p className="text-neutral-600 mb-6">
+                  Optimizarea pilonilor II și III pentru randament maxim
+                </p>
+                <Button variant="outline" className="group-hover:bg-purple-500 group-hover:text-white transition-colors">
+                  Învață Strategii
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Blog Posts */}
-      <section className="py-20">
+      <section className="py-20 bg-neutral-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-neutral-800 mb-4">
@@ -310,6 +372,15 @@ export default function Blog() {
           )}
         </div>
       </section>
+
+      {/* Educational Content Section */}
+      <EducationalContentSection 
+        title="Conținut Educațional Recomandat"
+        subtitle="Articole detaliate pentru înțelegerea și optimizarea pensiei tale"
+        articles={pensionEducationalContent}
+        showFeatured={true}
+        className="bg-white"
+      />
 
       {/* Newsletter Signup */}
       <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">

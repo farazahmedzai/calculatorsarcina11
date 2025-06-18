@@ -1,9 +1,12 @@
+import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
 import { PregnancyCalculator } from "@/components/pregnancy-calculator";
 import { SEOHead } from "@/components/seo-head";
 import { StructuredData } from "@/components/structured-data";
-import { Card, CardContent } from "@/components/ui/card";
+import { FAQSection, pregnancyFAQs } from "@/components/faq-section";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Baby, Heart, Calendar, Stethoscope } from "lucide-react";
+import { Baby, Heart, Calendar, Stethoscope, CheckCircle, AlertCircle, BookOpen, Users } from "lucide-react";
 
 export default function CalculatorSarcina() {
   return (
