@@ -5,6 +5,17 @@ import { insertPensionCalculationSchema, insertPregnancyCalculationSchema } from
 import { z } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Serve sitemap.xml and robots.txt BEFORE other routes
+  app.get("/sitemap.xml", (req, res) => {
+    res.setHeader("Content-Type", "application/xml");
+    res.sendFile("sitemap.xml", { root: "./public" });
+  });
+
+  app.get("/robots.txt", (req, res) => {
+    res.setHeader("Content-Type", "text/plain");
+    res.sendFile("robots.txt", { root: "./public" });
+  });
+
   // Pension calculation endpoint
   app.post("/api/calculate-pension", async (req, res) => {
     try {
