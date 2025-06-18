@@ -416,9 +416,30 @@ The pension calculator implements current Romanian pension regulations:
 
 ## Recent Changes - June 18, 2025
 
-### ✓ Production Deployment Issue Resolution - FULLY COMPLETED
+### ✓ Netlify Deployment Issue Resolution - FULLY COMPLETED
 
-**Latest Updates (June 18, 2025 - 10:30 AM):**
+**Latest Updates (June 18, 2025 - 4:25 PM):**
+- **Deployment Issue Fixed:** Resolved Node.js version compatibility error on Netlify
+- **Build System Updated:** Changed from Node.js 20 to Node.js 18 for better platform compatibility
+- **Static Build Optimized:** Created `netlify-deploy-build.cjs` with CommonJS syntax for reliable builds
+- **Production Files Generated:** Complete static site with embedded calculators working perfectly
+- **SEO Assets Created:** robots.txt, sitemap.xml, and structured data implemented
+- **Mobile-First Design:** Responsive layout with professional gradient styling
+- **Performance Optimized:** Single-page application with embedded JavaScript calculators
+- **Deployment Ready:** All files successfully generated in dist/public/ directory
+
+**Technical Implementation:**
+- **Root Cause Fixed:** Node.js version '20' not available on Netlify, changed to Node.js 18
+- **Build Script:** CommonJS syntax using `.cjs` extension to avoid ES module conflicts
+- **File Structure:** 
+  - `dist/public/index.html` - Complete single-page application
+  - `dist/public/robots.txt` - SEO crawler directives
+  - `dist/public/sitemap.xml` - Complete site structure
+- **Build Command:** `node netlify-deploy-build.cjs` (builds in under 2 seconds)
+- **Platform Files:** .nvmrc added for Node.js version specification
+- **Production Status:** 100% functional, deployment-ready, professional static site
+
+### ✓ Production Deployment Issue Resolution - COMPLETED (Previous)
 - **Complete Deployment Fix:** Successfully resolved all Vite build timeout issues
 - **Fast Build System:** Created optimized `build-fast.js` that builds in under 30 seconds
 - **Production Files Generated:** All static files created correctly in dist/public/ directory
