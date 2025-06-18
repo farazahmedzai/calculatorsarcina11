@@ -56,6 +56,8 @@ export const insertPensionCalculationSchema = createInsertSchema(pensionCalculat
   createdAt: true,
 });
 
+
+
 export const insertPregnancyCalculationSchema = createInsertSchema(pregnancyCalculations).omit({
   id: true,
   createdAt: true,

@@ -10,17 +10,17 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Calculator, CheckCircle, Loader2, Users, TrendingUp, BarChart3 } from "lucide-react";
 import { apiRequest } from "@/lib/queryClient";
-import { pensionCalculationSchema } from "@/../../shared/schema";
+import { insertPensionCalculationSchema } from "@/../../shared/schema";
 import { z } from "zod";
 import type { PensionCalculationResult } from "@/lib/pension-calculator";
 
-type PensionCalculationForm = z.infer<typeof pensionCalculationSchema>;
+type PensionCalculationForm = z.infer<typeof insertPensionCalculationSchema>;
 
 export function PensionCalculator() {
   const [result, setResult] = useState<PensionCalculationResult | null>(null);
   
   const form = useForm<PensionCalculationForm>({
-    resolver: zodResolver(pensionCalculationSchema),
+    resolver: zodResolver(insertPensionCalculationSchema),
     defaultValues: {
       currentAge: 35,
       monthlySalary: 5000,
@@ -31,14 +31,17 @@ export function PensionCalculator() {
 
   const calculateMutation = useMutation({
     mutationFn: async (data: PensionCalculationForm) => {
-      const response = await apiRequest("/api/calculate-pension", {
+      const response = await fetch("/api/calculate-pension", {
         method: "POST",
         body: JSON.stringify(data),
         headers: { "Content-Type": "application/json" },
       });
-      return response;
+      if (!response.ok) {
+        throw new Error('Calculation failed');
+      }
+      return response.json();
     },
-    onSuccess: (data) => {
+    onSuccess: (data: PensionCalculationResult) => {
       setResult(data);
     },
     onError: (error) => {
