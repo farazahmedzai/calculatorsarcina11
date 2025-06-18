@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { BreadcrumbNavigation } from "@/components/breadcrumb-navigation";
 import Home from "@/pages/home";
 import CalculatorSarcina from "@/pages/calculator-sarcina";
 import PlanificareePensie from "@/pages/planificare-pensie";
@@ -17,6 +18,7 @@ function Router() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
+      <BreadcrumbNavigation />
       <main className="flex-1">
         <Switch>
           <Route path="/" component={Home} />
