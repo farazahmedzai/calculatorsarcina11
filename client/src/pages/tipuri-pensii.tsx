@@ -3,7 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { SEOHead } from "@/components/seo-head";
-import { Users, Calendar, Heart, Shield, Clock, Calculator } from "lucide-react";
+import { StructuredData } from "@/components/structured-data";
+import { FAQSection, pensionFAQs } from "@/components/faq-section";
+import { ComparisonTable, pensionTypesComparison, pensionPillarsComparison } from "@/components/comparison-table";
+import { TimelineComponent, pensionTimelineItems } from "@/components/timeline-component";
+import { Users, Calendar, Heart, Shield, Clock, Calculator, TrendingUp, AlertTriangle } from "lucide-react";
 
 export default function TipuriPensii() {
   const pensionTypes = [
@@ -96,7 +100,23 @@ export default function TipuriPensii() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-purple-50 dark:to-slate-900">
-      <SEOHead page="tipuri" />
+      <SEOHead 
+        page="tipuri" 
+        title="Ghid Complet: Tipuri de Pensii din România 2025 | Calculator Pensii"
+        description="Descoperă toate tipurile de pensii din România: pentru limită de vârstă, anticipată, de invaliditate și de urmaș. Ghid complet cu condiții, calcul și avantaje."
+        keywords="tipuri pensii romania, pensie limita varsta, pensie anticipata, pensie invaliditate, pensie urmas, calculator pensii"
+      />
+      <StructuredData 
+        type="article" 
+        data={{
+          headline: "Ghid Exhaustiv: Tipuri de Pensii din România",
+          description: "Ghid complet despre toate tipurile de pensii disponibile în sistemul public din România, cu condiții de acordare și modalități de calcul.",
+          datePublished: new Date().toISOString(),
+          dateModified: new Date().toISOString(),
+          url: "https://calculatorsarcina.com/tipuri-pensii",
+          keywords: ["tipuri pensii", "pensie romania", "calculator pensii", "pensie anticipata", "pensie invaliditate"]
+        }} 
+      />
       
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
@@ -255,6 +275,97 @@ export default function TipuriPensii() {
           </div>
         </div>
       </section>
+
+      {/* Pillar Comparison */}
+      <ComparisonTable 
+        title="Comparație: Pilonii de Pensii din România"
+        subtitle="Înțelege diferențele între cele trei piloni de pensii"
+        columns={["Pilonul I", "Pilonul II", "Pilonul III"]}
+        items={pensionPillarsComparison}
+        className="bg-neutral-50"
+      />
+
+      {/* Pension Planning Timeline */}
+      <TimelineComponent 
+        title="Cronologia Planificării Pensiei"
+        items={pensionTimelineItems}
+        className="bg-white"
+      />
+
+      {/* Key Statistics */}
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Statistici Cheie - Sistemul de Pensii România</h2>
+            <p className="text-blue-100 text-lg">Date actualizate pentru 2025</p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            <Card className="bg-white/10 border-white/20 text-center">
+              <CardContent className="p-6">
+                <TrendingUp className="w-12 h-12 text-white mx-auto mb-4" />
+                <div className="text-3xl font-bold mb-2">87,5 RON</div>
+                <div className="text-blue-100">Valoarea punctului de pensie</div>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white/10 border-white/20 text-center">
+              <CardContent className="p-6">
+                <Users className="w-12 h-12 text-white mx-auto mb-4" />
+                <div className="text-3xl font-bold mb-2">4.8 mil</div>
+                <div className="text-blue-100">Pensionari în România</div>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white/10 border-white/20 text-center">
+              <CardContent className="p-6">
+                <Calculator className="w-12 h-12 text-white mx-auto mb-4" />
+                <div className="text-3xl font-bold mb-2">65 ani</div>
+                <div className="text-blue-100">Vârsta standard de pensionare</div>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white/10 border-white/20 text-center">
+              <CardContent className="p-6">
+                <Shield className="w-12 h-12 text-white mx-auto mb-4" />
+                <div className="text-3xl font-bold mb-2">25%</div>
+                <div className="text-blue-100">Contribuția CAS</div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Important Warnings */}
+      <section className="py-16 bg-yellow-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-lg p-8 shadow-lg border-l-4 border-yellow-400">
+            <div className="flex items-start">
+              <AlertTriangle className="w-8 h-8 text-yellow-600 mt-1 mr-4 flex-shrink-0" />
+              <div>
+                <h3 className="text-xl font-bold text-neutral-800 mb-4">Atenție la Planificarea Pensiei</h3>
+                <div className="space-y-4 text-neutral-700">
+                  <p>
+                    <strong>Verifică periodic datele:</strong> Solicită anual extrasul de cont de la Casa de Pensii pentru a verifica corectitudinea datelor de contribuții.
+                  </p>
+                  <p>
+                    <strong>Documentația completă:</strong> Păstrează toate documentele care atestă activitatea profesională, inclusiv contractele de muncă și adeverințele de salarii.
+                  </p>
+                  <p>
+                    <strong>Consultanță specializată:</strong> Pentru situații complexe (lucru în străinătate, perioade de întrerupere), consultă un specialist în legislația muncii.
+                  </p>
+                  <p>
+                    <strong>Pilonul II:</strong> Verifică performanța fondului de pensii privat ales și consideră schimbarea dacă este necesar.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <FAQSection faqs={pensionFAQs} className="bg-white" />
 
       {/* Call to Action */}
       <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">

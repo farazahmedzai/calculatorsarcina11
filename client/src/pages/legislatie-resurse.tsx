@@ -3,7 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { SEOHead } from "@/components/seo-head";
-import { FileText, Calendar, Scale, TrendingUp, AlertCircle, ExternalLink } from "lucide-react";
+import { StructuredData } from "@/components/structured-data";
+import { FAQSection, pensionFAQs } from "@/components/faq-section";
+import { FileText, Calendar, Scale, TrendingUp, AlertCircle, ExternalLink, Download, BookOpen } from "lucide-react";
 
 export default function LegislatieResurse() {
   const legislativeChanges = [
@@ -39,7 +41,23 @@ export default function LegislatieResurse() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-purple-50 dark:to-slate-900">
-      <SEOHead page="legislatie" />
+      <SEOHead 
+        page="legislatie" 
+        title="Legea Pensiilor România 2025: Ghid Complet și Actualizat | Calculator Pensii"
+        description="Ghid complet despre legislația pensiilor din România în 2025: modificări recente, vârsta de pensionare, contribuții și proceduri oficiale. Informații actualizate."
+        keywords="legea pensiilor romania 2025, legislatie pensii, varsta pensionare, contribuții cas, modificari legislative pensii"
+      />
+      <StructuredData 
+        type="article" 
+        data={{
+          headline: "Legea Pensiilor 2025 pe Înțelesul Tuturor",
+          description: "Ghid complet despre legislația pensiilor din România, modificările recente și procedurile oficiale pentru 2025.",
+          datePublished: new Date().toISOString(),
+          dateModified: new Date().toISOString(),
+          url: "https://calculatorsarcina.com/legislatie-resurse",
+          keywords: ["legea pensiilor", "legislatie romania", "pensii 2025", "modificari legislative"]
+        }} 
+      />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -276,17 +294,17 @@ export default function LegislatieResurse() {
       </section>
       {/* Official Resources */}
       <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-neutral-800 mb-4">
-              Resurse Oficiale
+              Resurse Oficiale și Documente
             </h2>
             <p className="text-xl text-neutral-600">
-              Link-uri către documentele și site-urile oficiale
+              Link-uri către documentele și site-urile oficiale pentru informații actualizate
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             <Card className="bg-primary/5 border-primary/20 hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
                 <h3 className="font-semibold text-neutral-800 mb-3 flex items-center">
@@ -316,9 +334,98 @@ export default function LegislatieResurse() {
                 </Button>
               </CardContent>
             </Card>
+
+            <Card className="bg-green-500/5 border-green-500/20 hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-neutral-800 mb-3 flex items-center">
+                  <Download className="w-5 h-5 mr-2 text-green-600" />
+                  Formulare și Cereri
+                </h3>
+                <p className="text-neutral-600 mb-4">
+                  Descarcă formularele necesare pentru dosarul de pensionare.
+                </p>
+                <Button variant="outline" size="sm" className="text-green-600 border-green-600 hover:bg-green-600 hover:text-white">
+                  Descarcă formulare
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Additional Resources */}
+          <div className="mt-12">
+            <h3 className="text-2xl font-bold text-neutral-800 mb-8 text-center">
+              Resurse Suplimentare pentru Planificarea Pensiei
+            </h3>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="bg-white shadow-md">
+                <CardHeader>
+                  <CardTitle className="flex items-center">
+                    <BookOpen className="w-6 h-6 mr-2 text-primary" />
+                    Ghiduri Tematice
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3"></span>
+                      <span className="text-neutral-700">Ghidul pensionarului: de la cerere la acordare</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3"></span>
+                      <span className="text-neutral-700">Pensionarea anticipată: condiții și calcule</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3"></span>
+                      <span className="text-neutral-700">Pilonul II: cum să îți optimizezi investițiile</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3"></span>
+                      <span className="text-neutral-700">Lucrul în străinătate și impactul asupra pensiei</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white shadow-md">
+                <CardHeader>
+                  <CardTitle className="flex items-center">
+                    <TrendingUp className="w-6 h-6 mr-2 text-accent" />
+                    Calculatoare Specializate
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-accent rounded-full mt-2 mr-3"></span>
+                      <span className="text-neutral-700">Calculatorul pensiei pentru limită de vârstă</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-accent rounded-full mt-2 mr-3"></span>
+                      <span className="text-neutral-700">Simulatorul pensiei anticipate cu penalizări</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-accent rounded-full mt-2 mr-3"></span>
+                      <span className="text-neutral-700">Estimatorul contribuțiilor pilonul II</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-accent rounded-full mt-2 mr-3"></span>
+                      <span className="text-neutral-700">Calculatorul stagiului de cotizare</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}  
+      <FAQSection 
+        title="Întrebări Frecvente despre Legislația Pensiilor"
+        faqs={pensionFAQs} 
+        className="bg-neutral-50" 
+      />
       {/* Call to Action */}
       <section className="py-16 bg-gradient-to-r from-primary to-secondary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
