@@ -41,17 +41,105 @@ const html = `<!DOCTYPE html>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif']
-                    }
-                }
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.5;
+            color: #1f2937;
+            background-color: #ffffff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #f3e8ff 0%, #dbeafe 50%, #e0e7ff 100%);
+            min-height: 100vh;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border: 1px solid #e5e7eb;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #db2777 0%, #7c3aed 100%);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, #059669 0%, #2563eb 100%);
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid #d1d5db;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #8b5cf6;
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 0.5rem;
+            }
+            
+            .card {
+                padding: 1.5rem;
             }
         }
-    </script>
+    </style>
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -72,201 +160,182 @@ const html = `<!DOCTYPE html>
     }
     </script>
 </head>
-<body class="font-sans antialiased">
+<body>
     <div id="root">
         <!-- Header -->
-        <header class="bg-white shadow-sm border-b">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between items-center h-16">
-                    <div class="flex items-center">
-                        <h1 class="text-xl font-bold text-gray-900">Calculator Sarcina</h1>
-                    </div>
-                    <nav class="hidden md:flex space-x-8">
-                        <a href="/" class="text-gray-700 hover:text-purple-600 font-medium">Acasă</a>
-                        <a href="/calculator-sarcina" class="text-gray-700 hover:text-purple-600 font-medium">Calculator Sarcină</a>
-                        <a href="/planificare-pensie" class="text-gray-700 hover:text-purple-600 font-medium">Calculator Pensie</a>
-                    </nav>
+        <header style="background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-bottom: 1px solid #e5e7eb;">
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center; height: 64px;">
+                <div style="display: flex; align-items: center;">
+                    <h1 style="font-size: 1.25rem; font-weight: 700; color: #1f2937; margin: 0;">Calculator Sarcina</h1>
                 </div>
+                <nav style="display: none;">
+                    <a href="/" style="color: #4b5563; text-decoration: none; font-weight: 500; margin-right: 2rem;">Acasă</a>
+                    <a href="#pregnancy" style="color: #4b5563; text-decoration: none; font-weight: 500; margin-right: 2rem;">Calculator Sarcină</a>
+                    <a href="#pension" style="color: #4b5563; text-decoration: none; font-weight: 500;">Calculator Pensie</a>
+                </nav>
             </div>
         </header>
 
         <!-- Main Content -->
-        <main class="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <main class="gradient-bg">
+            <div class="container" style="padding: 3rem 1rem;">
                 <!-- Hero Section -->
-                <div class="text-center mb-16">
-                    <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h1 style="font-size: 3rem; font-weight: 700; color: #1f2937; margin-bottom: 1.5rem; line-height: 1.1;">
                         Calculator Sarcină și Pensie
                     </h1>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                    <p style="font-size: 1.125rem; color: #4b5563; max-width: 48rem; margin: 0 auto 2rem auto;">
                         Folosește cel mai precis calculator online pentru a-ți calcula sarcina sau pentru a-ți estima pensia viitoare. 
                         Planifică-ți viitorul cu instrumentele noastre complete și actualizate conform legislației românești.
                     </p>
                 </div>
 
                 <!-- Calculator Cards -->
-                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 64rem; margin: 0 auto;">
                     <!-- Pregnancy Calculator -->
-                    <div class="bg-white rounded-2xl shadow-xl border border-gray-200 p-8 hover:shadow-2xl transition-all duration-300">
-                        <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                                </svg>
+                    <div class="card">
+                        <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                            <div style="width: 3rem; height: 3rem; background: linear-gradient(135deg, #ec4899, #8b5cf6); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center;">
+                                <span style="color: white; font-size: 1.5rem;">❤️</span>
                             </div>
-                            <h2 class="text-2xl font-bold text-gray-900 ml-4">Calculator Sarcină</h2>
+                            <h2 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin: 0 0 0 1rem;">Calculator Sarcină</h2>
                         </div>
-                        <p class="text-gray-600 mb-6">
+                        <p style="color: #4b5563; margin-bottom: 1.5rem;">
                             Calculează data nașterii, săptămânile de gestație și urmărește dezvoltarea sarcinii pas cu pas.
                         </p>
-                        <div class="space-y-4 mb-8">
-                            <div class="flex items-center text-sm text-gray-600">
-                                <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
+                        <div style="margin-bottom: 2rem;">
+                            <div style="display: flex; align-items: center; margin-bottom: 1rem; font-size: 0.875rem; color: #4b5563;">
+                                <span style="color: #10b981; margin-right: 0.5rem;">✓</span>
                                 Data estimată a nașterii
                             </div>
-                            <div class="flex items-center text-sm text-gray-600">
-                                <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
+                            <div style="display: flex; align-items: center; margin-bottom: 1rem; font-size: 0.875rem; color: #4b5563;">
+                                <span style="color: #10b981; margin-right: 0.5rem;">✓</span>
                                 Săptămâni și zile de gestație
                             </div>
-                            <div class="flex items-center text-sm text-gray-600">
-                                <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
+                            <div style="display: flex; align-items: center; margin-bottom: 1rem; font-size: 0.875rem; color: #4b5563;">
+                                <span style="color: #10b981; margin-right: 0.5rem;">✓</span>
                                 Etape dezvoltare fetală
                             </div>
                         </div>
-                        <button onclick="showCalculator('pregnancy')" class="w-full px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300">
+                        <button onclick="showCalculator('pregnancy')" class="btn-primary">
                             Calculează Sarcina
                         </button>
                     </div>
 
                     <!-- Pension Calculator -->
-                    <div class="bg-white rounded-2xl shadow-xl border border-gray-200 p-8 hover:shadow-2xl transition-all duration-300">
-                        <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-xl flex items-center justify-center">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
+                    <div class="card">
+                        <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                            <div style="width: 3rem; height: 3rem; background: linear-gradient(135deg, #10b981, #3b82f6); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center;">
+                                <span style="color: white; font-size: 1.5rem;">💰</span>
                             </div>
-                            <h2 class="text-2xl font-bold text-gray-900 ml-4">Calculator Pensie</h2>
+                            <h2 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin: 0 0 0 1rem;">Calculator Pensie</h2>
                         </div>
-                        <p class="text-gray-600 mb-6">
+                        <p style="color: #4b5563; margin-bottom: 1.5rem;">
                             Estimează pensia viitoare conform legislației românești și planifică-ți viitorul financiar.
                         </p>
-                        <div class="space-y-4 mb-8">
-                            <div class="flex items-center text-sm text-gray-600">
-                                <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
+                        <div style="margin-bottom: 2rem;">
+                            <div style="display: flex; align-items: center; margin-bottom: 1rem; font-size: 0.875rem; color: #4b5563;">
+                                <span style="color: #10b981; margin-right: 0.5rem;">✓</span>
                                 Estimare pensie stagiu complet
                             </div>
-                            <div class="flex items-center text-sm text-gray-600">
-                                <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
+                            <div style="display: flex; align-items: center; margin-bottom: 1rem; font-size: 0.875rem; color: #4b5563;">
+                                <span style="color: #10b981; margin-right: 0.5rem;">✓</span>
                                 Calculul Pilonul I și II
                             </div>
-                            <div class="flex items-center text-sm text-gray-600">
-                                <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
+                            <div style="display: flex; align-items: center; margin-bottom: 1rem; font-size: 0.875rem; color: #4b5563;">
+                                <span style="color: #10b981; margin-right: 0.5rem;">✓</span>
                                 Planificare financiară
                             </div>
                         </div>
-                        <button onclick="showCalculator('pension')" class="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-blue-700 transition-all duration-300">
+                        <button onclick="showCalculator('pension')" class="btn-secondary">
                             Calculează Pensia
                         </button>
                     </div>
                 </div>
 
                 <!-- Calculator Forms (Hidden by default) -->
-                <div id="pregnancy-calculator" class="hidden mt-16 max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-8">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Calculator Sarcină</h3>
-                    <form id="pregnancy-form" class="space-y-6">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">
-                                Data ultimei menstruații
-                            </label>
-                            <input type="date" name="lastPeriod" required 
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">
-                                Lungimea ciclului (zile)
-                            </label>
-                            <input type="number" name="cycleLength" value="28" min="21" max="35" required
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
-                        </div>
-                        <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300">
-                            Calculează
-                        </button>
-                    </form>
-                    <div id="pregnancy-result" class="hidden mt-6 p-4 bg-purple-50 rounded-lg"></div>
+                <div id="pregnancy-calculator" class="hidden" style="margin-top: 4rem; max-width: 32rem; margin-left: auto; margin-right: auto;">
+                    <div class="card">
+                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 1.5rem;">Calculator Sarcină</h3>
+                        <form id="pregnancy-form">
+                            <div style="margin-bottom: 1.5rem;">
+                                <label style="display: block; font-size: 0.875rem; font-weight: 500; color: #374151; margin-bottom: 0.5rem;">
+                                    Data ultimei menstruații
+                                </label>
+                                <input type="date" name="lastPeriod" required class="form-input">
+                            </div>
+                            <div style="margin-bottom: 1.5rem;">
+                                <label style="display: block; font-size: 0.875rem; font-weight: 500; color: #374151; margin-bottom: 0.5rem;">
+                                    Lungimea ciclului (zile)
+                                </label>
+                                <input type="number" name="cycleLength" value="28" min="21" max="35" required class="form-input">
+                            </div>
+                            <button type="submit" class="btn-primary">
+                                Calculează
+                            </button>
+                        </form>
+                        <div id="pregnancy-result" class="hidden" style="margin-top: 1.5rem; padding: 1rem; background-color: #faf5ff; border-radius: 0.5rem; border: 1px solid #e9d5ff;"></div>
+                    </div>
                 </div>
 
-                <div id="pension-calculator" class="hidden mt-16 max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-8">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Calculator Pensie</h3>
-                    <form id="pension-form" class="space-y-6">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">
-                                Vârsta actuală
-                            </label>
-                            <input type="number" name="age" min="18" max="70" required
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">
-                                Salariul lunar brut (RON)
-                            </label>
-                            <input type="number" name="salary" min="1000" required
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">
-                                Ani de contribuție
-                            </label>
-                            <input type="number" name="contributionYears" min="1" max="50" required
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                        </div>
-                        <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-blue-700 transition-all duration-300">
-                            Calculează
-                        </button>
-                    </form>
-                    <div id="pension-result" class="hidden mt-6 p-4 bg-blue-50 rounded-lg"></div>
+                <div id="pension-calculator" class="hidden" style="margin-top: 4rem; max-width: 32rem; margin-left: auto; margin-right: auto;">
+                    <div class="card">
+                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 1.5rem;">Calculator Pensie</h3>
+                        <form id="pension-form">
+                            <div style="margin-bottom: 1.5rem;">
+                                <label style="display: block; font-size: 0.875rem; font-weight: 500; color: #374151; margin-bottom: 0.5rem;">
+                                    Vârsta actuală
+                                </label>
+                                <input type="number" name="age" min="18" max="70" required class="form-input">
+                            </div>
+                            <div style="margin-bottom: 1.5rem;">
+                                <label style="display: block; font-size: 0.875rem; font-weight: 500; color: #374151; margin-bottom: 0.5rem;">
+                                    Salariul lunar brut (RON)
+                                </label>
+                                <input type="number" name="salary" min="1000" required class="form-input">
+                            </div>
+                            <div style="margin-bottom: 1.5rem;">
+                                <label style="display: block; font-size: 0.875rem; font-weight: 500; color: #374151; margin-bottom: 0.5rem;">
+                                    Ani de contribuție
+                                </label>
+                                <input type="number" name="contributionYears" min="1" max="50" required class="form-input">
+                            </div>
+                            <button type="submit" class="btn-secondary">
+                                Calculează
+                            </button>
+                        </form>
+                        <div id="pension-result" class="hidden" style="margin-top: 1.5rem; padding: 1rem; background-color: #eff6ff; border-radius: 0.5rem; border: 1px solid #dbeafe;"></div>
+                    </div>
                 </div>
             </div>
         </main>
 
         <!-- Footer -->
-        <footer class="bg-gray-900 text-white py-12">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid md:grid-cols-3 gap-8">
+        <footer style="background-color: #111827; color: white; padding: 3rem 0;">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
                     <div>
-                        <h3 class="text-lg font-semibold mb-4">Calculator Sarcina</h3>
-                        <p class="text-gray-400">
+                        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem;">Calculator Sarcina</h3>
+                        <p style="color: #9ca3af;">
                             Instrumentele tale pentru calculul sarcinii și estimarea pensiei în România.
                         </p>
                     </div>
                     <div>
-                        <h3 class="text-lg font-semibold mb-4">Linkuri Utile</h3>
-                        <ul class="space-y-2 text-gray-400">
-                            <li><a href="/" class="hover:text-white">Acasă</a></li>
-                            <li><a href="/calculator-sarcina" class="hover:text-white">Calculator Sarcină</a></li>
-                            <li><a href="/planificare-pensie" class="hover:text-white">Calculator Pensie</a></li>
+                        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem;">Linkuri Utile</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 0.5rem;"><a href="/" style="color: #9ca3af; text-decoration: none;">Acasă</a></li>
+                            <li style="margin-bottom: 0.5rem;"><a href="#pregnancy" style="color: #9ca3af; text-decoration: none;">Calculator Sarcină</a></li>
+                            <li style="margin-bottom: 0.5rem;"><a href="#pension" style="color: #9ca3af; text-decoration: none;">Calculator Pensie</a></li>
                         </ul>
                     </div>
                     <div>
-                        <h3 class="text-lg font-semibold mb-4">Contact</h3>
-                        <p class="text-gray-400">
+                        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem;">Contact</h3>
+                        <p style="color: #9ca3af;">
                             Pentru întrebări și sugestii, ne poți contacta prin intermediul formularului de pe site.
                         </p>
                     </div>
                 </div>
-                <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <div style="border-top: 1px solid #374151; margin-top: 2rem; padding-top: 2rem; text-align: center; color: #9ca3af;">
                     <p>&copy; 2024 Calculator Sarcina. Toate drepturile rezervate.</p>
                 </div>
             </div>
