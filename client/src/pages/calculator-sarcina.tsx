@@ -346,6 +346,39 @@ export default function CalculatorSarcina() {
           </div>
         </div>
       </section>
+
+      {/* Call to Action Section */}
+      <section className="py-16 bg-gradient-to-r from-pink-500 to-purple-600">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <div className="space-y-6 text-white">
+            <div className="space-y-4">
+              <h2 className="text-3xl md:text-4xl font-bold">
+                Dorești să urmărești sarcina în detaliu?
+              </h2>
+              <p className="text-xl text-white/90 max-w-2xl mx-auto">
+                Calculatorul nostru de pensie te ajută să planifici și viitorul financiar al familiei tale.
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
+              <a 
+                href="/planificare-pensie"
+                className="group inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              >
+                <Calendar className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform" />
+                <span>Calculator Pensie</span>
+              </a>
+              <a 
+                href="/blog"
+                className="group inline-flex items-center px-8 py-4 bg-white/20 text-white border border-white/30 rounded-xl font-semibold hover:bg-white/30 transition-all duration-300"
+              >
+                <Heart className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform" />
+                <span>Ghiduri Sarcină</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
