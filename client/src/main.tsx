@@ -11,9 +11,9 @@ import { Footer } from "@/components/footer";
 import Home from "@/pages/home-simple";
 import CalculatorSarcina from "@/pages/calculator-sarcina-simple";
 import PlanificareePensie from "@/pages/planificare-pensie-simple";
-import TipuriPensii from "@/pages/tipuri-pensii";
-import LegislatieResurse from "@/pages/legislatie-resurse";
-import Blog from "@/pages/blog";
+import TipuriPensii from "@/pages/tipuri-pensii-simple";
+import LegislatieResurse from "@/pages/legislatie-resurse-simple";
+import Blog from "@/pages/blog-simple";
 import NotFound from "@/pages/not-found";
 
 function SimpleApp() {
