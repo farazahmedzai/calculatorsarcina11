@@ -8,7 +8,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Pension calculation endpoint
   app.post("/api/calculate-pension", async (req, res) => {
     try {
-      const validatedData = insertPensionCalculationSchema.parse(req.body);
+      // Convert numeric fields to strings for decimal storage
+      const requestData = {
+        ...req.body,
+        monthlySalary: String(req.body.monthlySalary),
+        calculatedAmount: String(req.body.calculatedAmount)
+      };
+      
+      const validatedData = insertPensionCalculationSchema.parse(requestData);
       const calculation = await storage.createPensionCalculation(validatedData);
       res.json(calculation);
     } catch (error) {
