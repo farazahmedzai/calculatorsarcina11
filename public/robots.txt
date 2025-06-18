@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://calculatorsarcina.com/sitemap.xml
+
+# Allow all calculators and tools
+Allow: /calculator-sarcina
+Allow: /planificare-pensie
+Allow: /tipuri-pensii
+Allow: /legislatie-resurse
+Allow: /blog
+
+# Allow CSS, JS, and static assets
+Allow: /assets/
+Allow: /src/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.ico
+
+# Crawl delay (optional)
+Crawl-delay: 1

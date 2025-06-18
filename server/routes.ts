@@ -86,6 +86,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Serve sitemap.xml
+  app.get("/sitemap.xml", (req, res) => {
+    res.setHeader("Content-Type", "application/xml");
+    res.sendFile("sitemap.xml", { root: "./public" });
+  });
+
+  // Serve robots.txt
+  app.get("/robots.txt", (req, res) => {
+    res.setHeader("Content-Type", "text/plain");
+    res.sendFile("robots.txt", { root: "./public" });
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }
