@@ -54,7 +54,13 @@ export class MemStorage implements IStorage {
   }
 
   private initializeBlogPosts() {
-    const samplePosts: InsertBlogPost[] = [
+    // Only initialize if no posts exist to prevent duplication
+    if (this.blogPosts.size > 0) {
+      return;
+    }
+
+    const baseTime = new Date('2024-01-01T10:00:00Z');
+    const samplePosts = [
       {
         title: "Top 5 Greșeli de Evitat în Planificarea Pensiei",
         slug: "top-5-greseli-planificare-pensie",
@@ -62,7 +68,8 @@ export class MemStorage implements IStorage {
         content: "Planificarea pensiei este unul dintre cele mai importante aspecte ale planificării financiare...",
         category: "Planificare",
         imageUrl: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-        published: true
+        published: true,
+        publishedAt: new Date(baseTime.getTime() + (0 * 24 * 60 * 60 * 1000)) // Jan 1
       },
       {
         title: "Vârsta Standard de Pensionare în România: Tabel Complet 2024",
@@ -71,7 +78,8 @@ export class MemStorage implements IStorage {
         content: "Vârsta de pensionare în România a suferit modificări importante în ultimii ani...",
         category: "Legislație",
         imageUrl: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-        published: true
+        published: true,
+        publishedAt: new Date(baseTime.getTime() + (7 * 24 * 60 * 60 * 1000)) // Jan 8
       },
       {
         title: "Pilonul II vs. Pilonul III: Ghid de Decizie pentru 2024",
@@ -80,12 +88,27 @@ export class MemStorage implements IStorage {
         content: "Sistemul de pensii din România include mai mulți piloni de asigurare...",
         category: "Investiții",
         imageUrl: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-        published: true
+        published: true,
+        publishedAt: new Date(baseTime.getTime() + (14 * 24 * 60 * 60 * 1000)) // Jan 15
       }
     ];
 
-    samplePosts.forEach(post => {
-      this.createBlogPost(post);
+    samplePosts.forEach((post) => {
+      const id = this.currentBlogPostId++;
+      const { publishedAt, ...postData } = post;
+      const blogPost: BlogPost = { 
+        id,
+        title: postData.title,
+        slug: postData.slug,
+        excerpt: postData.excerpt,
+        content: postData.content,
+        category: postData.category,
+        imageUrl: postData.imageUrl || null,
+        published: true,
+        createdAt: publishedAt,
+        updatedAt: publishedAt
+      };
+      this.blogPosts.set(id, blogPost);
     });
   }
 

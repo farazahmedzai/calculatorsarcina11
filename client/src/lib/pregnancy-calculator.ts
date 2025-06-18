@@ -119,7 +119,7 @@ function generatePregnancyMilestones(lmpDate: Date): PregnancyMilestone[] {
     { week: 18, title: 'Ecografia morfologică', description: 'Ecografia detaliată pentru evaluarea dezvoltării', category: 'appointment' as const },
     { week: 20, title: 'Jumătatea sarcinii', description: 'Ai parcurs jumătate din sarcină!', category: 'development' as const },
     { week: 24, title: 'Viabilitatea fetală', description: 'Bebelușul are șanse de supraviețuire în afara uterului', category: 'development' as const },
-    { week: 26, title: 'Începutul celui de-al treilea trimestru', description: 'Ultima etapă a sarcinii', category: 'development' as const },
+    { week: 27, title: 'Începutul celui de-al treilea trimestru', description: 'Ultima etapă a sarcinii', category: 'development' as const },
     { week: 28, title: 'Testul pentru diabet gestațional', description: 'Screening pentru diabetul de sarcină', category: 'appointment' as const },
     { week: 32, title: 'Consultații mai frecvente', description: 'Vizitele la medic devin mai frecvente', category: 'appointment' as const },
     { week: 36, title: 'Bebelușul este considerat la termen', description: 'Nașterea poate avea loc oricând', category: 'development' as const },
