@@ -11,16 +11,16 @@ export default function PlanificareePensie() {
   const faqData = {
     questions: [
       {
-        question: "La ce vârstă ar trebui să încep să-mi planific pensia?",
-        answer: "Cât mai devreme posibil, ideally în primul an de muncă. Cu cât începi mai devreme, cu atât beneficiezi mai mult de efectul compoundului și poți economisi sume mai mici lunar pentru aceeași pensie finală."
+        question: "La ce vârstă pot ieși la pensie în România?",
+        answer: "Vârsta standard de pensionare este 65 de ani pentru bărbați și crește gradual pentru femei până la 63 de ani în 2030. Există opțiuni de pensie anticipată cu condiții speciale."
       },
       {
-        question: "Este suficient doar pilonul I pentru o pensie decentă?",
-        answer: "De obicei nu. Pilonul I (pensia de stat) reprezintă în medie 30-40% din ultimul salariu. Pentru a menține standardul de viață, experții recomandă să ai 70-80% din ultimul salariu, prin combinarea tuturor pilonilor de pensii și economii personale."
+        question: "Cum se calculează pensia în România?",
+        answer: "Pensia se calculează pe baza punctelor de pensie acumulate și valoarea punctului de pensie (1.785 RON în 2024). Formula: Puncte × Valoarea punctului × Coeficientul de corecție."
       },
       {
-        question: "Cât ar trebui să economisesc lunar pentru pensie?",
-        answer: "Regula generală este 10-15% din venit pentru pensie (incluzând toate pilonii). Dacă ai doar pilonul I (25% contribuție), consideră să adaugi încă 5-10% prin pilonul III sau economii personale."
+        question: "Ce este pilonul II de pensii?",
+        answer: "Pilonul II este sistemul de pensii private obligatorii pentru persoanele născute după 1 ianuarie 1970. Contribuția este de 3.75% din salariul brut și se investește pe piața de capital."
       }
     ]
   };
@@ -307,202 +307,37 @@ export default function PlanificareePensie() {
             ))}
           </div>
         </div>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                      Flexibilitate mare
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
+      </section>
 
-          {/* Strategii de Planificare */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-neutral-800 mb-8 flex items-center">
-              <Target className="w-8 h-8 text-accent mr-3" />
-              Strategii de Planificare Eficientă
-            </h2>
-            
-            <div className="space-y-8">
-              <Card className="bg-accent/5 border-accent/20">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-semibold text-neutral-800 mb-4">1. Începe Cât Mai Devreme</h3>
-                  <p className="text-neutral-600 mb-4">
-                    Timpul este cel mai important factor în planificarea pensiei. Cu cât începi mai devreme, 
-                    cu atât beneficiezi mai mult de efectul compoundului.
-                  </p>
-                  <div className="bg-white p-4 rounded-lg">
-                    <p className="text-sm text-neutral-700">
-                      <strong>Exemplu:</strong> Dacă începi să economisești 200 RON/lună la 25 de ani, 
-                      vei avea cu 40% mai mulți bani la pensie decât dacă începi la 35 de ani.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-primary/5 border-primary/20">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-semibold text-neutral-800 mb-4">2. Diversifică Sursele de Venit</h3>
-                  <p className="text-neutral-600 mb-4">
-                    Nu te baza doar pe pilonul I. Combină toate sursele: pensie de stat, pilonul II, pilonul III, 
-                    economii personale și investiții.
-                  </p>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="bg-white p-4 rounded-lg">
-                      <h4 className="font-semibold mb-2">Surse Obligatorii</h4>
-                      <ul className="text-sm space-y-1">
-                        <li>• Pilonul I (pensie de stat)</li>
-                        <li>• Pilonul II (dacă ai sub 35 ani)</li>
-                      </ul>
-                    </div>
-                    <div className="bg-white p-4 rounded-lg">
-                      <h4 className="font-semibold mb-2">Surse Opționale</h4>
-                      <ul className="text-sm space-y-1">
-                        <li>• Pilonul III</li>
-                        <li>• Economii personale</li>
-                        <li>• Investiții în acțiuni/fonduri</li>
-                        <li>• Proprietăți imobiliare</li>
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-orange-500/5 border-orange-500/20">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-semibold text-neutral-800 mb-4">3. Calculează Necesarul de Pensie</h3>
-                  <p className="text-neutral-600 mb-4">
-                    Experții recomandă ca pensia să reprezinte 70-80% din ultimul salariu pentru a menține 
-                    standardul de viață.
-                  </p>
-                  <div className="bg-white p-4 rounded-lg">
-                    <p className="text-sm text-neutral-700 mb-2">
-                      <strong>Formula simplă:</strong>
-                    </p>
-                    <p className="text-sm text-neutral-700">
-                      Pensia dorită = Ultimul salariu × 0.75<br/>
-                      Exemplu: Pentru un salariu de 5.000 RON, pensia dorită ar fi ~3.750 RON
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-
-          {/* Greșeli de Evitat */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-neutral-800 mb-8 flex items-center">
-              <AlertTriangle className="w-8 h-8 text-red-500 mr-3" />
-              Top 5 Greșeli de Evitat
-            </h2>
-            
-            <div className="space-y-6">
-              {[
-                {
-                  title: "Amânarea planificării",
-                  description: "Mulți oameni cred că au timp suficient și amână planificarea pensiei. Fiecare an întârziat reduce semnificativ suma finală."
-                },
-                {
-                  title: "Bazarea exclusiv pe pilonul I",
-                  description: "Pensia de stat nu va fi suficientă pentru a menține standardul de viață. Este esențial să ai surse suplimentare de venit."
-                },
-                {
-                  title: "Ignorarea inflației",
-                  description: "Banii de azi nu vor avea aceeași putere de cumpărare peste 20-30 de ani. Investițiile trebuie să bată inflația."
-                },
-                {
-                  title: "Lipsă de diversificare",
-                  description: "Punerea tuturor ouălor într-un singur coș este riscantă. Diversifică între piloni și tipuri de investiții."
-                },
-                {
-                  title: "Necunoașterea legislației",
-                  description: "Modificările legislative pot afecta planificarea. Informează-te regulat despre schimbările din sistemul de pensii."
-                }
-              ].map((mistake, index) => (
-                <Card key={index} className="border-l-4 border-l-red-500">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-neutral-800 mb-2">
-                      {index + 1}. {mistake.title}
-                    </h3>
-                    <p className="text-neutral-600">{mistake.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-
-          {/* FAQ Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-neutral-800 mb-8 text-center">
-              Întrebări Frecvente despre Planificarea Pensiei
-            </h2>
-            
+      {/* Call to Action Section */}
+      <section className="py-16 bg-gradient-to-r from-indigo-500 to-purple-600">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <div className="space-y-6 text-white">
             <div className="space-y-4">
-              <Card className="border border-neutral-200">
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold text-neutral-800 mb-2">
-                    La ce vârstă ar trebui să încep să-mi planific pensia?
-                  </h3>
-                  <p className="text-neutral-600">
-                    Cât mai devreme posibil, ideally în primul an de muncă. Cu cât începi mai devreme, 
-                    cu atât beneficiezi mai mult de efectul compoundului și poți economisi sume mai mici lunar 
-                    pentru aceeași pensie finală.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border border-neutral-200">
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold text-neutral-800 mb-2">
-                    Este suficient doar pilonul I pentru o pensie decentă?
-                  </h3>
-                  <p className="text-neutral-600">
-                    De obicei nu. Pilonul I (pensia de stat) reprezintă în medie 30-40% din ultimul salariu. 
-                    Pentru a menține standardul de viață, experții recomandă să ai 70-80% din ultimul salariu, 
-                    prin combinarea tuturor piloniu de pensii și economii personale.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border border-neutral-200">
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold text-neutral-800 mb-2">
-                    Cât ar trebui să economisesc lunar pentru pensie?
-                  </h3>
-                  <p className="text-neutral-600">
-                    Regula generală este 10-15% din venit pentru pensie (incluzând toate pilonii). 
-                    Dacă ai doar pilonul I (25% contribuție), consideră să adaugi încă 5-10% prin pilonul III 
-                    sau economii personale.
-                  </p>
-                </CardContent>
-              </Card>
+              <h2 className="text-3xl md:text-4xl font-bold">
+                Dorești să afli mai multe despre sistemul de pensii?
+              </h2>
+              <p className="text-xl text-white/90 max-w-2xl mx-auto">
+                Calculatorul nostru de sarcină te ajută să planifici și viitorul familial al copilului.
+              </p>
             </div>
-          </div>
-
-          {/* Call to Action */}
-          <div className="text-center">
-            <Card className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-4 text-white">Începe Planificarea Acum</h3>
-                <p className="text-white/90 mb-6">
-                  Folosește calculatorul nostru pentru a vedea cum arată pensia ta cu strategiile recomandate.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/">
-                    <Button className="bg-white/20 hover:bg-white/30 text-white border border-white/30 hover:border-white/50 transition-all duration-300">
-                      Calculează Pensia
-                    </Button>
-                  </Link>
-                  <Link href="/tipuri-pensii">
-                    <Button variant="outline" className="border-white text-white bg-white/10 hover:bg-white hover:text-purple-600 transition-all duration-300">
-                      Explorează Tipurile de Pensii
-                    </Button>
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
+              <a 
+                href="/calculator-sarcina"
+                className="group inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              >
+                <Calculator className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform" />
+                <span>Calculator Sarcină</span>
+              </a>
+              <a 
+                href="/tipuri-pensii"
+                className="group inline-flex items-center px-8 py-4 bg-white/20 text-white border border-white/30 rounded-xl font-semibold hover:bg-white/30 transition-all duration-300"
+              >
+                <Shield className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform" />
+                <span>Tipuri de Pensii</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
