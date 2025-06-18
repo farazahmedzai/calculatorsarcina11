@@ -1,6 +1,6 @@
 [build]
   publish = "dist/public"
-  command = "node netlify-deploy-build.cjs"
+  command = "node netlify-final-build.cjs"
 
 [build.environment]
   NODE_VERSION = "18"
