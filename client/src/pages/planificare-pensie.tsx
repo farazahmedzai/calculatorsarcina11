@@ -233,6 +233,54 @@ export default function PlanificareePensie() {
             </div>
           </div>
 
+          {/* FAQ Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-neutral-800 mb-8 text-center">
+              Întrebări Frecvente despre Planificarea Pensiei
+            </h2>
+            
+            <div className="space-y-4">
+              <Card className="border border-neutral-200">
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-semibold text-neutral-800 mb-2">
+                    La ce vârstă ar trebui să încep să-mi planific pensia?
+                  </h3>
+                  <p className="text-neutral-600">
+                    Cât mai devreme posibil, ideally în primul an de muncă. Cu cât începi mai devreme, 
+                    cu atât beneficiezi mai mult de efectul compoundului și poți economisi sume mai mici lunar 
+                    pentru aceeași pensie finală.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border border-neutral-200">
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-semibold text-neutral-800 mb-2">
+                    Este suficient doar pilonul I pentru o pensie decentă?
+                  </h3>
+                  <p className="text-neutral-600">
+                    De obicei nu. Pilonul I (pensia de stat) reprezintă în medie 30-40% din ultimul salariu. 
+                    Pentru a menține standardul de viață, experții recomandă să ai 70-80% din ultimul salariu, 
+                    prin combinarea tuturor piloniu de pensii și economii personale.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border border-neutral-200">
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-semibold text-neutral-800 mb-2">
+                    Cât ar trebui să economisesc lunar pentru pensie?
+                  </h3>
+                  <p className="text-neutral-600">
+                    Regula generală este 10-15% din venit pentru pensie (incluzând toate pilonii). 
+                    Dacă ai doar pilonul I (25% contribuție), consideră să adaugi încă 5-10% prin pilonul III 
+                    sau economii personale.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
           {/* Call to Action */}
           <div className="text-center">
             <Card className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
