@@ -8,7 +8,7 @@ import "./index.css";
 // Simple components
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import Home from "@/pages/home-simple";
+import Home from "@/pages/home";
 import CalculatorSarcina from "@/pages/calculator-sarcina";
 import PlanificareePensie from "@/pages/planificare-pensie";
 import TipuriPensii from "@/pages/tipuri-pensii";
