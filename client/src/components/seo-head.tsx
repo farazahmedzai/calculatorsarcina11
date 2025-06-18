@@ -9,8 +9,8 @@ interface SEOHeadProps {
   canonical?: string;
   ogImage?: string;
   article?: {
-    publishedTime?: string;
-    modifiedTime?: string;
+    publishedTime?: string | Date;
+    modifiedTime?: string | Date;
     author?: string;
     section?: string;
     tags?: string[];
@@ -96,10 +96,16 @@ export function SEOHead({
     // Article specific Open Graph tags
     if (article) {
       if (article.publishedTime) {
-        updateOrCreateMeta('article:published_time', article.publishedTime, true);
+        const publishedTime = typeof article.publishedTime === 'string' 
+          ? article.publishedTime 
+          : article.publishedTime.toISOString();
+        updateOrCreateMeta('article:published_time', publishedTime, true);
       }
       if (article.modifiedTime) {
-        updateOrCreateMeta('article:modified_time', article.modifiedTime, true);
+        const modifiedTime = typeof article.modifiedTime === 'string' 
+          ? article.modifiedTime 
+          : article.modifiedTime.toISOString();
+        updateOrCreateMeta('article:modified_time', modifiedTime, true);
       }
       if (article.author) {
         updateOrCreateMeta('article:author', article.author, true);

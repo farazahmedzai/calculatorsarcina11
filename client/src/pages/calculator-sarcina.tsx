@@ -1,5 +1,6 @@
 import { PregnancyCalculator } from "@/components/pregnancy-calculator";
 import { SEOHead } from "@/components/seo-head";
+import { StructuredData } from "@/components/structured-data";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Baby, Heart, Calendar, Stethoscope } from "lucide-react";
@@ -11,6 +12,42 @@ export default function CalculatorSarcina() {
         page="calculator-sarcina" 
         title="Calculator Sarcină Online - Calculează Data Nașterii și Săptămânile de Sarcină"
         description="Calculator sarcină precis pentru calcularea datei nașterii, săptămânilor de sarcină și jaloanelor importante. Introdu data ultimei menstruații sau a concepției pentru rezultate exacte."
+      />
+      <StructuredData 
+        type="howto" 
+        data={{
+          name: "Cum să folosești calculatorul de sarcină",
+          description: "Ghid pas cu pas pentru calcularea datei nașterii și săptămânilor de sarcină",
+          image: "https://calculatorsarcina.com/assets/calculator-tutorial.jpg",
+          steps: [
+            {
+              name: "Selectează metoda de calcul",
+              text: "Alege între ultima menstruație (LMP), data concepției sau pe baza ecografiei"
+            },
+            {
+              name: "Introdu datele necesare", 
+              text: "Completează câmpurile cerute în funcție de metoda aleasă"
+            },
+            {
+              name: "Calculează rezultatul",
+              text: "Apasă butonul de calcul pentru a obține data nașterii și săptămânile de sarcină"
+            }
+          ]
+        }} 
+      />
+      <StructuredData 
+        type="calculator" 
+        data={{
+          name: "Calculator Sarcină Online",
+          description: "Calculator profesional pentru calcularea datei nașterii și urmărirea sarcinii",
+          url: "https://calculatorsarcina.com/calculator-sarcina",
+          features: [
+            "3 metode de calcul disponibile",
+            "Calculul precis al datei nașterii", 
+            "Urmărirea săptămânilor de sarcină",
+            "Jaloanele importante ale sarcinii"
+          ]
+        }} 
       />
       
       {/* Hero Section */}
