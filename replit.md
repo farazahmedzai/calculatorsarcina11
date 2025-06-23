@@ -433,6 +433,7 @@ The pension calculator implements current Romanian pension regulations:
 - Fixed React component export issues preventing Hot Module Replacement
 - Ensured clean module resolution for production builds
 - Resolved Netlify "vite: not found" deployment error by moving build tools to production dependencies
+- Fixed esbuild version conflict (0.25.0 vs 0.23.1) causing npm dependency installation failures
 
 ## Recent Changes - June 18, 2025
 
