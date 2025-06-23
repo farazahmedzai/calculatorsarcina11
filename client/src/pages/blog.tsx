@@ -273,9 +273,11 @@ export default function Blog() {
                 <p className="text-neutral-600 mb-6">
                   Concepte de bază ale sistemului de pensii explicate simplu
                 </p>
-                <Button variant="outline" className="group-hover:bg-blue-500 group-hover:text-white transition-colors">
-                  Explorează Ghidurile
-                </Button>
+                <Link href="/legislatie-resurse">
+                  <Button variant="outline" className="group-hover:bg-blue-500 group-hover:text-white transition-colors">
+                    Explorează Ghidurile
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
 
@@ -288,9 +290,11 @@ export default function Blog() {
                 <p className="text-neutral-600 mb-6">
                   Instrumente pentru simulări și planificare detaliată
                 </p>
-                <Button variant="outline" className="group-hover:bg-green-500 group-hover:text-white transition-colors">
-                  Folosește Calculatoarele
-                </Button>
+                <Link href="/calculator-sarcina">
+                  <Button variant="outline" className="group-hover:bg-green-500 group-hover:text-white transition-colors">
+                    Folosește Calculatoarele
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
 
@@ -303,9 +307,11 @@ export default function Blog() {
                 <p className="text-neutral-600 mb-6">
                   Optimizarea pilonilor II și III pentru randament maxim
                 </p>
-                <Button variant="outline" className="group-hover:bg-purple-500 group-hover:text-white transition-colors">
-                  Învață Strategii
-                </Button>
+                <Link href="/planificare-pensie">
+                  <Button variant="outline" className="group-hover:bg-purple-500 group-hover:text-white transition-colors">
+                    Învață Strategii
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>
