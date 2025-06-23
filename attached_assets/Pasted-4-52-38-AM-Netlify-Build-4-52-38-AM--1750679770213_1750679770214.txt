@@ -1,0 +1,91 @@
+4:52:38 AM: Netlify Build                                                 
+4:52:38 AM: ────────────────────────────────────────────────────────────────
+4:52:38 AM: ​
+4:52:38 AM: ❯ Version
+4:52:38 AM:   @netlify/build 33.4.6
+4:52:38 AM: ​
+4:52:38 AM: ❯ Flags
+4:52:38 AM:   accountId: 6829ebab4e15d2f11c454ddc
+4:52:38 AM:   baseRelDir: true
+4:52:38 AM:   buildId: 68593ff0b30e310008ab7ebc
+4:52:38 AM:   deployId: 68593ff0b30e310008ab7ebe
+4:52:38 AM: ​
+4:52:38 AM: ❯ Current directory
+4:52:38 AM:   /opt/build/repo
+4:52:38 AM: ​
+4:52:38 AM: ❯ Config file
+4:52:38 AM:   /opt/build/repo/netlify.toml
+4:52:38 AM: ​
+4:52:38 AM: ❯ Context
+4:52:38 AM:   production
+4:52:38 AM: ​
+4:52:38 AM: build.command from netlify.toml                               
+4:52:38 AM: ────────────────────────────────────────────────────────────────
+4:52:38 AM: ​
+4:52:38 AM: $ vite build --config vite.config.netlify.ts && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+4:52:38 AM: vite v6.3.5 building for production...
+4:52:39 AM: Failed during stage 'building site': Build script returned non-zero exit code: 2 (https://ntl.fyi/exit-code-2)
+4:52:39 AM: transforming...
+4:52:39 AM: ✓ 44 modules transformed.
+4:52:39 AM: ✗ Build failed in 441ms
+4:52:39 AM: error during build:
+4:52:39 AM: [vite:css] [postcss] Cannot find module '@tailwindcss/typography'
+4:52:39 AM: Require stack:
+4:52:39 AM: - /opt/build/repo/tailwind.config.ts
+4:52:39 AM: file: /opt/build/repo/client/src/index.css:undefined:NaN
+4:52:39 AM:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+4:52:39 AM:     at Function.resolve (node:internal/modules/helpers:193:19)
+4:52:39 AM:     at _resolve (/opt/build/repo/node_modules/tailwindcss/node_modules/jiti/dist/jiti.js:1:246378)
+4:52:39 AM:     at jiti (/opt/build/repo/node_modules/tailwindcss/node_modules/jiti/dist/jiti.js:1:249092)
+4:52:39 AM:     at /opt/build/repo/tailwind.config.ts:89:45
+4:52:39 AM:     at evalModule (/opt/build/repo/node_modules/tailwindcss/node_modules/jiti/dist/jiti.js:1:251913)
+4:52:39 AM:     at jiti (/opt/build/repo/node_modules/tailwindcss/node_modules/jiti/dist/jiti.js:1:249841)
+4:52:39 AM:     at /opt/build/repo/node_modules/tailwindcss/lib/lib/load-config.js:52:26
+4:52:39 AM:     at loadConfig (/opt/build/repo/node_modules/tailwindcss/lib/lib/load-config.js:62:6)
+4:52:39 AM:     at getTailwindConfig (/opt/build/repo/node_modules/tailwindcss/lib/lib/setupTrackingContext.js:71:116)
+4:52:39 AM: ​
+4:52:39 AM: "build.command" failed                                        
+4:52:39 AM: ────────────────────────────────────────────────────────────────
+4:52:39 AM: ​
+4:52:39 AM:   Error message
+4:52:39 AM:   Command failed with exit code 1: vite build --config vite.config.netlify.ts && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist (https://ntl.fyi/exit-code-1)
+4:52:39 AM: ​
+4:52:39 AM:   Error location
+4:52:39 AM:   In build.command from netlify.toml:
+4:52:39 AM:   vite build --config vite.config.netlify.ts && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+4:52:39 AM: ​
+4:52:39 AM:   Resolved config
+4:52:39 AM:   build:
+4:52:39 AM:     command: vite build --config vite.config.netlify.ts && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+4:52:39 AM:     commandOrigin: config
+4:52:39 AM:     environment:
+4:52:39 AM:       - NODE_VERSION
+4:52:39 AM:       - NODE_ENV
+4:52:39 AM:     publish: /opt/build/repo/dist
+4:52:39 AM:     publishOrigin: config
+4:52:39 AM:   headers:
+4:52:39 AM:     - for: /assets/*
+      values:
+        Cache-Control: public, max-age=31536000, immutable
+    - for: '*.js'
+      values:
+        Cache-Control: public, max-age=31536000, immutable
+    - for: '*.css'
+      values:
+        Cache-Control: public, max-age=31536000, immutable
+    - for: /*
+      values:
+        Content-Security-Policy: 'default-src ''self''; script-src ''self'' ''unsafe-inline'' ''unsafe-eval''; style-src ''self'' ''unsafe-inline'' fonts.googleapis.com; font-src ''self'' fonts.gstatic.com; img-src ''self'' data: https:; connect-src ''self'' https:;'
+        Referrer-Policy: strict-origin-when-cross-origin
+        X-Content-Type-Options: nosniff
+        X-Frame-Options: DENY
+        X-XSS-Protection: 1; mode=block
+  headersOrigin: config
+  redirects:
+    - from: /*
+      status: 200
+      to: /index.html
+  redirectsOrigin: config
+4:52:39 AM: Build failed due to a user error: Build script returned non-zero exit code: 2
+4:52:39 AM: Failing build: Failed to build site
+4:52:40 AM: Finished processing build request in 16.3s
