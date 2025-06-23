@@ -436,6 +436,7 @@ The pension calculator implements current Romanian pension regulations:
 - Fixed esbuild version conflict (0.25.0 vs 0.23.1) causing npm dependency installation failures
 - Created separate Netlify-specific Vite config to exclude Replit plugins from production builds
 - Updated netlify.toml to use Netlify-optimized build configuration
+- Added missing @tailwindcss/typography package for successful Netlify builds
 
 ## Recent Changes - June 18, 2025
 
