@@ -314,7 +314,12 @@ export default function LegislatieResurse() {
                 <p className="text-neutral-600 mb-4">
                   Site-ul oficial al CNPP cu informații actualizate despre pensii și proceduri.
                 </p>
-                <Button variant="outline" size="sm" className="text-primary border-primary hover:bg-primary hover:text-white">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="text-primary border-primary hover:bg-primary hover:text-white"
+                  onClick={() => window.open('https://www.cnpp.ro', '_blank')}
+                >
                   Vizitează site-ul oficial
                 </Button>
               </CardContent>
@@ -329,7 +334,12 @@ export default function LegislatieResurse() {
                 <p className="text-neutral-600 mb-4">
                   Textul integral al legii sistemului unitar de pensii publice.
                 </p>
-                <Button variant="outline" size="sm" className="text-blue-600 border-blue-600 hover:bg-blue-600 hover:text-white">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="text-blue-600 border-blue-600 hover:bg-blue-600 hover:text-white"
+                  onClick={() => window.open('https://legislatie.just.ro/Public/DetaliiDocument/123431', '_blank')}
+                >
                   Citește legea completă
                 </Button>
               </CardContent>
@@ -344,7 +354,12 @@ export default function LegislatieResurse() {
                 <p className="text-neutral-600 mb-4">
                   Descarcă formularele necesare pentru dosarul de pensionare.
                 </p>
-                <Button variant="outline" size="sm" className="text-green-600 border-green-600 hover:bg-green-600 hover:text-white">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="text-green-600 border-green-600 hover:bg-green-600 hover:text-white"
+                  onClick={() => window.open('https://www.cnpp.ro/formulare', '_blank')}
+                >
                   Descarcă formulare
                 </Button>
               </CardContent>

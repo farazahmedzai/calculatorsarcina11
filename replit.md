@@ -418,7 +418,9 @@ The pension calculator implements current Romanian pension regulations:
 
 ### ✓ Blog Display Issue Resolution Completed
 
-**Latest Updates (June 23, 2025 - 1:12 PM):**
+**Latest Updates (June 23, 2025 - 1:20 PM):**
+- **Legislation Page Button Fix:** Added proper click handlers to all resource buttons
+- **External Link Integration:** Connected buttons to official Romanian government sites
 - **Blog Article Display Fix:** Resolved issue where blog posts weren't showing on /blog page
 - **Button Navigation Fix:** Added proper Link components to educational content buttons
 - **Fallback Data Handling:** Improved static data fallback for reliable blog post display
