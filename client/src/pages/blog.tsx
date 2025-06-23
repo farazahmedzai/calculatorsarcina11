@@ -15,18 +15,20 @@ export default function Blog() {
   const params = useParams();
   const slug = params.slug;
 
-  const { data: blogPosts, isLoading: isLoadingPosts } = useQuery<BlogPost[]>({
+  const { data: blogPosts, isLoading: isLoadingPosts, error } = useQuery<BlogPost[]>({
     queryKey: ["/api/blog-posts"],
     queryFn: async () => {
       try {
         const response = await fetch("/api/blog-posts");
         if (!response.ok) {
-          // Fallback to static data if API is not available (Netlify deployment)
+          console.log("API not available, using static data");
           return staticBlogPosts;
         }
-        return response.json();
+        const data = await response.json();
+        console.log("API data received:", data);
+        return data;
       } catch (error) {
-        // Fallback to static data if API is not available
+        console.log("API error, using static data:", error);
         return staticBlogPosts;
       }
     },
@@ -345,7 +347,7 @@ export default function Blog() {
                 </Card>
               ))}
             </div>
-          ) : blogPosts && blogPosts.length > 0 ? (
+          ) : (blogPosts && Array.isArray(blogPosts) && blogPosts.length > 0) ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.map((post) => (
                 <Card key={post.id} className="bg-white hover:shadow-lg transition-shadow group">
@@ -388,19 +390,47 @@ export default function Blog() {
               ))}
             </div>
           ) : (
-            <div className="text-center py-16">
-              <BookOpen className="w-16 h-16 text-neutral-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-neutral-800 mb-2">
-                Nu sunt articole disponibile
-              </h3>
-              <p className="text-neutral-600 mb-6">
-                Revino în curând pentru articole noi despre pensii și planificare financiară.
-              </p>
-              <Link href="/">
-                <Button className="bg-primary hover:bg-secondary">
-                  Calculează-ți Pensia
-                </Button>
-              </Link>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Show static blog posts as fallback */}
+              {(blogPosts || staticBlogPosts).map((post) => (
+                <Card key={post.id} className="bg-white hover:shadow-lg transition-shadow group">
+                  {post.imageUrl && (
+                    <img 
+                      src={post.imageUrl} 
+                      alt={post.title}
+                      className="w-full h-48 object-cover rounded-t-xl group-hover:scale-105 transition-transform duration-300"
+                    />
+                  )}
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <Badge 
+                        variant="secondary" 
+                        className={`${
+                          post.category === "Planificare" ? "bg-primary/10 text-primary" :
+                          post.category === "Legislație" ? "bg-orange-500/10 text-orange-500" :
+                          "bg-accent/10 text-accent"
+                        }`}
+                      >
+                        {post.category}
+                      </Badge>
+                      <span className="text-sm text-neutral-500">
+                        {new Date(post.createdAt).toLocaleDateString('ro-RO')}
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-semibold text-neutral-800 mb-3 line-clamp-2">
+                      {post.title}
+                    </h3>
+                    <p className="text-neutral-600 mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <Link href={`/blog/${post.slug}`}>
+                      <Button variant="link" className="p-0 text-primary hover:text-secondary font-medium">
+                        Citește articolul →
+                      </Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           )}
         </div>
