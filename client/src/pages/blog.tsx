@@ -37,20 +37,30 @@ export default function Blog() {
   const { data: singlePost, isLoading: isLoadingSingle } = useQuery<BlogPost>({
     queryKey: [`/api/blog-posts/${slug}`],
     queryFn: async () => {
+      console.log("Fetching blog post for slug:", slug);
       try {
         const response = await fetch(`/api/blog-posts/${slug}`);
         if (!response.ok) {
-          // Fallback to static data if API is not available
-          return staticBlogPosts.find(post => post.slug === slug) || null;
+          console.log("API not available for single post, using static data");
+          const staticPost = staticBlogPosts.find(post => post.slug === slug);
+          console.log("Static post found:", staticPost);
+          return staticPost || null;
         }
-        return response.json();
+        const data = await response.json();
+        console.log("API post data:", data);
+        return data;
       } catch (error) {
-        // Fallback to static data if API is not available
-        return staticBlogPosts.find(post => post.slug === slug) || null;
+        console.log("API error for single post, using static data:", error);
+        const staticPost = staticBlogPosts.find(post => post.slug === slug);
+        console.log("Fallback static post found:", staticPost);
+        return staticPost || null;
       }
     },
     enabled: !!slug,
   });
+
+  // Debug logging
+  console.log("Blog component - slug:", slug, "singlePost:", singlePost, "isLoadingSingle:", isLoadingSingle);
 
   // If we have a slug, show single post
   if (slug) {
