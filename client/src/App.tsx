@@ -7,7 +7,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { BreadcrumbNavigation } from "@/components/breadcrumb-navigation";
 import { MobileResponsiveWrapper, useMobileOptimization } from "@/components/mobile-responsive-wrapper";
-import { AdvancedSEOWrapper, useMobilePerformanceOptimization } from "@/components/advanced-seo-wrapper";
+import { AdvancedSEOWrapper } from "@/components/advanced-seo-wrapper";
 import Home from "@/pages/home";
 import CalculatorSarcina from "@/pages/calculator-sarcina";
 import PlanificareePensie from "@/pages/planificare-pensie";
@@ -17,9 +17,8 @@ import Blog from "@/pages/blog";
 import NotFound from "@/pages/not-found";
 
 function Router() {
-  // Apply mobile and performance optimizations
+  // Apply mobile optimizations
   useMobileOptimization();
-  useMobilePerformanceOptimization();
 
   return (
     <AdvancedSEOWrapper>

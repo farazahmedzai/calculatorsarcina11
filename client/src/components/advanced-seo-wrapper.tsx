@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'wouter';
 
 interface AdvancedSEOWrapperProps {
@@ -8,7 +8,7 @@ interface AdvancedSEOWrapperProps {
 export function AdvancedSEOWrapper({ children }: AdvancedSEOWrapperProps) {
   const [location] = useLocation();
 
-  useEffect(() => {
+  React.useEffect(() => {
     // Critical Web Vitals optimization
     optimizeWebVitals();
     
@@ -24,6 +24,10 @@ export function AdvancedSEOWrapper({ children }: AdvancedSEOWrapperProps) {
     // Schema markup validation
     validateStructuredData();
     
+    // Initialize mobile optimizations
+    const cleanup = initializeMobileOptimizations();
+    
+    return cleanup;
   }, [location]);
 
   return <>{children}</>;
@@ -135,7 +139,7 @@ function monitorPagePerformance() {
     resources.forEach((resource) => {
       // Monitor slow resources
       if (resource.duration > 1000) {
-        console.debug('Slow resource:', resource.name, resource.duration);
+        // Resource monitoring - silent in production
       }
     });
   });
@@ -154,12 +158,7 @@ function monitorPagePerformance() {
         const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
         const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
         
-        console.debug('Page load metrics:', {
-          loadTime,
-          domContentLoaded,
-          firstByte: navigation.responseStart - navigation.requestStart,
-          domInteractive: navigation.domInteractive - navigation.fetchStart
-        });
+        // Page load metrics tracking - silent in production
       }
     }, 0);
   });
@@ -210,37 +209,27 @@ function validateStructuredData() {
     try {
       const data = JSON.parse(script.textContent || '');
       
-      // Basic validation for required fields
-      if (data['@context'] !== 'https://schema.org') {
-        console.debug('Invalid schema context');
-      }
-      
-      if (!data['@type']) {
-        console.debug('Missing schema type');
-      }
+      // Basic validation for required fields - silent validation
       
     } catch (e) {
-      console.debug('Invalid JSON-LD structured data');
+      // Invalid JSON-LD structured data - silent handling
     }
   });
 }
 
-// Advanced mobile performance optimizations
-export function useMobilePerformanceOptimization() {
-  useEffect(() => {
-    // Preload critical resources
-    preloadCriticalResources();
-    
-    // Optimize font loading
-    optimizeFontLoading();
-    
-    // Network-aware loading
-    adaptToNetworkConditions();
-    
-    // Memory management
-    cleanupMemoryLeaks();
-    
-  }, []);
+// Mobile performance optimizations - integrated into main wrapper
+function initializeMobileOptimizations() {
+  // Preload critical resources
+  preloadCriticalResources();
+  
+  // Optimize font loading
+  optimizeFontLoading();
+  
+  // Network-aware loading
+  adaptToNetworkConditions();
+  
+  // Memory management
+  return cleanupMemoryLeaks();
 }
 
 function preloadCriticalResources() {
