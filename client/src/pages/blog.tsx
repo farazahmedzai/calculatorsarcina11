@@ -9,6 +9,7 @@ import { StructuredData } from "@/components/structured-data";
 import { EducationalContentSection, pensionEducationalContent } from "@/components/educational-content-section";
 import { ArrowLeft, Calendar, User, BookOpen, TrendingUp, FileText, Users, Calculator } from "lucide-react";
 import type { BlogPost } from "@shared/schema";
+import { staticBlogPosts } from "@/data/blog-posts";
 
 export default function Blog() {
   const params = useParams();
@@ -16,10 +17,36 @@ export default function Blog() {
 
   const { data: blogPosts, isLoading: isLoadingPosts } = useQuery<BlogPost[]>({
     queryKey: ["/api/blog-posts"],
+    queryFn: async () => {
+      try {
+        const response = await fetch("/api/blog-posts");
+        if (!response.ok) {
+          // Fallback to static data if API is not available (Netlify deployment)
+          return staticBlogPosts;
+        }
+        return response.json();
+      } catch (error) {
+        // Fallback to static data if API is not available
+        return staticBlogPosts;
+      }
+    },
   });
 
   const { data: singlePost, isLoading: isLoadingSingle } = useQuery<BlogPost>({
     queryKey: [`/api/blog-posts/${slug}`],
+    queryFn: async () => {
+      try {
+        const response = await fetch(`/api/blog-posts/${slug}`);
+        if (!response.ok) {
+          // Fallback to static data if API is not available
+          return staticBlogPosts.find(post => post.slug === slug) || null;
+        }
+        return response.json();
+      } catch (error) {
+        // Fallback to static data if API is not available
+        return staticBlogPosts.find(post => post.slug === slug) || null;
+      }
+    },
     enabled: !!slug,
   });
 

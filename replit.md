@@ -440,6 +440,7 @@ The pension calculator implements current Romanian pension regulations:
 - Verified all Tailwind CSS packages are properly configured for production builds
 - Fixed Netlify domain 404 error by configuring static-only build for frontend deployment
 - Updated netlify.toml to serve only frontend assets with proper SPA routing
+- Fixed blog articles display by adding static data fallback for Netlify deployment
 
 ## Recent Changes - June 18, 2025
 
