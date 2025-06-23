@@ -18,6 +18,14 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          utils: ['wouter', '@tanstack/react-query']
+        }
+      }
+    }
   },
   server: {
     fs: {

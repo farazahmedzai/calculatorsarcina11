@@ -438,6 +438,8 @@ The pension calculator implements current Romanian pension regulations:
 - Updated netlify.toml to use Netlify-optimized build configuration
 - Moved @tailwindcss/typography and @tailwindcss/vite to production dependencies for Netlify access
 - Verified all Tailwind CSS packages are properly configured for production builds
+- Fixed Netlify domain 404 error by configuring static-only build for frontend deployment
+- Updated netlify.toml to serve only frontend assets with proper SPA routing
 
 ## Recent Changes - June 18, 2025
 
