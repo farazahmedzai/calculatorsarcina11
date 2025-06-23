@@ -427,11 +427,12 @@ The pension calculator implements current Romanian pension regulations:
 - **Application Stability:** Site now loads without console errors or module resolution issues
 
 **Technical Implementation:**
-- Moved `vite`, `@vitejs/plugin-react`, `autoprefixer`, `postcss`, `tailwindcss` to dependencies
+- Moved `vite`, `@vitejs/plugin-react`, `autoprefixer`, `postcss`, `tailwindcss` to dependencies for Netlify deployment compatibility
 - Removed external script references causing CSP violations
 - Integrated mobile performance optimizations into main SEO wrapper
 - Fixed React component export issues preventing Hot Module Replacement
 - Ensured clean module resolution for production builds
+- Resolved Netlify "vite: not found" deployment error by moving build tools to production dependencies
 
 ## Recent Changes - June 18, 2025
 
