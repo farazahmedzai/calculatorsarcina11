@@ -434,6 +434,8 @@ The pension calculator implements current Romanian pension regulations:
 - Ensured clean module resolution for production builds
 - Resolved Netlify "vite: not found" deployment error by moving build tools to production dependencies
 - Fixed esbuild version conflict (0.25.0 vs 0.23.1) causing npm dependency installation failures
+- Created separate Netlify-specific Vite config to exclude Replit plugins from production builds
+- Updated netlify.toml to use Netlify-optimized build configuration
 
 ## Recent Changes - June 18, 2025
 
