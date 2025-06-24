@@ -1,34 +1,20 @@
 #!/bin/bash
 
-# Production build script for Calculator Sarcina
-echo "Building Calculator Sarcina for production..."
+# Build the frontend with Netlify config
+echo "Building frontend for Netlify deployment..."
+vite build --config vite.config.netlify.ts
 
-# Set production environment
-export NODE_ENV=production
+# Ensure public files are copied to build output
+echo "Copying public files to build output..."
+cp -r public/* dist/public/
 
-# Clean previous builds
-rm -rf dist/
-rm -rf server/public/
+echo "Build complete. Contents of dist/public:"
+ls -la dist/public/
 
-# Create directories
-mkdir -p server/public/
-
-# Build the frontend with optimizations
-echo "Building frontend..."
-npx vite build --mode production
-
-# Build the server
-echo "Building server..."
-npx esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist --minify
-
-# Copy static files if build succeeded
-if [ -d "dist/public" ]; then
-    echo "Copying static files..."
-    cp -r dist/public/* server/public/
-    echo "Build completed successfully!"
+echo "Checking if sitemap.xml exists:"
+if [ -f "dist/public/sitemap.xml" ]; then
+    echo "✓ sitemap.xml found in build output"
+    head -5 dist/public/sitemap.xml
 else
-    echo "Frontend build failed - dist/public not found"
-    exit 1
+    echo "✗ sitemap.xml missing from build output"
 fi
-
-echo "Production build ready. Server files in dist/, static files in server/public/"
