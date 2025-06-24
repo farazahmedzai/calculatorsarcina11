@@ -120,12 +120,15 @@ export function EducationalContentSection({
                           {article.difficulty}
                         </Badge>
                       </div>
-                      <Link href={article.href}>
-                        <Button variant="ghost" size="sm" className="text-primary hover:text-primary/80 group flex items-center gap-1">
-                          Citește mai mult
-                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                        </Button>
-                      </Link>
+                      <Button 
+                        variant="ghost" 
+                        size="sm" 
+                        className="text-primary hover:text-primary/80 group flex items-center gap-1 cursor-pointer"
+                        onClick={() => window.location.href = article.href}
+                      >
+                        Citește mai mult
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </Button>
                     </div>
                   </CardContent>
                 </Card>
@@ -164,12 +167,15 @@ export function EducationalContentSection({
                         {article.difficulty}
                       </Badge>
                     </div>
-                    <Link href={article.href}>
-                      <Button variant="ghost" size="sm" className="text-primary hover:text-primary/80 p-2 flex items-center gap-2">
-                        Citește mai mult
-                        <ArrowRight className="w-4 h-4" />
-                      </Button>
-                    </Link>
+                    <Button 
+                      variant="ghost" 
+                      size="sm" 
+                      className="text-primary hover:text-primary/80 p-2 flex items-center gap-2 cursor-pointer"
+                      onClick={() => window.location.href = article.href}
+                    >
+                      Citește mai mult
+                      <ArrowRight className="w-4 h-4" />
+                    </Button>
                   </div>
                 </CardContent>
               </Card>

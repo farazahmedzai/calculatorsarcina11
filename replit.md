@@ -418,10 +418,12 @@ The pension calculator implements current Romanian pension regulations:
 
 ### ✓ Blog Display Issue Resolution Completed
 
-**Latest Updates (June 24, 2025 - 6:25 AM):**
+**Latest Updates (June 24, 2025 - 7:15 AM):**
+- **Blog Navigation Links Fixed:** Replaced non-functional Link components with onClick handlers for reliable navigation
+- **Home Page Blog Cards:** Added proper Link components to "Citește mai mult" buttons in home page blog section
+- **Educational Content Navigation:** Enhanced button functionality with direct URL navigation using window.location
 - **Sitemap Deployment Fix:** Fixed 404 error by configuring Netlify to properly serve sitemap.xml
 - **Netlify Configuration:** Updated netlify.toml with specific redirects and headers for sitemap.xml
-- **Vite Build Enhancement:** Configured publicDir to ensure sitemap.xml is included in build output
 - **Sitemap Enhancement:** Updated sitemap.xml with consistent date formatting and current timestamps
 - **SEO Optimization:** Standardized all lastmod dates to ISO 8601 format with timezone information
 - **Blog Article Routing Fix:** Fixed "article not found" errors by updating educational content links

@@ -381,10 +381,12 @@ export default function Home() {
                         <span className="text-sm text-slate-500 font-medium">
                           {new Date(post.createdAt).toLocaleDateString('ro-RO', { day: 'numeric', month: 'short', year: 'numeric' })}
                         </span>
-                        <Button variant="ghost" size="sm" className={`${colorScheme.button} font-medium group/btn`}>
-                          Citește mai mult
-                          <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                        </Button>
+                        <Link href={`/blog/${post.slug}`}>
+                          <Button variant="ghost" size="sm" className={`${colorScheme.button} font-medium group/btn`}>
+                            Citește mai mult
+                            <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                          </Button>
+                        </Link>
                       </div>
                     </CardContent>
                   </Card>
