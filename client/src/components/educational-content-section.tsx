@@ -183,54 +183,54 @@ export function EducationalContentSection({
 // Sample educational content for pension topics
 export const pensionEducationalContent: EducationalArticle[] = [
   {
-    title: "Ghidul Complet al Pensionarului 2025: Tot Ce Trebuie să Știi",
-    excerpt: "De la depunerea dosarului până la acordarea pensiei - ghid pas cu pas pentru procesul de pensionare în România.",
+    title: "Top 5 Greșeli de Evitat în Planificarea Pensiei",
+    excerpt: "Descoperă cele mai comune greșeli pe care le fac românii când își planifică pensia și cum să le eviți.",
     category: "Planificare",
     readTime: "15 min",
     difficulty: "Beginner",
-    href: "/blog/ghidul-complet-pensionar-2025",
+    href: "/blog/top-5-greseli-planificare-pensie",
     featured: true
   },
   {
-    title: "Pilonul II vs Pilonul III: Care Este Cea Mai Bună Opțiune?",
-    excerpt: "Comparație detaliată între pilonii de pensii private, cu strategii de optimizare a investițiilor pentru fiecare vârstă.",
+    title: "Pilonul II vs. Pilonul III: Ghid de Decizie pentru 2024",
+    excerpt: "Compară avantajele și dezavantajele celor două piloni și ia decizia corectă pentru situația ta financiară.",
     category: "Investiții",
     readTime: "12 min",
     difficulty: "Intermediate",
-    href: "/blog/pilonul-2-vs-pilonul-3-comparatie",
+    href: "/blog/pilonul-2-vs-pilonul-3-ghid-decizie-2024",
     featured: true
   },
   {
-    title: "Calculul Pensiei pentru Limită de Vârstă: Formula Oficială",
-    excerpt: "Explicația detaliată a modului de calcul al pensiei, cu exemple practice și factori care influențează cuantumul.",
-    category: "Calculatoare",
+    title: "Vârsta Standard de Pensionare în România: Tabel Complet 2024",
+    excerpt: "Ghid actualizat cu toate modificările legislative privind vârsta de pensionare pentru bărbați și femei.",
+    category: "Legislație",
     readTime: "10 min",
     difficulty: "Intermediate",
-    href: "/blog/calcul-pensie-limita-varsta"
+    href: "/blog/varsta-standard-pensionare-romania-2024"
   },
   {
-    title: "Pensionarea Anticipată: Condiții și Penalizări în 2025",
-    excerpt: "Tot ce trebuie să știi despre pensionarea înainte de vârsta standard, inclusiv calculul penalizărilor.",
-    category: "Legislație",
+    title: "Calculator Pensie: Planifică-ți Viitorul Financiar",
+    excerpt: "Folosește calculatorul nostru pentru a estima pensia și pentru a lua decizii informate despre viitorul tău.",
+    category: "Calculatoare",
     readTime: "8 min",
-    difficulty: "Advanced",
-    href: "/blog/pensionare-anticipata-conditii"
+    difficulty: "Beginner",
+    href: "/planificare-pensie"
   },
   {
-    title: "Stagiul de Cotizare: Cum se Calculează și Ce Perioade se Iau în Considerare",
-    excerpt: "Ghid complet pentru înțelegerea stagiului de cotizare, perioade contributive și asimilate.",
+    title: "Legislația Pensiilor: Resurse și Proceduri Oficiale",
+    excerpt: "Accesează informații complete despre legislația actuală și procedurile oficiale pentru pensionare.",
     category: "Legislație",
     readTime: "12 min",
     difficulty: "Intermediate",
-    href: "/blog/stagiu-cotizare-calcul"
+    href: "/legislatie-resurse"
   },
   {
-    title: "Optimizarea Contribuțiilor la Pilonul II: Strategii pentru Randament Maxim",
-    excerpt: "Cum să îți alegi fondul de pensii privat și să îți maximizezi contribuțiile pentru un randament optimal.",
-    category: "Investiții",
+    title: "Calculator Sarcină: Planificare pentru Viitoarele Mame",
+    excerpt: "Calculează data nașterii și urmărește dezvoltarea sarcinii cu ghidurile noastre complete.",
+    category: "Planificare",
     readTime: "15 min",
-    difficulty: "Advanced",
-    href: "/blog/optimizare-contributii-pilonul-2"
+    difficulty: "Beginner",
+    href: "/calculator-sarcina"
   }
 ];
 
