@@ -121,9 +121,9 @@ export function EducationalContentSection({
                         </Badge>
                       </div>
                       <Link href={article.href}>
-                        <Button variant="ghost" size="sm" className="text-primary hover:text-primary/80 group">
-                          Citește
-                          <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                        <Button variant="ghost" size="sm" className="text-primary hover:text-primary/80 group flex items-center gap-1">
+                          Citește mai mult
+                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </Button>
                       </Link>
                     </div>
@@ -165,7 +165,8 @@ export function EducationalContentSection({
                       </Badge>
                     </div>
                     <Link href={article.href}>
-                      <Button variant="ghost" size="sm" className="text-primary hover:text-primary/80 p-2">
+                      <Button variant="ghost" size="sm" className="text-primary hover:text-primary/80 p-2 flex items-center gap-2">
+                        Citește mai mult
                         <ArrowRight className="w-4 h-4" />
                       </Button>
                     </Link>
