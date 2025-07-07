@@ -1,24 +1,29 @@
 #!/bin/bash
 
-# Production startup script
-export NODE_ENV=production
-export PORT=5000
+echo "🚀 Starting Calculator Sarcina Production Server..."
 
-echo "Starting Calculator Sarcina in production mode..."
-echo "Environment: $NODE_ENV"
-echo "Port: $PORT"
+# Kill any existing servers on port 5000
+echo "🔄 Stopping existing servers..."
+pkill -f "tsx server/index.ts" 2>/dev/null || true
+pkill -f "node production-server.js" 2>/dev/null || true
+pkill -f "node dist/index.js" 2>/dev/null || true
 
-# Check if build exists
-if [ ! -f "dist/index.js" ]; then
-    echo "Production build not found. Running build first..."
-    ./build-production.sh
+# Wait for ports to be freed
+sleep 2
+
+# Ensure build is complete
+echo "🔨 Building application..."
+npm run build
+node fix-deployment.js
+
+# Verify static files exist
+if [ ! -f "dist/public/index.html" ]; then
+    echo "❌ Error: Static files not found!"
+    exit 1
 fi
 
-if [ ! -d "server/public" ] || [ -z "$(ls -A server/public)" ]; then
-    echo "Static files not found. Running build first..."
-    ./build-production.sh
-fi
+echo "📁 Static files verified: $(ls -la dist/public/)"
 
-# Start the production server
-echo "Starting production server..."
-node dist/index.js
+# Start production server
+echo "🌐 Starting production server on port 5000..."
+NODE_ENV=production node production-server.js
