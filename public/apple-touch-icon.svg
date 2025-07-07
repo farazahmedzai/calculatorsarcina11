@@ -1,0 +1,6 @@
+<svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+  <rect width="180" height="180" fill="#7c3aed" rx="24"/>
+  <text x="90" y="90" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">CS</text>
+  <text x="90" y="120" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Calculator</text>
+  <text x="90" y="135" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Sarcina</text>
+</svg>

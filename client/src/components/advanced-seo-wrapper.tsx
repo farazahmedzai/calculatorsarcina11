@@ -245,8 +245,8 @@ export function useMobilePerformanceOptimization() {
 
 function preloadCriticalResources() {
   const criticalResources = [
-    { href: '/manifest.json', as: 'manifest' },
     { href: 'https://fonts.gstatic.com', rel: 'preconnect', crossorigin: 'anonymous' },
+    { href: 'https://fonts.googleapis.com', rel: 'preconnect' },
   ];
 
   criticalResources.forEach(({ href, as, rel = 'preload', crossorigin }) => {
