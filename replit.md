@@ -429,6 +429,8 @@ The pension calculator implements current Romanian pension regulations:
 - **Vite Deployment Fix:** Moved Vite, ESBuild, TypeScript, and @vitejs/plugin-react to production dependencies to resolve "command not found" deployment errors
 - **Build Dependencies Fixed:** Successfully installed all critical build tools (vite@5.4.19, esbuild@0.25.6, typescript@5.6.3, @vitejs/plugin-react@4.6.0) as production dependencies
 - **Deployment Ready:** Application successfully builds and transforms all 1845 modules, ready for Netlify deployment
+- **Netlify Build Configuration:** Updated netlify.toml with direct node_modules path references to resolve vite command not found issues
+- **Custom Build Script:** Created netlify-build.sh with fallback build process for deployment reliability
 
 **Technical Fixes Applied:**
 - Fixed `const THEMES = { light: "", ".dark" }` to `const THEMES = { light: "", dark: ".dark" }`
