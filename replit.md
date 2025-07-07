@@ -426,6 +426,7 @@ The pension calculator implements current Romanian pension regulations:
 - **Caniuse-lite Package Fixed:** Resolved corrupted caniuse-lite dependency that was preventing builds
 - **Build Process Optimized:** Build now successfully processes all 1845 modules and completes transformation
 - **HTML and Manifest Updated:** Updated all references to use SVG icons instead of missing PNG files
+- **Vite Deployment Fix:** Moved Vite, ESBuild, TypeScript, and @vitejs/plugin-react to production dependencies to resolve "command not found" deployment errors
 
 **Technical Fixes Applied:**
 - Fixed `const THEMES = { light: "", ".dark" }` to `const THEMES = { light: "", dark: ".dark" }`
@@ -433,6 +434,7 @@ The pension calculator implements current Romanian pension regulations:
 - Removed problematic manifest preload link that used unsupported attributes
 - Created SVG-based favicon system with proper MIME types in manifest.json
 - Reinstalled corrupted caniuse-lite package to fix PostCSS build failures
+- Moved critical build tools (vite@5.4.19, esbuild@0.25.6, typescript@5.6.3, @vitejs/plugin-react@4.6.0) to production dependencies for deployment compatibility
 
 ## Recent Changes - June 18, 2025
 
