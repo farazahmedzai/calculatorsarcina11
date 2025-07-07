@@ -11,11 +11,11 @@ const app = express();
 app.use((req, res, next) => {
   res.setHeader('Content-Security-Policy', 
     "default-src 'self'; " +
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://googletagmanager.com https://replit.com; " +
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://googletagmanager.com https://www.google-analytics.com https://google-analytics.com https://ssl.google-analytics.com https://replit.com; " +
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
     "font-src 'self' https://fonts.gstatic.com; " +
     "img-src 'self' data: https:; " +
-    "connect-src 'self' https: https://www.google-analytics.com https://analytics.google.com; " +
+    "connect-src 'self' https: https://www.google-analytics.com https://analytics.google.com https://ssl.google-analytics.com; " +
     "manifest-src 'self';"
   );
   res.setHeader('X-Frame-Options', 'DENY');
