@@ -414,6 +414,26 @@ The pension calculator implements current Romanian pension regulations:
 
 *This Replit configuration document is maintained alongside the project. Last updated: June 17, 2025*
 
+## Recent Changes - July 7, 2025
+
+### ✓ Critical Build Issues Fixed Completed
+
+**Latest Updates (July 7, 2025 - 5:15 PM):**
+- **Content Security Policy Fixed:** Updated CSP headers in both netlify.toml and Express server to allow Google Analytics scripts from googletagmanager.com and google-analytics.com domains
+- **TypeScript Syntax Error Fixed:** Corrected critical syntax error in chart.tsx file (fixed THEMES object structure)
+- **Preload Link Issue Resolved:** Removed unsupported `as="manifest"` attribute from preload link in advanced-seo-wrapper.tsx
+- **Missing Icon Files Created:** Added apple-touch-icon.svg and favicon files (16x16, 32x32) as SVG format
+- **Caniuse-lite Package Fixed:** Resolved corrupted caniuse-lite dependency that was preventing builds
+- **Build Process Optimized:** Build now successfully processes all 1845 modules and completes transformation
+- **HTML and Manifest Updated:** Updated all references to use SVG icons instead of missing PNG files
+
+**Technical Fixes Applied:**
+- Fixed `const THEMES = { light: "", ".dark" }` to `const THEMES = { light: "", dark: ".dark" }`
+- Added proper CSP directives: `script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com`
+- Removed problematic manifest preload link that used unsupported attributes
+- Created SVG-based favicon system with proper MIME types in manifest.json
+- Reinstalled corrupted caniuse-lite package to fix PostCSS build failures
+
 ## Recent Changes - June 18, 2025
 
 ### ✓ Calculator-Sarcina Page Complete Visual Redesign Completed
