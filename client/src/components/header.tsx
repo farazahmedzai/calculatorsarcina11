@@ -16,6 +16,7 @@ export function Header() {
     { name: "Tipuri de Pensii", href: "/tipuri-pensii", current: location === "/tipuri-pensii" },
     { name: "Legislație", href: "/legislatie-resurse", current: location === "/legislatie-resurse" },
     { name: "Blog", href: "/blog", current: location === "/blog" },
+    { name: "Despre Noi", href: "/despre-noi", current: location === "/despre-noi" },
   ];
 
   useEffect(() => {

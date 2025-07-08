@@ -55,6 +55,13 @@ export const pageSEO: Record<string, SEOData> = {
     description: "Articole actualizate despre sistemul de pensii din România, modificări legislative și sfaturi practice pentru o pensie decentă.",
     keywords: "blog pensii, ghiduri pensii, sfaturi planificare pensie, modificări legislative",
   },
+  "despre-noi": {
+    title: "Despre Noi - Calculator Sarcina | Echipa și Misiunea Noastră",
+    description: "Descoperă echipa Calculator Sarcina, misiunea noastră și valorile care ne ghidează în oferirea celor mai precise calculatoare pentru sarcină și pensie în România.",
+    keywords: "despre calculator sarcina, echipa, misiune, valori, experienta, specializare romania",
+    robots: "index, follow",
+    ogImage: "https://calculatorsarcina.com/assets/og-about.jpg",
+  },
 };
 
 export function getSEOData(page: string): SEOData {

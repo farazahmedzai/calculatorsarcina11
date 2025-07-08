@@ -14,6 +14,7 @@ import PlanificareePensie from "@/pages/planificare-pensie";
 import TipuriPensii from "@/pages/tipuri-pensii";
 import LegislatieResurse from "@/pages/legislatie-resurse";
 import Blog from "@/pages/blog";
+import DespreNoi from "@/pages/despre-noi";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -40,6 +41,7 @@ function Router() {
               <Route path="/legislatie-resurse" component={LegislatieResurse} />
               <Route path="/blog" component={Blog} />
               <Route path="/blog/:slug" component={Blog} />
+              <Route path="/despre-noi" component={DespreNoi} />
               <Route component={NotFound} />
             </Switch>
           </main>
