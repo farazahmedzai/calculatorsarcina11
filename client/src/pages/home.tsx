@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { SEOHead } from "@/components/seo-head";
 import { StructuredData } from "@/components/structured-data";
 import { PensionCalculator } from "@/components/pension-calculator";
+import { HeaderAd, ContentAd } from "@/components/ezoic-ad";
 import { 
   ArrowRight, 
   Shield, 
@@ -130,6 +131,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      {/* Header Ad */}
+      <HeaderAd />
+      
       {/* Features Grid */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -313,6 +318,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      {/* Content Ad */}
+      <ContentAd />
+      
       {/* Pension Calculator Section */}
       <section id="pension-calculator" className="py-12">
         <div className="max-w-4xl mx-auto px-6">

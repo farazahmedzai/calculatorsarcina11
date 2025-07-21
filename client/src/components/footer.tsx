@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { FooterAd } from "@/components/ezoic-ad";
 import { Facebook, Twitter, Calculator, Mail, Phone, MapPin, Heart, Star, Shield, Sparkles } from "lucide-react";
 
 export function Footer() {
@@ -147,6 +148,9 @@ export function Footer() {
             </div>
           </div>
         </div>
+        
+        {/* Footer Ad */}
+        <FooterAd />
         
         {/* Bottom Section */}
         <div className="border-t border-slate-700/50 mt-12 pt-8">

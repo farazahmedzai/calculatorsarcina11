@@ -7,6 +7,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { SEOHead } from "@/components/seo-head";
 import { StructuredData } from "@/components/structured-data";
 import { EducationalContentSection, pensionEducationalContent } from "@/components/educational-content-section";
+import { SidebarAd, ContentAd } from "@/components/ezoic-ad";
 import { ArrowLeft, Calendar, User, BookOpen, TrendingUp, FileText, Users, Calculator } from "lucide-react";
 import type { BlogPost } from "@shared/schema";
 
@@ -125,6 +126,9 @@ export default function Blog() {
             <div className="text-neutral-700 leading-relaxed whitespace-pre-line">
               {singlePost.content}
             </div>
+            
+            {/* Content Ad */}
+            <ContentAd />
           </div>
 
           <footer className="mt-16 pt-8 border-t border-neutral-200">

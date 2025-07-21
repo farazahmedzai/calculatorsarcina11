@@ -6,6 +6,7 @@ import { StructuredData } from "@/components/structured-data";
 import { FAQSection, pregnancyFAQs } from "@/components/faq-section";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { HeaderAd, ContentAd } from "@/components/ezoic-ad";
 import { Baby, Heart, Calendar, Stethoscope, CheckCircle, AlertCircle, BookOpen, Users } from "lucide-react";
 
 export default function CalculatorSarcina() {
@@ -133,12 +134,18 @@ export default function CalculatorSarcina() {
         </div>
       </section>
 
+      {/* Header Ad */}
+      <HeaderAd />
+      
       {/* Calculator Section */}
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-6">
           <PregnancyCalculator />
         </div>
       </section>
+      
+      {/* Content Ad */}
+      <ContentAd />
 
       {/* Information Section */}
       <section className="py-16 bg-muted/50">
