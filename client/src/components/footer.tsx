@@ -170,9 +170,11 @@ export function Footer() {
               <a href="#" className="text-slate-400 hover:text-purple-300 transition-all duration-300 hover:underline px-2 py-1 rounded hover:bg-slate-800/50">
                 Termeni și Condiții
               </a>
-              <a href="#" className="text-slate-400 hover:text-indigo-300 transition-all duration-300 hover:underline px-2 py-1 rounded hover:bg-slate-800/50">
-                Politica de Confidențialitate
-              </a>
+              <Link href="/privacy-policy">
+                <span className="text-slate-400 hover:text-indigo-300 transition-all duration-300 hover:underline px-2 py-1 rounded hover:bg-slate-800/50 cursor-pointer">
+                  Politica de Confidențialitate
+                </span>
+              </Link>
               <a href="#" className="text-slate-400 hover:text-emerald-300 transition-all duration-300 hover:underline px-2 py-1 rounded hover:bg-slate-800/50">
                 GDPR
               </a>
